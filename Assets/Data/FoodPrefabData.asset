@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b2da59740a13d45a32f47ab3a2d41a, type: 3}
+  m_Name: FoodPrefabData
+  m_EditorClassIdentifier: 
+  FoodList:
+  - {fileID: -7574343605581448595, guid: 9d2d5cf46e0424c88adba30513942c9c, type: 3}
+  - {fileID: -2954357928105905535, guid: 4bd03b14ba0e947afafb54c65cb15aa5, type: 3}
+  - {fileID: -7858238835350959430, guid: 3962481ef957946ea983e58994d98754, type: 3}
+  - {fileID: -6914435292481373277, guid: 0802729158ede465b972143b4f42bb40, type: 3}
+  - {fileID: -951456721009664784, guid: e3bf3fccf8c9b45498abdff9f929a511, type: 3}
+  - {fileID: -5104418854420727184, guid: c829a1c8ca6ac42a3b934ea39387de10, type: 3}
+  - {fileID: -7043507532077776265, guid: 0555c6de1cd8945d784364e64772a287, type: 3}
+  - {fileID: 6349300342650774451, guid: d8606da1e10174defb23e6c4e9ec6fbb, type: 3}
+  - {fileID: -2363212743376711189, guid: 7cbc4dfd2c3864a70a523aaac9e17c4e, type: 3}
+  - {fileID: -8711155433853728507, guid: 4caaae7ba39c9404e86499e9d1e44988, type: 3}
+  - {fileID: -4041282337104999209, guid: 6277c0a139a9347a7a7b6e5ea1c3c2a0, type: 3}
+  - {fileID: 7094494756658403633, guid: b7e17bebb59934bc198c8565481242a8, type: 3}
+  - {fileID: -2382503237526438629, guid: ce377413f121f4d5d9705f9761c4cd81, type: 3}
+  - {fileID: -6659070130017045594, guid: b6b5194e0a28f4900b2cdb942ebdefc4, type: 3}
+  - {fileID: 675305970526144715, guid: 427dfda3e4b284fc4995fe6e449c8655, type: 3}
+  - {fileID: 3611746643757882530, guid: c970ff3f2f0a4449a945da55f1189f29, type: 3}
+  - {fileID: -8730144655123959309, guid: b67854a02d8a948f58e30ef840f16d47, type: 3}
+  - {fileID: -3783796977045619496, guid: 0b21652e4ddd948cc8f003ea65afa697, type: 3}
+  - {fileID: 1272038331213592517, guid: f90dc804cc22742cc893c3a016cbb4e0, type: 3}
+  - {fileID: 3611753371048337744, guid: b3d8ae1dbd9e849899af3c0c883f2e1c, type: 3}
+  - {fileID: 4300705519864035775, guid: c51016de152514ce9b0242837bbdbc43, type: 3}
+  - {fileID: 1222710754655404191, guid: d494581e4148c4c679dbf6ab3618de4d, type: 3}
+  - {fileID: -3676346425015947815, guid: 084e6df27ddc14e27b0578368ef9fbf3, type: 3}
+  - {fileID: -6200773305684532371, guid: 7c7dfc7988e884955afa49a6c1dcf7de, type: 3}
+  - {fileID: 523651427602517338, guid: a61e2595db11e4bf38c1668c6f8292c9, type: 3}
+  - {fileID: 4428513261992868582, guid: 3b1af75c38c454696a0f73e9cabd3814, type: 3}
+  - {fileID: 5016325145730956910, guid: 449c010fee6fa4e94a0eb0d3aa38f2ca, type: 3}

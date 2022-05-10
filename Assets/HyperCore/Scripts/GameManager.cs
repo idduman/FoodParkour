@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dixy.LunchBoxRun;
 using UnityEngine;
 
 namespace HyperCore
@@ -8,6 +9,7 @@ namespace HyperCore
     public class GameManager : SingletonBehaviour<GameManager>
     {
         public static event Action LevelLoaded;
+        public FoodPrefabData FoodData;
         
         [SerializeField] private List<LevelBehaviour> _levels = new List<LevelBehaviour>();
 

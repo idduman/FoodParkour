@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - LunchBox
+  - Plate
+  - Platform
+  - SolidFood
+  - Machine
   layers:
   - Default
   - TransparentFX
@@ -11,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Food
+  - Plate
   - 
   - 
   - 
