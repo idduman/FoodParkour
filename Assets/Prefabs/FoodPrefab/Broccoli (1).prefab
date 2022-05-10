@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7216279510368118439}
   m_Layer: 6
   m_Name: Cylinder.016
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 575666238102698151}
   m_Layer: 6
   m_Name: Sphere.021
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 342646453074781159}
   m_Layer: 6
   m_Name: Sphere.019
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 8720579085604693792}
   m_Layer: 6
   m_Name: Sphere.020
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

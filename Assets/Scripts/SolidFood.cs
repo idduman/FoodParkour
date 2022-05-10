@@ -18,8 +18,7 @@ namespace Dixy.LunchBoxRun
 
             if (other.collider.CompareTag("Machine") || other.collider.CompareTag("Platform"))
             {
-                IsStatic = true;
-                Destroy(gameObject, 0.2f);
+                Destroy(gameObject);
             }
         }
     }

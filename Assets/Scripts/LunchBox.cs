@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Dixy.LunchBoxRun
 {
-    public class Plate : MonoBehaviour
+    public class LunchBox : MonoBehaviour
     {
         private List<SolidFood> _foods = new List<SolidFood>();
 
@@ -16,11 +16,12 @@ namespace Dixy.LunchBoxRun
             _foods = GetComponentsInChildren<SolidFood>().ToList();
             _foods.ForEach(f => f.gameObject.SetActive(false));
         }
-        
-        private void OnTriggerEnter(Collider other)
+
+        public void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("SolidFood") && 
-                other.TryGetComponent<SolidFood>(out var food) &&
+            var rb = other.attachedRigidbody;
+            if (rb.CompareTag("SolidFood") && 
+                rb.TryGetComponent<SolidFood>(out var food) &&
                 !food.IsStatic)
             {
                 AddFood(food);
@@ -30,22 +31,13 @@ namespace Dixy.LunchBoxRun
         public void AddFood(SolidFood food)
         {
             var foodInside = _foods.FirstOrDefault(x => !x.Placed && (x.Type == food.Type));
-            if (!foodInside)
+            if (foodInside)
             {
-                var firstEmpty = _foods.FirstOrDefault(x => !x.Placed);
-                if (!firstEmpty)
-                    return;
-
-                food.IsStatic = true;
-                food.GetComponent<Rigidbody>().isKinematic = true;
-                food.transform.parent = transform;
-                food.transform.position = firstEmpty.transform.position;
-                firstEmpty.Placed = true;
-                return;
+                foodInside.gameObject.SetActive(true);
+                foodInside.IsStatic = true;
+                foodInside.Placed = true;
             }
             
-            foodInside.gameObject.SetActive(true);
-            foodInside.Placed = true;
             Destroy(food.gameObject);
         }
     }
