@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1824701604582664812}
   - component: {fileID: 4823152360668544594}
   - component: {fileID: 3824635376834319966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cheese
   m_TagString: SolidFood
   m_Icon: {fileID: 0}

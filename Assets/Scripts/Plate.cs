@@ -9,6 +9,9 @@ namespace Dixy.LunchBoxRun
         public void OnTriggerEnter(Collider other)
         {
             var rb = other.attachedRigidbody;
+            if (!rb)
+                return;
+            
             if (rb.CompareTag("SolidFood") && 
                 rb.TryGetComponent<SolidFood>(out var food) &&
                 !food.IsStatic &&

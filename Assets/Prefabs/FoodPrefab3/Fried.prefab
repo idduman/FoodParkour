@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6781218904629222290}
   - component: {fileID: 3929650488324495963}
   - component: {fileID: 7145302059674596498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fried
   m_TagString: SolidFood
   m_Icon: {fileID: 0}

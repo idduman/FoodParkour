@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - SolidFood
   - Machine
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - UI
   - Food
   - Plate
-  - 
-  - 
+  - LunchBox
+  - Obstacle
   - 
   - 
   - 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6409035211457523303}
   - component: {fileID: 8345599799498193963}
   - component: {fileID: 712287231769459625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cookie
   m_TagString: SolidFood
   m_Icon: {fileID: 0}

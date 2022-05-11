@@ -10,8 +10,8 @@ namespace Dixy.LunchBoxRun
     public class SolidFoodMachine : MonoBehaviour
     {
         [SerializeField] private FoodType _foodType;
-        [SerializeField] private float _dropInterval = 1f;
-        [SerializeField] private float _dropheight = 2f;
+        [SerializeField] private float _dropInterval = 0.5f;
+        [SerializeField] private float _dropheight = 1f;
 
         private float _dropTimer;
         private bool _dropping = false;

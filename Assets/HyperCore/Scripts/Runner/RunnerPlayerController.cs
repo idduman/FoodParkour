@@ -1,3 +1,4 @@
+using Dixy.LunchBoxRun;
 using UnityEngine;
 
 namespace HyperCore.Runner
@@ -24,6 +25,7 @@ namespace HyperCore.Runner
         private float _offsetX;
         //private Animator _anim;
         private RunnerPlayerBehaviour _player;
+        private float _staggerTimer;
         
         //private static readonly int _offsetDeltaParam = Animator.StringToHash("OffsetDelta");
         //private static readonly int _runningParam = Animator.StringToHash("Running");
@@ -45,6 +47,12 @@ namespace HyperCore.Runner
         {
             if (!Active)
                 return;
+
+            if (_staggerTimer > 0)
+            {
+                _staggerTimer -= Time.deltaTime;
+                return;
+            }
             
             var pos = transform.position;
             pos.z += _moveSpeed * Time.deltaTime;
@@ -57,6 +65,7 @@ namespace HyperCore.Runner
         {
             InputController.Instance.Pressed += OnPressed;
             InputController.Instance.Moved += OnMoved;
+            LunchBox.ObstacleHit += OnObstacleHit;
         }
     
         private void Unsubscribe()
@@ -66,6 +75,7 @@ namespace HyperCore.Runner
             
             InputController.Instance.Pressed -= OnPressed;
             InputController.Instance.Moved -= OnMoved;
+            LunchBox.ObstacleHit -= OnObstacleHit;
         }
         
         private void OnPressed(Vector3 pos)
@@ -81,6 +91,11 @@ namespace HyperCore.Runner
         private void OnMoved(Vector3 inputDelta)
         {
             _offsetX = Mathf.Clamp(_offsetX + inputDelta.x * _steerSpeed, -_clampX, _clampX);
+        }
+
+        private void OnObstacleHit()
+        {
+            _staggerTimer = 0.5f;
         }
     }
 }

@@ -10,16 +10,21 @@ namespace Dixy.LunchBoxRun
 {
     public class LunchBox : MonoBehaviour
     {
+        public static event Action ObstacleHit;
+        
         private List<SolidFood> _foods = new List<SolidFood>();
+        private List<Plate> _plates = new List<Plate>();
 
         private const float _angleVariaton = 10f;
         private const float _throwSpeed = 4f;
         private const float _foodAlignDuration = 0.25f;
         private const float _jumpAmount = 0.7f;
 
-        public void Start()
+        public void Awake()
         {
             _foods = GetComponentsInChildren<SolidFood>().ToList();
+            _plates = GetComponentsInChildren<Plate>().ToList();
+            
             _foods.ForEach(f => f.gameObject.SetActive(false));
         }
 
@@ -31,6 +36,15 @@ namespace Dixy.LunchBoxRun
         public void OnDisable()
         {
             Plate.FoodHit -= OnFoodHit;
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Obstacle"))
+            {
+                other.transform.SendMessageUpwards("OpenGate");
+                OnObstacleHit();
+            }
         }
 
         private void OnFoodHit(Plate plate, SolidFood food)
@@ -62,6 +76,13 @@ namespace Dixy.LunchBoxRun
             }
         }
 
+        private void OnObstacleHit()
+        {
+            ObstacleHit?.Invoke();
+            _plates.ForEach(RemoveFoodFromPlate);
+        }
+        
+
         private void RemoveFoodFromPlate(Plate plate)
         {
             if (_foods.Count == 0)
@@ -72,7 +93,6 @@ namespace Dixy.LunchBoxRun
                 return;
 
             foodToRemove.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
-
         }
 
         private Vector3 GenerateRandomVelocity(Vector3 from, Vector3 to)

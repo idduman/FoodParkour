@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8877212531805099600}
   - component: {fileID: 2778340833115524649}
   - component: {fileID: 8513410278849845958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sausage1
   m_TagString: SolidFood
   m_Icon: {fileID: 0}

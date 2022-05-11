@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3106466866177783071}
   - component: {fileID: 7760149260077742512}
   - component: {fileID: 169527445502433745}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 3838617395946106458}
   - component: {fileID: 2732449762483174332}
   - component: {fileID: 7951104791567605574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BezierCurve.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 9057875632077333640}
   - component: {fileID: 428420414539861133}
   - component: {fileID: 8564457060318550986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 6762062509674560832}
   - component: {fileID: 7666134626315954189}
   - component: {fileID: 9159174649617423026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sausage
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 8728539228765163229}
   - component: {fileID: 1431771899824997177}
   - component: {fileID: 6143643829277017115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.157
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3609546795769345604}
   - component: {fileID: 5902587977198686623}
   - component: {fileID: 7772332268781225342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.046
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 9153957788927614504}
   - component: {fileID: 7371771543898702008}
   - component: {fileID: 1677455989242181583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.048
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4168349555567271047}
   - component: {fileID: 1540391880995046178}
   - component: {fileID: 5348866390139398942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bug
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 3644295527774733885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.75, y: 0.304, z: -1.088}
-  m_LocalScale: {x: 0.49402, y: 0.49402, z: 0.49402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3609546795769345604}
   - {fileID: 104210440132252003}
@@ -242,9 +242,9 @@ GameObject:
   - component: {fileID: 9002494997594177496}
   - component: {fileID: 361618417315161929}
   - component: {fileID: 2534963870005726918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.038
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,9 +337,9 @@ GameObject:
   - component: {fileID: 104210440132252003}
   - component: {fileID: 7340829563467702396}
   - component: {fileID: 6725068318877318806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.047
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,9 +419,9 @@ GameObject:
   - component: {fileID: 1030044295383616096}
   - component: {fileID: 762383373036334750}
   - component: {fileID: 6538071853447686045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.039
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

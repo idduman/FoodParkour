@@ -34,7 +34,8 @@ namespace Dixy.LunchBoxRun
         public void Throw(Vector3 velocity)
         {
             _rb.isKinematic = false;
-            _rb.velocity = velocity;
+            _rb.AddForce(velocity, ForceMode.VelocityChange);
+            _rb.AddTorque(velocity*10f, ForceMode.VelocityChange);
             IsStatic = false;
         }
     }
