@@ -171,6 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2560898579051208923}
+  - component: {fileID: -4521764736358028884}
   m_Layer: 0
   m_Name: Solid food machine1
   m_TagString: Untagged
@@ -201,6 +202,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &-4521764736358028884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936895737441958497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d33f41ef0b8ac14b97d76cb00af750b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodType: 0
+  _dropInterval: 1
+  _dropheight: 1.1
 --- !u!1 &3361846003524394544
 GameObject:
   m_ObjectHideFlags: 0

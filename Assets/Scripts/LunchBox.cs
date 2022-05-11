@@ -30,15 +30,20 @@ namespace Dixy.LunchBoxRun
 
         public void AddFood(SolidFood food)
         {
+            food.IsStatic = true;
+            
             var foodInside = _foods.FirstOrDefault(x => !x.Placed && (x.Type == food.Type));
             if (foodInside)
             {
+                
                 foodInside.gameObject.SetActive(true);
                 foodInside.IsStatic = true;
                 foodInside.Placed = true;
             }
-            
-            Destroy(food.gameObject);
+            else
+            {
+                Destroy(food.gameObject);
+            }
         }
     }
 }

@@ -31,7 +31,14 @@ namespace Dixy.LunchBoxRun
         Roll,
         Strawberry,
         Tomato,
-        Soup,
+        Bread,
+        Cake,
+        Cheese,
+        Cookie,
+        Fries,
+        HotDog,
+        Sausage,
+        Bug,
     }
 }
 
