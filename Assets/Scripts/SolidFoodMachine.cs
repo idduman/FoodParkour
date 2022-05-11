@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using HyperCore;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Dixy.LunchBoxRun
 {
@@ -17,7 +18,7 @@ namespace Dixy.LunchBoxRun
 
         private void Start()
         {
-            _dropTimer = _dropInterval;
+            _dropTimer = _dropInterval + Random.Range(-_dropInterval/2f, _dropInterval/2f);
         }
 
         private void OnEnable()
@@ -34,11 +35,12 @@ namespace Dixy.LunchBoxRun
         {
             _dropping = true;
         }
+        
         void Update()
         {
-            if (_foodType == FoodType.None)
+            if (!_dropping || _foodType == FoodType.None)
                 return;
-            
+
             if (_dropTimer <= 0f)
             {
                 DropItem();

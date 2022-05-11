@@ -39,6 +39,8 @@ namespace HyperCore
             UIController.Instance.SetLevelText(index);
             if(index == 0)
                 UIController.Instance.ToggleTutorialPanel(true);
+            
+            LevelLoaded?.Invoke();
         }
 
         public void FinishGame(bool success)
