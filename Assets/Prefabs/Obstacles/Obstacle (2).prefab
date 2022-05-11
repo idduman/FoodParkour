@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 8220001866454551702}
   - component: {fileID: 9129328210767449983}
   - component: {fileID: 5600182729029789906}
+  - component: {fileID: 6042886834181778015}
   m_Layer: 9
   m_Name: Cylinder.037
   m_TagString: Untagged
@@ -416,6 +417,18 @@ CapsuleCollider:
   m_Height: 0.0042603076
   m_Direction: 1
   m_Center: {x: -1.4551915e-11, y: -0.000000014901161, z: -2.910383e-11}
+--- !u!114 &6042886834181778015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496797932255384462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f9d12119863c04597b9eff40809edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4398041205331530698
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +553,7 @@ GameObject:
   - component: {fileID: 8503959664213214714}
   - component: {fileID: 6804678130908798046}
   - component: {fileID: 5441898035596611758}
+  - component: {fileID: 4902554733280049954}
   m_Layer: 9
   m_Name: Cylinder.036
   m_TagString: Untagged
@@ -625,6 +639,18 @@ CapsuleCollider:
   m_Height: 0.0042603076
   m_Direction: 1
   m_Center: {x: 4.656613e-10, y: -0.000000014901161, z: -2.910383e-11}
+--- !u!114 &4902554733280049954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259768030881746090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f9d12119863c04597b9eff40809edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7475932466255563441
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +748,7 @@ GameObject:
   - component: {fileID: 640164813487515219}
   - component: {fileID: 6690610845280248372}
   - component: {fileID: 463971293298544558}
+  - component: {fileID: 3436797198135267880}
   m_Layer: 9
   m_Name: Cylinder.038
   m_TagString: Untagged
@@ -807,6 +834,18 @@ CapsuleCollider:
   m_Height: 0.0042603076
   m_Direction: 1
   m_Center: {x: -9.313226e-10, y: -0.000000014901161, z: -2.910383e-11}
+--- !u!114 &3436797198135267880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486881713904631763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f9d12119863c04597b9eff40809edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7525552995969912522
 GameObject:
   m_ObjectHideFlags: 0
