@@ -15,8 +15,8 @@ namespace Dixy.LunchBoxRun
         private List<SolidFood> _foods = new List<SolidFood>();
         private List<Plate> _plates = new List<Plate>();
 
-        private const float _angleVariaton = 10f;
-        private const float _throwSpeed = 4f;
+        private const float _angleVariaton = 20f;
+        private const float _throwSpeed = 5f;
         private const float _foodAlignDuration = 0.25f;
         private const float _jumpAmount = 0.7f;
 
@@ -92,6 +92,7 @@ namespace Dixy.LunchBoxRun
             if (foodToRemove == null)
                 return;
 
+            foodToRemove.transform.parent = transform.parent.parent.parent;
             foodToRemove.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
         }
 

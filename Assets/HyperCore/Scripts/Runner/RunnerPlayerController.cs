@@ -5,6 +5,7 @@ namespace HyperCore.Runner
 {
     public class RunnerPlayerController : MonoBehaviour
     {
+        [SerializeField] private Transform _playerFollower;
         [SerializeField] private float _moveSpeed = 2f;
         [SerializeField] private float _steerSpeed = 5f;
         [SerializeField] private float _responsiveness = 10f;
@@ -58,6 +59,7 @@ namespace HyperCore.Runner
             pos.z += _moveSpeed * Time.deltaTime;
             pos.x = Mathf.Lerp(pos.x, _offsetX, _responsiveness * Time.deltaTime);
             transform.position = pos;
+            _playerFollower.position = new Vector3(0f, pos.y, pos.z);
             //_anim.SetFloat(_offsetDeltaParam, _offsetX - pos.x);
         }
 
