@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using HyperCore;
+using HyperCore.Runner;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,7 @@ namespace Dixy.LunchBoxRun
         [SerializeField] private float _dropheight = 1f;
 
         private float _dropTimer;
+        private bool _started = false;
         private bool _dropping = false;
 
         private void Start()
@@ -33,11 +35,18 @@ namespace Dixy.LunchBoxRun
     
         private void OnLevelLoaded()
         {
-            _dropping = true;
+            _started = true;
         }
         
         void Update()
         {
+            if (!_started)
+                return;
+            
+            var dist =  transform.position.z - RunnerPlayerBehaviour.ZCoordinate;
+
+            _dropping = dist < 10f && dist > -1.5f;
+            
             if (!_dropping || _foodType == FoodType.None)
                 return;
 

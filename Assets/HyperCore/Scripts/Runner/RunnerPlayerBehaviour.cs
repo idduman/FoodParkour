@@ -5,9 +5,8 @@ namespace HyperCore.Runner
     [RequireComponent(typeof(RunnerPlayerController))]
     public class RunnerPlayerBehaviour : MonoBehaviour
     {
-        [SerializeField] private float _shootInterval;
-
-        public bool Shooting;
+        public static float ZCoordinate;
+        
         private Transform _finish;
 
         private RunnerPlayerController _controller;
@@ -16,6 +15,7 @@ namespace HyperCore.Runner
 
         void Start()
         {
+            ZCoordinate = transform.position.z;
             _controller = GetComponent<RunnerPlayerController>();
             _finish = GameObject.FindGameObjectWithTag("Finish").transform;
             if(!_finish)
@@ -31,6 +31,8 @@ namespace HyperCore.Runner
         {
             if (_finished)
                 return;
+
+            ZCoordinate = transform.position.z;
 
             if (transform.position.z > _finish.position.z)
                 Finish(true);
