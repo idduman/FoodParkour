@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8121552648315497291}
   - component: {fileID: 1994348198923578980}
   - component: {fileID: 4103374787035477613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2839800788596252157}
   - component: {fileID: 8068124249103660287}
   - component: {fileID: 8825494041962111308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,9 +171,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471190762795892852}
-  m_Layer: 0
+  - component: {fileID: 1345717562741745837}
+  - component: {fileID: 1831834380744185894}
+  - component: {fileID: 3012300455863066493}
+  m_Layer: 6
   m_Name: Broccoli
-  m_TagString: Untagged
+  m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +199,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1345717562741745837
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243189094269672142}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &1831834380744185894
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243189094269672142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2912533
+  m_Center: {x: 0.034279466, y: 0.17446718, z: 0}
+--- !u!114 &3012300455863066493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243189094269672142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1271805dab99dbd4e94bdf4c8b78e444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
+  IsStatic: 0
+  Placed: 0
 --- !u!1 &3190954579459268474
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +254,7 @@ GameObject:
   - component: {fileID: 492384859868619636}
   - component: {fileID: 8822105620828147624}
   - component: {fileID: 1320565052231999863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +335,7 @@ GameObject:
   - component: {fileID: 6791489893369771005}
   - component: {fileID: 2432458410468493176}
   - component: {fileID: 2315835007417948949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
