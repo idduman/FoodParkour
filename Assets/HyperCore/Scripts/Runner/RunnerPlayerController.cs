@@ -12,6 +12,7 @@ namespace HyperCore.Runner
         [SerializeField] private float _clampX = 3f;
 
         private bool _active;
+        private const float StaggerDuration = 0.5f;
         public bool Active
         {
             get => _active;
@@ -67,7 +68,8 @@ namespace HyperCore.Runner
         {
             InputController.Instance.Pressed += OnPressed;
             InputController.Instance.Moved += OnMoved;
-            LunchBox.ObstacleHit += OnObstacleHit;
+            LunchBox.ObstacleHit += Stagger;
+            SoupPlate.Filling += Stagger;
         }
     
         private void Unsubscribe()
@@ -77,7 +79,8 @@ namespace HyperCore.Runner
             
             InputController.Instance.Pressed -= OnPressed;
             InputController.Instance.Moved -= OnMoved;
-            LunchBox.ObstacleHit -= OnObstacleHit;
+            LunchBox.ObstacleHit -= Stagger;
+            SoupPlate.Filling -= Stagger;
         }
         
         private void OnPressed(Vector3 pos)
@@ -95,9 +98,9 @@ namespace HyperCore.Runner
             _offsetX = Mathf.Clamp(_offsetX + inputDelta.x * _steerSpeed, -_clampX, _clampX);
         }
 
-        private void OnObstacleHit()
+        private void Stagger()
         {
-            _staggerTimer = 0.5f;
+            _staggerTimer = StaggerDuration;
         }
     }
 }
