@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Dixy.LunchBoxRun;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ namespace HyperCore.Runner
 
         private bool _active;
         private const float StaggerDuration = 0.5f;
+
+        private float _currentMoveSpeed;
+        private Tween _moveSpeedTween;
         public bool Active
         {
             get => _active;
@@ -38,6 +42,7 @@ namespace HyperCore.Runner
             //_anim = GetComponentInChildren<Animator>();
             _started = false;
             Subscribe();
+            Active = true;
         }
     
         private void OnDestroy()
@@ -57,7 +62,7 @@ namespace HyperCore.Runner
             }
             
             var pos = transform.position;
-            pos.z += _moveSpeed * Time.deltaTime;
+            pos.z += _currentMoveSpeed * Time.deltaTime;
             pos.x = Mathf.Lerp(pos.x, _offsetX, _responsiveness * Time.deltaTime);
             transform.position = pos;
             _playerFollower.position = new Vector3(0f, pos.y, pos.z);
@@ -67,17 +72,19 @@ namespace HyperCore.Runner
         private void Subscribe()
         {
             InputController.Instance.Pressed += OnPressed;
+            InputController.Instance.Released += OnRelease;
             InputController.Instance.Moved += OnMoved;
             LunchBox.ObstacleHit += Stagger;
             SoupPlate.Filling += Stagger;
         }
-    
+
         private void Unsubscribe()
         {
             if (!InputController.Instance)
                 return;
             
             InputController.Instance.Pressed -= OnPressed;
+            InputController.Instance.Released -= OnRelease;
             InputController.Instance.Moved -= OnMoved;
             LunchBox.ObstacleHit -= Stagger;
             SoupPlate.Filling -= Stagger;
@@ -85,12 +92,16 @@ namespace HyperCore.Runner
         
         private void OnPressed(Vector3 pos)
         {
-            if (_started)
-                return;
-    
             _started = true;
-            Active = true;
             UIController.Instance.ToggleTutorialPanel(false);
+            _moveSpeedTween.Kill();
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, _moveSpeed, 0.2f);
+        }
+        
+        private void OnRelease(Vector3 obj)
+        {
+            _moveSpeedTween.Kill();
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, 0f, 0.2f);
         }
     
         private void OnMoved(Vector3 inputDelta)
