@@ -97,7 +97,7 @@ MonoBehaviour:
   _moveSpeed: 1.5
   _steerSpeed: 4
   _responsiveness: 8
-  _clampX: 1.5
+  _clampX: 1.4
 --- !u!114 &8292034659539875482
 MonoBehaviour:
   m_ObjectHideFlags: 0

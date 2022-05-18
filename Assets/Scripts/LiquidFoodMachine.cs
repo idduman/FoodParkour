@@ -8,25 +8,21 @@ using UnityEngine.Rendering;
 
 namespace Dixy.LunchBoxRun
 {
-    public class LiquidFoodMachine : MonoBehaviour
+    public class LiquidFoodMachine : FoodMachine
     {
         [SerializeField] private GameObject _soupStream;
-
-        public bool Active { get; private set; }
 
         private bool _started;
         private bool _flowing;
 
-        private Painter _painter;
+        //private Painter _painter;
         private LayerMask _plateMask;
         private SoupPlate _soupPlate;
 
         private void Start()
         {
-            _painter = GetComponentInChildren<Painter>();
+            //_painter = GetComponentInChildren<Painter>();
             _plateMask = LayerMask.GetMask("Plate");
-            _started = false;
-            _flowing = false;
         }
 
         private void OnEnable()
@@ -36,8 +32,9 @@ namespace Dixy.LunchBoxRun
 
         private void OnDisable()
         {
-            _soupPlate.FillComplete -= OnFillComplete;
             GameManager.LevelLoaded -= OnLevelLoaded;
+            if(_soupPlate)
+                _soupPlate.FillComplete -= OnFillComplete;
         }
     
         private void OnLevelLoaded()
@@ -58,21 +55,12 @@ namespace Dixy.LunchBoxRun
         private void OnFillComplete()
         {
             _flowing = false;
-            _soupPlate.FillComplete -= OnFillComplete;
         }
 
-        void Update()
+        protected override void Update()
         {
-            if (!_started)
-                return;
-            
-            var dist =  transform.position.z - RunnerPlayerBehaviour.ZCoordinate;
-
-            Active = _started && _flowing && (dist < 10f && dist > -1.5f);
-
-            _soupStream.gameObject.SetActive(Active);
-            
-            _painter.Painting = Active;
+            base.Update();
+            _soupStream.gameObject.SetActive(_started && _flowing && Active);
 
             /*if (!_flowing)
                 return;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using DG.Tweening;
+using HyperCore;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,19 +12,36 @@ namespace Dixy.LunchBoxRun
     public class LunchBox : MonoBehaviour
     {
         public static event Action ObstacleHit;
-        
+
         private List<SolidFood> _foods = new List<SolidFood>();
         private List<Plate> _plates = new List<Plate>();
+        private SoupPlate _soupPlate;
 
         private const float _angleVariaton = 20f;
         private const float _throwSpeed = 5f;
         private const float _foodAlignDuration = 0.25f;
         private const float _jumpAmount = 0.7f;
 
+        private int _foodCount;
+        public int FoodCount
+        {
+            get => _foodCount;
+            private set
+            {
+                _foodCount = value;
+                var foodPercentage = (float) (_foodCount + _soupPlate.FillAmount) / (float) (_foods.Count + 1);
+                UIController.Instance.SetLevelPercentage(foodPercentage);
+            }
+        }
+
         public void Awake()
         {
             _foods = GetComponentsInChildren<SolidFood>().ToList();
             _plates = GetComponentsInChildren<Plate>().ToList();
+            _soupPlate = GetComponentInChildren<SoupPlate>();
+
+            UIController.Instance.SetLevelPercentage(0f);
+            FoodCount = 0;
             
             _foods.ForEach(f => f.gameObject.SetActive(false));
         }
@@ -60,6 +78,7 @@ namespace Dixy.LunchBoxRun
                 
                 foodInside.IsStatic = true;
                 foodInside.Placed = true;
+                FoodCount = Mathf.Min(FoodCount + 1, _foods.Count);
                 food.transform.parent = foodInside.transform.parent;
                 food.transform.DOLocalRotateQuaternion(foodInside.transform.localRotation, _foodAlignDuration);
                 food.transform.DOLocalMove(foodInside.transform.localPosition, _foodAlignDuration)
@@ -94,6 +113,8 @@ namespace Dixy.LunchBoxRun
 
             foodToRemove.transform.parent = transform.parent.parent.parent;
             foodToRemove.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
+
+            FoodCount = Mathf.Max(FoodCount - 1, 0);
         }
 
         private Vector3 GenerateRandomVelocity(Vector3 from, Vector3 to)

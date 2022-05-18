@@ -9,7 +9,6 @@ namespace Dixy.LunchBoxRun
     public class SoupPlate : Plate
     {
         public static event Action Filling;
-        
         public event Action FillComplete; 
 
         public bool Filled
@@ -17,7 +16,9 @@ namespace Dixy.LunchBoxRun
             get;
             private set;
         }
-        
+
+        public float FillAmount => Filled ? 1f : 0f;
+
         [SerializeField] private Transform _soupTransform;
 
         private void Start()

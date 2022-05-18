@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace Dixy.LunchBoxRun
 {
-    public class SolidFoodMachine : MonoBehaviour
+    public class SolidFoodMachine : FoodMachine
     {
         [SerializeField] private FoodType _foodType;
         [SerializeField] private float _dropInterval = 0.5f;
@@ -16,7 +16,6 @@ namespace Dixy.LunchBoxRun
 
         private float _dropTimer;
         private bool _started = false;
-        private bool _dropping = false;
 
         private void Start()
         {
@@ -38,16 +37,14 @@ namespace Dixy.LunchBoxRun
             _started = true;
         }
         
-        void Update()
+        protected override void Update()
         {
+            base.Update();
+            
             if (!_started)
                 return;
-            
-            var dist =  transform.position.z - RunnerPlayerBehaviour.ZCoordinate;
 
-            _dropping = dist < 10f && dist > -1.5f;
-            
-            if (!_dropping || _foodType == FoodType.None)
+            if (!Active || _foodType == FoodType.None)
                 return;
 
             if (_dropTimer <= 0f)
