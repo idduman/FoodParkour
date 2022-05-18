@@ -13,13 +13,6 @@ namespace Dixy.LunchBoxRun
         public bool IsStatic = false;
         public bool Placed = false;
 
-        private Rigidbody _rb;
-
-        private void Start()
-        {
-            _rb = GetComponent<Rigidbody>();
-        }
-
         private void OnCollisionEnter(Collision other)
         {
             if (IsStatic)
@@ -33,9 +26,10 @@ namespace Dixy.LunchBoxRun
 
         public void Throw(Vector3 velocity)
         {
-            _rb.isKinematic = false;
-            _rb.AddForce(velocity, ForceMode.VelocityChange);
-            _rb.AddTorque(velocity*10f, ForceMode.VelocityChange);
+            var rb = GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddForce(velocity, ForceMode.VelocityChange);
+            rb.AddTorque(velocity*10f, ForceMode.VelocityChange);
             IsStatic = false;
         }
     }

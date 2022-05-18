@@ -110,9 +110,13 @@ namespace Dixy.LunchBoxRun
             var foodToRemove = _foods.LastOrDefault(x => x && x.Placed && (x.transform.parent == plate.transform));
             if (foodToRemove == null)
                 return;
-
-            foodToRemove.transform.parent = transform.parent.parent.parent;
-            foodToRemove.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
+            
+            var foodToThrow = Instantiate(foodToRemove, foodToRemove.transform.position, foodToRemove.transform.rotation);
+            foodToThrow.transform.parent = transform.parent.parent.parent;
+            foodToThrow.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
+            
+            foodToRemove.Placed = false;
+            foodToRemove.gameObject.SetActive(false);
 
             FoodCount = Mathf.Max(FoodCount - 1, 0);
         }
