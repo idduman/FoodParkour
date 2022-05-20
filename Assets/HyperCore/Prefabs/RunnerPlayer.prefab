@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerFollower: {fileID: 0}
-  _moveSpeed: 1.5
+  _moveSpeed: 2
   _steerSpeed: 4
   _responsiveness: 8
   _clampX: 1.4

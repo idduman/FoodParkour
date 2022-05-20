@@ -539,8 +539,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d33f41ef0b8ac14b97d76cb00af750b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
   _foodType: 0
-  _dropInterval: 0.35
+  _dropInterval: 0.3
   _dropheight: 1.1
 --- !u!1 &4632825704807091954
 GameObject:
