@@ -54,8 +54,6 @@ namespace Dixy.LunchBoxRun
     
         private void OnButtonPressed(Material sharedMaterial)
         {
-            Unsunbscribe();
-            
             if (_sharedCubeMaterial == sharedMaterial)
             {
                 OpenGate();
