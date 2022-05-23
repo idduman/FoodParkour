@@ -3501,6 +3501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LiquidType: 2
+  FillAmount: 0
   _liquidTransform: {fileID: 5391365723025295490}
 --- !u!1 &4839753126444866570
 GameObject:
@@ -4899,6 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LiquidType: 3
+  FillAmount: 0
   _liquidTransform: {fileID: 7733080535529123091}
 --- !u!1 &7252453164164172132
 GameObject:
@@ -5750,6 +5752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d34791f0bdcb47b6644468e2c4349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: f9ac3b0a7e14d824287e98b030e49b85, type: 3}
 --- !u!1 &8439537884635595014
 GameObject:
   m_ObjectHideFlags: 0

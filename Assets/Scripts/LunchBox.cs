@@ -11,39 +11,32 @@ namespace Dixy.LunchBoxRun
 {
     public class LunchBox : MonoBehaviour
     {
+        [SerializeField] private Sprite _sprite;
         public static event Action ObstacleHit;
 
-        private List<SolidFood> _foods = new List<SolidFood>();
-        private List<Plate> _plates = new List<Plate>();
-        private LiquidPlate liquidPlate;
+        private List<SolidFood> _solidFoods = new List<SolidFood>();
+        private List<Plate> _solidPlates = new List<Plate>();
+        private List<LiquidPlate> _liquidPlates = new List<LiquidPlate>();
+
+        private int _foodCount;
+        private float FoodPercentage => (float)_foodCount / _solidFoods.Count;
 
         private const float _angleVariaton = 20f;
         private const float _throwSpeed = 5f;
         private const float _foodAlignDuration = 0.25f;
         private const float _jumpAmount = 0.7f;
-
-        private int _foodCount;
-        public int FoodCount
-        {
-            get => _foodCount;
-            private set
-            {
-                _foodCount = value;
-                var foodPercentage = (float) (_foodCount + liquidPlate.FillAmount) / (float) (_foods.Count + 1);
-                UIController.Instance.SetLevelPercentage(foodPercentage);
-            }
-        }
-
         public void Awake()
         {
-            _foods = GetComponentsInChildren<SolidFood>().ToList();
-            _plates = GetComponentsInChildren<Plate>().ToList();
-            liquidPlate = GetComponentInChildren<LiquidPlate>();
+            _solidFoods = GetComponentsInChildren<SolidFood>().ToList();
+            _solidPlates = GetComponentsInChildren<Plate>().ToList();
+            _liquidPlates = GetComponentsInChildren<LiquidPlate>().ToList();
 
-            UIController.Instance.SetLevelPercentage(0f);
-            FoodCount = 0;
+            UIController.Instance.SetLevelPercentage(0f, true);
+            _foodCount = 0;
             
-            _foods.ForEach(f => f.gameObject.SetActive(false));
+            _solidFoods.ForEach(f => f.gameObject.SetActive(false));
+            
+            UIController.Instance.SetLunchboxSprite(_sprite);
         }
 
         public void OnEnable()
@@ -67,7 +60,7 @@ namespace Dixy.LunchBoxRun
 
         private void OnFoodHit(Plate plate, SolidFood food)
         {
-            var foodsMatched = _foods.Where(x => x.Type == food.Type).ToList();
+            var foodsMatched = _solidFoods.Where(x => x.Type == food.Type).ToList();
             if (foodsMatched.Count > 0)
             {
                 var foodInside = foodsMatched.FirstOrDefault(x => !x.Placed);
@@ -77,7 +70,7 @@ namespace Dixy.LunchBoxRun
                 food.IsStatic = true;
                 foodInside.IsStatic = true;
                 foodInside.Placed = true;
-                FoodCount = Mathf.Min(FoodCount + 1, _foods.Count);
+                _foodCount = Mathf.Min(_foodCount + 1, _solidFoods.Count);
                 food.transform.parent = foodInside.transform.parent;
                 food.transform.DOLocalRotateQuaternion(foodInside.transform.localRotation, _foodAlignDuration);
                 food.transform.DOLocalMove(foodInside.transform.localPosition, _foodAlignDuration)
@@ -92,21 +85,23 @@ namespace Dixy.LunchBoxRun
                 RemoveFoodFromPlate(plate);
                 Destroy(food.gameObject);
             }
+            UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
 
         private void OnObstacleHit()
         {
             ObstacleHit?.Invoke();
-            _plates.ForEach(RemoveFoodFromPlate);
+            _solidPlates.ForEach(RemoveFoodFromPlate);
+            UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
         
 
         private void RemoveFoodFromPlate(Plate plate)
         {
-            if (_foods.Count == 0 || FoodCount == 0)
+            if (_solidFoods.Count == 0 || _foodCount == 0)
                 return;
             
-            var foodToRemove = _foods.LastOrDefault(x => x && x.Placed && (x.transform.parent == plate.transform));
+            var foodToRemove = _solidFoods.LastOrDefault(x => x && x.Placed && (x.transform.parent == plate.transform));
             if (foodToRemove == null)
                 return;
             
@@ -117,7 +112,7 @@ namespace Dixy.LunchBoxRun
             foodToRemove.Placed = false;
             foodToRemove.gameObject.SetActive(false);
 
-            FoodCount = Mathf.Max(FoodCount - 1, 0);
+            _foodCount = Mathf.Max(_foodCount - 1, 0);
         }
 
         private Vector3 GenerateRandomVelocity(Vector3 from, Vector3 to)
@@ -129,7 +124,6 @@ namespace Dixy.LunchBoxRun
 
             return vel;
         }
-        
         
     }
 }

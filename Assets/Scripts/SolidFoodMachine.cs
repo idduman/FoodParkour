@@ -16,10 +16,18 @@ namespace Dixy.LunchBoxRun
 
         private float _dropTimer;
         private bool _started = false;
+        private void Awake()
+        {
+            _sprites = GetComponentsInChildren<SpriteRenderer>();
+        }
 
         private void Start()
         {
             _dropTimer = _dropInterval + Random.Range(-_dropInterval/2f, _dropInterval/2f);
+            foreach (var s in _sprites)
+            {
+                s.sprite = GameManager.Instance.FoodSpriteData.GetSolidFoodSprite(_foodType);
+            }
         }
 
         private void OnEnable()
@@ -59,7 +67,7 @@ namespace Dixy.LunchBoxRun
 
         private void DropItem()
         {
-            var foodToDrop = GameManager.Instance.FoodData.GetRandomFood(_foodType);
+            var foodToDrop = GameManager.Instance.FoodPrefabData.GetRandomFood(_foodType);
             if (!foodToDrop)
             {
                 Debug.LogError($"No food of type {_foodType} found in food data");

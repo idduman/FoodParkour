@@ -14,6 +14,7 @@ namespace HyperCore
         [SerializeField] private RectTransform _successPanel;
         [SerializeField] private RectTransform _failPanel;
         [SerializeField] private RectTransform _tutorialPanel;
+        [SerializeField] private Image _lunchboxSprite;
 
         public void ActivateEndgamePanel(bool success)
         {
@@ -51,6 +52,11 @@ namespace HyperCore
             
             DOTween.To(() => _levelBar.value, x => _levelBar.value = x, percentage, 0.2f)
                 .SetEase(Ease.OutQuad);
+        }
+
+        public void SetLunchboxSprite(Sprite sprite)
+        {
+            _lunchboxSprite.sprite = sprite;
         }
     }
 }

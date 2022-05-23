@@ -9,7 +9,8 @@ namespace HyperCore
     public class GameManager : SingletonBehaviour<GameManager>
     {
         public static event Action LevelLoaded;
-        public FoodPrefabData FoodData;
+        public FoodPrefabData FoodPrefabData;
+        public FoodSpriteData FoodSpriteData;
         
         [SerializeField] private List<LevelBehaviour> _levels = new List<LevelBehaviour>();
 

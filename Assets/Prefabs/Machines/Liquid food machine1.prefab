@@ -475,6 +475,7 @@ Transform:
   - {fileID: 8651102999119846891}
   - {fileID: 7125729537677893024}
   - {fileID: 5000023480821638575}
+  - {fileID: 1981172707657486504}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -491,6 +492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
+  _sprite1: {fileID: 4589907037960961021}
+  _sprite2: {fileID: 7089788178571803302}
   _liquidType: 0
 --- !u!136 &7960031063843478404
 CapsuleCollider:
@@ -695,7 +698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6882161992599103490}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.0067378283, y: 1.404349, z: -0.009137273}
+  m_LocalPosition: {x: -0.007, y: 1.404349, z: 0.017}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 3884622312488620253}
@@ -831,3 +834,75 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &5740280847931830922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3884622312488620253}
+    m_Modifications:
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084651305565124051, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+      propertyPath: m_Name
+      value: Sprites
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+--- !u!4 &1981172707657486504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6113382576316736034, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+  m_PrefabInstance: {fileID: 5740280847931830922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4589907037960961021 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8078106592342313335, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+  m_PrefabInstance: {fileID: 5740280847931830922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7089788178571803302 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3299572600836802604, guid: 54e9390799f24714ea6efdd6da06aec7, type: 3}
+  m_PrefabInstance: {fileID: 5740280847931830922}
+  m_PrefabAsset: {fileID: 0}

@@ -8,6 +8,7 @@ namespace Dixy.LunchBoxRun
     public class FoodMachine : MonoBehaviour
     {
         public bool Active;
+        protected SpriteRenderer[] _sprites;
 
         protected virtual void Update()
         {

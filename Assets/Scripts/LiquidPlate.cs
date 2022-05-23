@@ -20,7 +20,7 @@ namespace Dixy.LunchBoxRun
             private set;
         }
 
-        public float FillAmount => Filled ? 1f : 0f;
+        public float FillAmount;
 
         [FormerlySerializedAs("_soupTransform")] [SerializeField] private Transform _liquidTransform;
 
@@ -29,7 +29,7 @@ namespace Dixy.LunchBoxRun
             _initialScale = _liquidTransform.localScale;
             _liquidTransform.localScale = new Vector3(_initialScale.x, 0f, _initialScale.z);
             _liquidTransform.gameObject.SetActive(false);
-            Filled = false;
+            FillAmount = 0f;
         }
 
         public void FillLiquid()
@@ -38,7 +38,7 @@ namespace Dixy.LunchBoxRun
                 return;
 
             Filling?.Invoke();
-            Filled = true;
+            FillAmount = 1f;
             _liquidTransform.gameObject.SetActive(true);
             _liquidTransform.DOScaleY(_initialScale.y, 0.5f)
                 .OnComplete(() => FillComplete?.Invoke());

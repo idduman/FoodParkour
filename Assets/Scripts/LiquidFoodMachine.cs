@@ -20,14 +20,23 @@ namespace Dixy.LunchBoxRun
         //private Painter _painter;
         private LayerMask _plateMask;
         private LiquidPlate liquidPlate;
+        
+        private void Awake()
+        {
+            _sprites = GetComponentsInChildren<SpriteRenderer>();
+        }
 
         private void Start()
         {
             //_painter = GetComponentInChildren<Painter>();
             _stream = transform.Find("Stream");
             _plateMask = LayerMask.GetMask("Plate");
-            var liquid = Instantiate(GameManager.Instance.FoodData.GetLiquidStream(_liquidType), _stream);
+            var liquid = Instantiate(GameManager.Instance.FoodPrefabData.GetLiquidStream(_liquidType), _stream);
             liquid.transform.localPosition = Vector3.zero;
+            foreach (var s in _sprites)
+            {
+                s.sprite = GameManager.Instance.FoodSpriteData.GetLiquidFoodSprite(_liquidType);
+            }
         }
 
         private void OnEnable()
