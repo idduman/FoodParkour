@@ -924,6 +924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6136034891066933056, guid: a247e684992c04930a16e2bcc0cc9b4c, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     - target: {fileID: 6803887447261455866, guid: a247e684992c04930a16e2bcc0cc9b4c, type: 3}
       propertyPath: m_RootOrder
       value: 0

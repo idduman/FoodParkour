@@ -67,8 +67,6 @@ namespace Dixy.LunchBoxRun
 
         private void OnFoodHit(Plate plate, SolidFood food)
         {
-            food.IsStatic = true;
-            
             var foodsMatched = _foods.Where(x => x.Type == food.Type).ToList();
             if (foodsMatched.Count > 0)
             {
@@ -76,6 +74,7 @@ namespace Dixy.LunchBoxRun
                 if (!foodInside)
                     return;
                 
+                food.IsStatic = true;
                 foodInside.IsStatic = true;
                 foodInside.Placed = true;
                 FoodCount = Mathf.Min(FoodCount + 1, _foods.Count);
