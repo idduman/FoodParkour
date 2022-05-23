@@ -19,7 +19,9 @@ namespace Dixy.LunchBoxRun
         private List<LiquidPlate> _liquidPlates = new List<LiquidPlate>();
 
         private int _foodCount;
-        private float FoodPercentage => (float)_foodCount / _solidFoods.Count;
+        private float FoodPercentage =>
+            (_solidPlates.Sum(x => x.FillPercentage) + _liquidPlates.Sum(x => x.FillAmount))
+                    / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count);
 
         private const float _angleVariaton = 20f;
         private const float _throwSpeed = 5f;
@@ -27,26 +29,34 @@ namespace Dixy.LunchBoxRun
         private const float _jumpAmount = 0.7f;
         public void Awake()
         {
-            _solidFoods = GetComponentsInChildren<SolidFood>().ToList();
             _solidPlates = GetComponentsInChildren<Plate>().ToList();
             _liquidPlates = GetComponentsInChildren<LiquidPlate>().ToList();
 
             UIController.Instance.SetLevelPercentage(0f, true);
             _foodCount = 0;
-            
-            _solidFoods.ForEach(f => f.gameObject.SetActive(false));
-            
+
             UIController.Instance.SetLunchboxSprite(_sprite);
+        }
+
+        public void Start()
+        {
+            foreach (var plate in _solidPlates)
+            {
+                _solidFoods.AddRange(plate.Foods);
+            }
+            _solidFoods.ForEach(f => f.gameObject.SetActive(false));
         }
 
         public void OnEnable()
         {
             Plate.FoodHit += OnFoodHit;
+            LiquidPlate.Filling += OnFill;
         }
 
         public void OnDisable()
         {
             Plate.FoodHit -= OnFoodHit;
+            LiquidPlate.Filling -= OnFill;
         }
 
         public void OnTriggerEnter(Collider other)
@@ -92,6 +102,11 @@ namespace Dixy.LunchBoxRun
         {
             ObstacleHit?.Invoke();
             _solidPlates.ForEach(RemoveFoodFromPlate);
+            UIController.Instance.SetLevelPercentage(FoodPercentage);
+        }
+        
+        private void OnFill()
+        {
             UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
         

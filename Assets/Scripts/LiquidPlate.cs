@@ -36,9 +36,9 @@ namespace Dixy.LunchBoxRun
         {
             if (Filled)
                 return;
-
-            Filling?.Invoke();
+            
             FillAmount = 1f;
+            Filling?.Invoke();
             _liquidTransform.gameObject.SetActive(true);
             _liquidTransform.DOScaleY(_initialScale.y, 0.5f)
                 .OnComplete(() => FillComplete?.Invoke());
