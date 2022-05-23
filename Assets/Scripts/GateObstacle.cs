@@ -60,13 +60,13 @@ namespace Dixy.LunchBoxRun
             {
                 OpenGate();
             }
-            else
+            /*else
             {
                 Material[] materials = new Material[_cubeRenderer.materials.Length];
                 materials[0] = _cubeRenderer.materials[0];
                 materials[1] = sharedMaterial;
                 _cubeRenderer.materials = _cylinderRenderer1.materials = _cylinderRenderer2.materials = materials;
-            }
+            }*/
         }
     
         public void OpenGate()
