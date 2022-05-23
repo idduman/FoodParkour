@@ -28,7 +28,7 @@ namespace Dixy.LunchBoxRun
             Filled = false;
         }
 
-        public void FillSoup()
+        public void FillLiquid()
         {
             if (Filled)
                 return;
