@@ -103,7 +103,7 @@ namespace Dixy.LunchBoxRun
 
         private void RemoveFoodFromPlate(Plate plate)
         {
-            if (_foods.Count == 0)
+            if (_foods.Count == 0 || FoodCount == 0)
                 return;
             
             var foodToRemove = _foods.LastOrDefault(x => x && x.Placed && (x.transform.parent == plate.transform));

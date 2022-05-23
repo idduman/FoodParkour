@@ -1310,6 +1310,9 @@ namespace PaintIn3D
 
 		private void ExecuteCommands(List<P3dCommand> commands, bool sendNotifications, RenderTexture main, ref RenderTexture swap)
 		{
+			if (!main)
+				return;
+			
 			RenderTexture.active = main;
 
 			// Loop through all commands
