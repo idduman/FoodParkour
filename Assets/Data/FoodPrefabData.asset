@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b2da59740a13d45a32f47ab3a2d41a, type: 3}
   m_Name: FoodPrefabData
   m_EditorClassIdentifier: 
-  FoodList:
+  SolidFoodList:
   - {fileID: 3012300455863066493, guid: d503ef0e061234dc69fcc1701accbd89, type: 3}
   - {fileID: 6352955427047705738, guid: 806d14addbc4a4a568424f54d20a1f6e, type: 3}
   - {fileID: 7997769355619367976, guid: fb6050c316c0a4b38becd500a0d44ccd, type: 3}
@@ -27,3 +27,8 @@ MonoBehaviour:
   - {fileID: 7145302059674596498, guid: 028ee8f56c61b48d5adff58a852bbb23, type: 3}
   - {fileID: 9159174649617423026, guid: 430b9882dc3e049e68b7c96eca069742, type: 3}
   - {fileID: 8513410278849845958, guid: 8e3eac6a2d82343c6b98d246e9cb0bc6, type: 3}
+  - {fileID: 9107038265248234755, guid: 81bf49c1e95ca7a4e8b1b4042471d985, type: 3}
+  LiquidStreamList:
+  - {fileID: 475162779447910471, guid: 2a1e68a36d422104dbdc1d85f588a115, type: 3}
+  - {fileID: 4080993552310292771, guid: 23dd71758da2a5645b4aa11d7ebeb8be, type: 3}
+  - {fileID: 4080993552310292771, guid: 20bbe2899796bd141a6ae1630a07eec3, type: 3}

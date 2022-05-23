@@ -223,7 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806acb1c148ac864399666d36b47e803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soupTransform: {fileID: 6934912792491523116}
+  LiquidType: 1
+  _liquidTransform: {fileID: 6934912792491523116}
 --- !u!1 &5468755081088933662
 GameObject:
   m_ObjectHideFlags: 0

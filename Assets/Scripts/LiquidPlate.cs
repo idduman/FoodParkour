@@ -1,15 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Dixy.LunchBoxRun
 {
-    public class SoupPlate : Plate
+    public class LiquidPlate : Plate
     {
         public static event Action Filling;
-        public event Action FillComplete; 
+        public event Action FillComplete;
+
+        public LiquidType LiquidType;
+
+        private Vector3 _initialScale;
 
         public bool Filled
         {
@@ -19,12 +22,13 @@ namespace Dixy.LunchBoxRun
 
         public float FillAmount => Filled ? 1f : 0f;
 
-        [SerializeField] private Transform _soupTransform;
+        [FormerlySerializedAs("_soupTransform")] [SerializeField] private Transform _liquidTransform;
 
         private void Start()
         {
-            _soupTransform.localPosition = new Vector3(_soupTransform.localPosition.x,
-                _soupTransform.localPosition.y, _soupTransform.localPosition.z - 0.1f);
+            _initialScale = _liquidTransform.localScale;
+            _liquidTransform.localScale = new Vector3(_initialScale.x, 0f, _initialScale.z);
+            _liquidTransform.gameObject.SetActive(false);
             Filled = false;
         }
 
@@ -35,7 +39,8 @@ namespace Dixy.LunchBoxRun
 
             Filling?.Invoke();
             Filled = true;
-            _soupTransform.DOLocalMoveZ(_soupTransform.localPosition.z + 0.1f, 0.5f)
+            _liquidTransform.gameObject.SetActive(true);
+            _liquidTransform.DOScaleY(_initialScale.y, 0.5f)
                 .OnComplete(() => FillComplete?.Invoke());
         }
     }

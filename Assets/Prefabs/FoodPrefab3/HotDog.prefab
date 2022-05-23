@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 7666134626315954189}
   - component: {fileID: 9159174649617423026}
   m_Layer: 6
-  m_Name: Sausage
+  m_Name: HotDog
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

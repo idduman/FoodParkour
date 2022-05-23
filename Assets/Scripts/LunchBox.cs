@@ -15,7 +15,7 @@ namespace Dixy.LunchBoxRun
 
         private List<SolidFood> _foods = new List<SolidFood>();
         private List<Plate> _plates = new List<Plate>();
-        private SoupPlate _soupPlate;
+        private LiquidPlate liquidPlate;
 
         private const float _angleVariaton = 20f;
         private const float _throwSpeed = 5f;
@@ -29,7 +29,7 @@ namespace Dixy.LunchBoxRun
             private set
             {
                 _foodCount = value;
-                var foodPercentage = (float) (_foodCount + _soupPlate.FillAmount) / (float) (_foods.Count + 1);
+                var foodPercentage = (float) (_foodCount + liquidPlate.FillAmount) / (float) (_foods.Count + 1);
                 UIController.Instance.SetLevelPercentage(foodPercentage);
             }
         }
@@ -38,7 +38,7 @@ namespace Dixy.LunchBoxRun
         {
             _foods = GetComponentsInChildren<SolidFood>().ToList();
             _plates = GetComponentsInChildren<Plate>().ToList();
-            _soupPlate = GetComponentInChildren<SoupPlate>();
+            liquidPlate = GetComponentInChildren<LiquidPlate>();
 
             UIController.Instance.SetLevelPercentage(0f);
             FoodCount = 0;

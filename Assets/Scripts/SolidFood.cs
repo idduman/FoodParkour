@@ -50,6 +50,7 @@ namespace Dixy.LunchBoxRun
         HotDog,
         Sausage,
         Bug,
+        ColaGlass,
     }
 }
 

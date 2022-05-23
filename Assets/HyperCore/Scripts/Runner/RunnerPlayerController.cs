@@ -75,7 +75,7 @@ namespace HyperCore.Runner
             InputController.Instance.Released += OnRelease;
             InputController.Instance.Moved += OnMoved;
             LunchBox.ObstacleHit += Stagger;
-            SoupPlate.Filling += Stagger;
+            LiquidPlate.Filling += Stagger;
         }
 
         private void Unsubscribe()
@@ -87,7 +87,7 @@ namespace HyperCore.Runner
             InputController.Instance.Released -= OnRelease;
             InputController.Instance.Moved -= OnMoved;
             LunchBox.ObstacleHit -= Stagger;
-            SoupPlate.Filling -= Stagger;
+            LiquidPlate.Filling -= Stagger;
         }
         
         private void OnPressed(Vector3 pos)

@@ -287,8 +287,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.8369883, b: 0.56700003, a: 1}
-      maxColor: {r: 1, g: 0.62352943, b: 0, a: 1}
+      minColor: {r: 0.289, g: 0.07167201, b: 0.09268114, a: 1}
+      maxColor: {r: 0.2, g: 0.03137255, b: 0.011764706, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4836,8 +4836,9 @@ GameObject:
   - component: {fileID: 136683248346592945}
   - component: {fileID: 136683248346592950}
   - component: {fileID: 136683248346592951}
+  - component: {fileID: 4080993552310292771}
   m_Layer: 0
-  m_Name: Paint_Line
+  m_Name: Coke_Stream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4922,7 +4923,7 @@ MonoBehaviour:
     Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  color: {r: 1, g: 0.6217326, b: 0, a: 1}
+  color: {r: 0.199, g: 0.028865239, b: 0.00970732, a: 1}
   opacity: 1
   angle: 0
   scale: {x: 1, y: 1, z: 1}
@@ -4936,6 +4937,19 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
+--- !u!114 &4080993552310292771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136683248346592949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c619b6f1d78aa8949b66c72e2c84b0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodType: 3
 --- !u!1 &136683248441181293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683248441181293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.49999982, z: 0}
+  m_LocalPosition: {x: 0, y: -0.49999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 136683248346592945}
@@ -5223,8 +5237,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.83811766, b: 0.57, a: 1}
-      maxColor: {r: 1, g: 0.62352943, b: 0, a: 1}
+      minColor: {r: 0.2901961, g: 0.07058824, b: 0.09411765, a: 1}
+      maxColor: {r: 0.2, g: 0.03137255, b: 0.011764706, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9841,7 +9855,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6032659c47b967145bba0c6b4859baa4, type: 2}
+  - {fileID: 2100000, guid: f4b0a62013176f6499d85481c3310f94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9863,8 +9877,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -10.68, y: 1.204993, z: 1.6769997}
-  - {x: -10.68, y: -2.1860306, z: 1.6769997}
+  - {x: 0, y: 0.67, z: 0}
+  - {x: 0, y: -1.3299999, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.05
@@ -9885,8 +9899,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.62352943, b: 0, a: 1}
-      key1: {r: 1, g: 0.62352943, b: 0, a: 1}
+      key0: {r: 0.2, g: 0.03137255, b: 0.011764706, a: 1}
+      key1: {r: 0.2, g: 0.03137255, b: 0.011764706, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

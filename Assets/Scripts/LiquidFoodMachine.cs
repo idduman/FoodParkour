@@ -10,19 +10,24 @@ namespace Dixy.LunchBoxRun
 {
     public class LiquidFoodMachine : FoodMachine
     {
-        [SerializeField] private GameObject _soupStream;
+        [SerializeField] private LiquidType _liquidType;
+        
+        private Transform _stream;
 
         private bool _started;
         private bool _flowing;
 
         //private Painter _painter;
         private LayerMask _plateMask;
-        private SoupPlate _soupPlate;
+        private LiquidPlate liquidPlate;
 
         private void Start()
         {
             //_painter = GetComponentInChildren<Painter>();
+            _stream = transform.Find("Stream");
             _plateMask = LayerMask.GetMask("Plate");
+            var liquid = Instantiate(GameManager.Instance.FoodData.GetLiquidStream(_liquidType), _stream);
+            liquid.transform.localPosition = Vector3.zero;
         }
 
         private void OnEnable()
@@ -33,8 +38,8 @@ namespace Dixy.LunchBoxRun
         private void OnDisable()
         {
             GameManager.LevelLoaded -= OnLevelLoaded;
-            if(_soupPlate)
-                _soupPlate.FillComplete -= OnFillComplete;
+            if(liquidPlate)
+                liquidPlate.FillComplete -= OnFillComplete;
         }
     
         private void OnLevelLoaded()
@@ -45,10 +50,12 @@ namespace Dixy.LunchBoxRun
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Plate") && other.TryGetComponent<SoupPlate>(out _soupPlate))
+            if (other.CompareTag("Plate") 
+                && other.TryGetComponent<LiquidPlate>(out liquidPlate)
+                && liquidPlate.LiquidType == _liquidType)
             {
-                _soupPlate.FillComplete += OnFillComplete;
-                _soupPlate.FillSoup();
+                liquidPlate.FillComplete += OnFillComplete;
+                liquidPlate.FillLiquid();
             }
         }
 
@@ -60,7 +67,7 @@ namespace Dixy.LunchBoxRun
         protected override void Update()
         {
             base.Update();
-            _soupStream.gameObject.SetActive(_started && _flowing && Active);
+            _stream.gameObject.SetActive(_started && _flowing && Active);
 
             /*if (!_flowing)
                 return;
