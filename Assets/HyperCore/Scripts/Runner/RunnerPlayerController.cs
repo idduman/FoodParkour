@@ -6,12 +6,12 @@ namespace HyperCore.Runner
 {
     public class RunnerPlayerController : MonoBehaviour
     {
-        [SerializeField] private Transform _playerFollower;
         [SerializeField] private float _moveSpeed = 2f;
         [SerializeField] private float _steerSpeed = 5f;
         [SerializeField] private float _responsiveness = 10f;
         [SerializeField] private float _clampX = 3f;
 
+        private Transform _playerFollower;
         private bool _active;
         private const float StaggerDuration = 0.5f;
 
@@ -39,6 +39,7 @@ namespace HyperCore.Runner
         private void Start()
         {
             _player = GetComponent<RunnerPlayerBehaviour>();
+            _playerFollower = CameraController.Instance.PlayerFollower;
             //_anim = GetComponentInChildren<Animator>();
             _started = false;
             Subscribe();

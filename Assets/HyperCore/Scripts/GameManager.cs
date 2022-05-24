@@ -44,6 +44,7 @@ namespace HyperCore
             LevelLoaded?.Invoke();
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void FinishGame(bool success)
         {
             if (success)
@@ -51,7 +52,21 @@ namespace HyperCore
             
             PlayerPrefs.SetInt("PlayerLevel", CurrentLevel);
             
+            StartCoroutine(FinishRoutine(success));
+        }
+
+        private void EndGame(bool success)
+        {
             UIController.Instance.ActivateEndgamePanel(success);
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private IEnumerator FinishRoutine(bool success)
+        {
+            CameraController.Instance.ActivateEndgameCamera();
+            yield return new WaitForSeconds(1.5f);
+            EndGame(success);
+            yield return null;
         }
     }
 }

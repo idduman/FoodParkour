@@ -469,7 +469,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.26098, y: 0.000000016610084, z: -0.0000000044905226, w: 0.96534425}
+  m_LocalRotation: {x: 0.26098, y: -0.000000016610079, z: 0.0000000044905204, w: 0.96534425}
   m_LocalPosition: {x: 0, y: 5.7, z: 1.4000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
