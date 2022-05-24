@@ -14,6 +14,7 @@ namespace Dixy.LunchBoxRun
         Soup,
         Ketchup,
         Coke,
+        Puree,
     }
 }
 
