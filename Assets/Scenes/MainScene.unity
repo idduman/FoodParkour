@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3519152276005877936, guid: 384f168de73c2064b9f8ec14be2fbbaf, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4712542555369783728, guid: 384f168de73c2064b9f8ec14be2fbbaf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -229,10 +225,6 @@ PrefabInstance:
     - target: {fileID: 5982439047231904122, guid: 384f168de73c2064b9f8ec14be2fbbaf, type: 3}
       propertyPath: m_Name
       value: UICanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7936901361603978464, guid: 384f168de73c2064b9f8ec14be2fbbaf, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 384f168de73c2064b9f8ec14be2fbbaf, type: 3}
