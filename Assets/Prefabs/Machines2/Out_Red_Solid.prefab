@@ -463,7 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Active: 0
   _foodType: 0
-  _dropInterval: 0.3
+  _dropInterval: 0.25
   _nozzleTransform: {fileID: 5454579881651549676}
 --- !u!54 &7850858473428425149
 Rigidbody:

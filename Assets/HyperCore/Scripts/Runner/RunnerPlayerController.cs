@@ -28,6 +28,7 @@ namespace HyperCore.Runner
         }
         
         private bool _started;
+        private bool _finished;
         private float _offsetX;
         //private Animator _anim;
         private RunnerPlayerBehaviour _player;
@@ -108,6 +109,12 @@ namespace HyperCore.Runner
         private void OnMoved(Vector3 inputDelta)
         {
             _offsetX = Mathf.Clamp(_offsetX + inputDelta.x * _steerSpeed, -_clampX, _clampX);
+        }
+
+        public void OnFinish()
+        {
+            Active = false;
+            transform.DOMoveX(0f, 0.5f);
         }
 
         private void Stagger()

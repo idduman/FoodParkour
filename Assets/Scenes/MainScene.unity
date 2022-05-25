@@ -375,8 +375,6 @@ MonoBehaviour:
   FoodSpriteData: {fileID: 11400000, guid: 2ecca083b9dda2a4c9b9c5f064c32942, type: 2}
   _levels:
   - {fileID: 8969715388329621713, guid: abc668c361490214bbecd07ff49c8e16, type: 3}
-  - {fileID: 8969715388329621713, guid: 78a6f8e71b6ebab4f8b65f4884a5bcd4, type: 3}
-  - {fileID: 8969715388329621713, guid: 2292f8f00e79b2b4c8c43c3fc0617614, type: 3}
   CurrentLevel: 0
 --- !u!4 &722672407
 Transform:
