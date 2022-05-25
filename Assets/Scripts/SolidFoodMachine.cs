@@ -12,8 +12,8 @@ namespace Dixy.LunchBoxRun
     {
         [SerializeField] private FoodType _foodType;
         [SerializeField] private float _dropInterval = 0.5f;
-        [SerializeField] private float _dropheight = 1f;
-
+        [SerializeField] private Transform _nozzleTransform;
+        
         private float _dropTimer;
         private bool _started = false;
         private void Awake()
@@ -21,8 +21,10 @@ namespace Dixy.LunchBoxRun
             _sprites = GetComponentsInChildren<SpriteRenderer>();
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
+
             _dropTimer = _dropInterval + Random.Range(-_dropInterval/2f, _dropInterval/2f);
             foreach (var s in _sprites)
             {
@@ -74,7 +76,8 @@ namespace Dixy.LunchBoxRun
                 return;
             }
             
-            Instantiate(foodToDrop, transform.position + _dropheight * Vector3.up, foodToDrop.transform.rotation);
+            var food = Instantiate(foodToDrop, _nozzleTransform.position, foodToDrop.transform.rotation);
+            food.transform.SetParent(_nozzleTransform);
         }
     }
 }

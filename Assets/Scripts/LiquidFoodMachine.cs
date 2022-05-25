@@ -11,8 +11,7 @@ namespace Dixy.LunchBoxRun
     public class LiquidFoodMachine : FoodMachine
     {
         [SerializeField] private LiquidType _liquidType;
-        
-        private Transform _stream;
+        [SerializeField] private Transform _nozzleTransform;
 
         private bool _started;
         private bool _flowing;
@@ -26,13 +25,13 @@ namespace Dixy.LunchBoxRun
             _sprites = GetComponentsInChildren<SpriteRenderer>();
         }
 
-        private void Start()
+        protected override void Start()
         {
-            //_painter = GetComponentInChildren<Painter>();
-            _stream = transform.Find("Stream");
+            base.Start();
             _plateMask = LayerMask.GetMask("Plate");
-            var liquid = Instantiate(GameManager.Instance.FoodPrefabData.GetLiquidStream(_liquidType), _stream);
+            var liquid = Instantiate(GameManager.Instance.FoodPrefabData.GetLiquidStream(_liquidType), _nozzleTransform);
             liquid.transform.localPosition = Vector3.zero;
+            
             foreach (var s in _sprites)
             {
                 s.sprite = GameManager.Instance.FoodSpriteData.GetLiquidFoodSprite(_liquidType);
@@ -76,7 +75,7 @@ namespace Dixy.LunchBoxRun
         protected override void Update()
         {
             base.Update();
-            _stream.gameObject.SetActive(_started && _flowing && Active);
+            _nozzleTransform.gameObject.SetActive(_started && _flowing && Active);
 
             /*if (!_flowing)
                 return;

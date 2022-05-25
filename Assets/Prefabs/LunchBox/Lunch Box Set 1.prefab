@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &4712196447982237999
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806acb1c148ac864399666d36b47e803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
   LiquidType: 1
   FillAmount: 0
   _liquidTransform: {fileID: 6934912792491523116}
@@ -287,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &5839896403092053231
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &8388991800124186635
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &8409276103512673629
 GameObject:
   m_ObjectHideFlags: 0
