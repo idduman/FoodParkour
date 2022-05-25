@@ -92,11 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e30d02c33f9281478b111ae24575aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerFollower: {fileID: 0}
-  _moveSpeed: 2
-  _steerSpeed: 4
-  _responsiveness: 8
-  _clampX: 1.75
+  _moveSpeed: 2.5
+  _steerSpeed: 5
+  _responsiveness: 10
+  _clampX: 1.8
 --- !u!114 &8292034659539875482
 MonoBehaviour:
   m_ObjectHideFlags: 0

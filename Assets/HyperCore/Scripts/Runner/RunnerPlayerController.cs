@@ -28,6 +28,7 @@ namespace HyperCore.Runner
         }
         
         private bool _started;
+        private bool _finished;
         private float _offsetX;
         //private Animator _anim;
         private RunnerPlayerBehaviour _player;
@@ -96,18 +97,24 @@ namespace HyperCore.Runner
             _started = true;
             UIController.Instance.ToggleTutorialPanel(false);
             _moveSpeedTween.Kill();
-            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, _moveSpeed, 0.2f);
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, _moveSpeed, 0.15f);
         }
         
         private void OnRelease(Vector3 obj)
         {
             _moveSpeedTween.Kill();
-            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, 0f, 0.2f);
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, 0f, 0.15f);
         }
     
         private void OnMoved(Vector3 inputDelta)
         {
             _offsetX = Mathf.Clamp(_offsetX + inputDelta.x * _steerSpeed, -_clampX, _clampX);
+        }
+
+        public void OnFinish()
+        {
+            Active = false;
+            transform.DOMoveX(0f, 0.5f);
         }
 
         private void Stagger()

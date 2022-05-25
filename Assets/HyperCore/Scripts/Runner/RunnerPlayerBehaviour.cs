@@ -56,7 +56,7 @@ namespace HyperCore.Runner
                 return;
 
             _finished = true;
-            _controller.Active = false;
+            _controller.OnFinish();
             StopAllCoroutines();
             GameManager.Instance.FinishGame(success);
         }

@@ -11,7 +11,7 @@ namespace Dixy.LunchBoxRun
     public class SolidFoodMachine : FoodMachine
     {
         [SerializeField] private FoodType _foodType;
-        [SerializeField] private float _dropInterval = 0.5f;
+        [SerializeField] private float _dropInterval = 0.25f;
         [SerializeField] private Transform _nozzleTransform;
         
         private float _dropTimer;
