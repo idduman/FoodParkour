@@ -19,7 +19,7 @@ namespace Dixy.LunchBoxRun
         private List<LiquidPlate> _liquidPlates = new List<LiquidPlate>();
 
         private int _foodCount;
-        private float FoodPercentage =>
+        public float FoodPercentage =>
             (_solidPlates.Sum(x => x.FillPercentage) + _liquidPlates.Sum(x => x.FillAmount))
                     / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count);
 

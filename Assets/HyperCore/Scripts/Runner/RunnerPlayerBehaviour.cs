@@ -1,3 +1,4 @@
+using Dixy.LunchBoxRun;
 using UnityEngine;
 
 namespace HyperCore.Runner
@@ -10,6 +11,7 @@ namespace HyperCore.Runner
         private Transform _finish;
 
         private RunnerPlayerController _controller;
+        private LunchBox _lunchBox;
 
         private bool _finished;
 
@@ -17,6 +19,7 @@ namespace HyperCore.Runner
         {
             ZCoordinate = transform.position.z;
             _controller = GetComponent<RunnerPlayerController>();
+            _lunchBox = GetComponentInChildren<LunchBox>();
             _finish = GameObject.FindGameObjectWithTag("Finish").transform;
             if(!_finish)
                 Debug.LogError("No finish line found in level!");
@@ -35,7 +38,7 @@ namespace HyperCore.Runner
             ZCoordinate = transform.position.z;
 
             if (transform.position.z > _finish.position.z)
-                Finish(true);
+                Finish(_lunchBox.FoodPercentage > 0.4f);
         }
 
         private void OnTriggerEnter(Collider other)
