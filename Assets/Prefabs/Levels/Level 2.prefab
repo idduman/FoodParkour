@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00659c1a8354fb478d9147b8e11fc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Skybox: {fileID: 2100000, guid: 56113b3b655ab7349bab4d7d405c258a, type: 2}
 --- !u!1 &8969715388446201382
 GameObject:
   m_ObjectHideFlags: 0

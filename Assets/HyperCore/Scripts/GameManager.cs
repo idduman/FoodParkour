@@ -37,6 +37,11 @@ namespace HyperCore
             var index = CurrentLevel % _levels.Count;
             
             _level = Instantiate(_levels[index]);
+            if (_level.Skybox)
+            {
+                RenderSettings.skybox = _level.Skybox;
+            }
+            
             UIController.Instance.SetLevelText(index);
             if(index == 0)
                 UIController.Instance.ToggleTutorialPanel(true);

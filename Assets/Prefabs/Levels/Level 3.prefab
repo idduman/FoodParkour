@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00659c1a8354fb478d9147b8e11fc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Skybox: {fileID: 2100000, guid: 0d40ce759221f7a43959e41f7b57f5c4, type: 2}
 --- !u!1 &8969715388446201382
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8969715388053899130}
     m_Modifications:
+    - target: {fileID: 5631592218874470037, guid: a247e684992c04930a16e2bcc0cc9b4c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: febad5fc2bcb13c42add0c5f8b21e802, type: 2}
     - target: {fileID: 6136034891066933056, guid: a247e684992c04930a16e2bcc0cc9b4c, type: 3}
       propertyPath: m_Name
       value: Platform (1)
