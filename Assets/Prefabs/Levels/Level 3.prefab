@@ -665,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599992865652593470, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
       propertyPath: _foodType
-      value: 14
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8599992865652593470, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
       propertyPath: _dropInterval
@@ -821,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8962980220814376318, guid: bf42a6f9656db4eafa5f8671b6d2dbbc, type: 3}
       propertyPath: _foodType
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8962980220814376318, guid: bf42a6f9656db4eafa5f8671b6d2dbbc, type: 3}
       propertyPath: _dropInterval
@@ -1199,6 +1199,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8969715388329621712}
     m_Modifications:
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.9539676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.7092648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9664997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.25666797
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000001662996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000044163255
+      objectReference: {fileID: 0}
     - target: {fileID: 3227874814768889278, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -1529,7 +1553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8270868954535194161, guid: e072c571497d644f5b251c2a7f197d51, type: 3}
       propertyPath: _foodType
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8270868954535194161, guid: e072c571497d644f5b251c2a7f197d51, type: 3}
       propertyPath: _dropInterval

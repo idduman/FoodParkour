@@ -11,6 +11,7 @@ namespace Dixy.LunchBoxRun
 {
     public class LunchBox : MonoBehaviour
     {
+        [SerializeField] private String _name;
         [SerializeField] private Sprite _sprite;
         public static event Action ObstacleHit;
 
@@ -35,7 +36,7 @@ namespace Dixy.LunchBoxRun
             UIController.Instance.SetLevelPercentage(0f, true);
             _foodCount = 0;
 
-            UIController.Instance.SetLunchboxSprite(_sprite);
+            UIController.Instance.SetLunchboxPanel(_sprite, _name);
         }
 
         public void Start()

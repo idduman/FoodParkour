@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599992865652593470, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
       propertyPath: _dropInterval
-      value: 0.15
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
@@ -743,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599992865652593470, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
       propertyPath: _dropInterval
-      value: 0.25
+      value: 0.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12d052712e0d243de9de43ed87b79420, type: 3}
@@ -821,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8962980220814376318, guid: bf42a6f9656db4eafa5f8671b6d2dbbc, type: 3}
       propertyPath: _dropInterval
-      value: 0.32
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf42a6f9656db4eafa5f8671b6d2dbbc, type: 3}
@@ -1055,7 +1055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8528243232266965059, guid: 6b03b087307ad4f3f9027868db7239c6, type: 3}
       propertyPath: _dropInterval
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b03b087307ad4f3f9027868db7239c6, type: 3}
@@ -1133,6 +1133,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8969715388329621712}
     m_Modifications:
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000001662996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000044163255
+      objectReference: {fileID: 0}
     - target: {fileID: 3227874814768889278, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -1525,7 +1533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8528243232266965059, guid: 6b03b087307ad4f3f9027868db7239c6, type: 3}
       propertyPath: _dropInterval
-      value: 0.32
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b03b087307ad4f3f9027868db7239c6, type: 3}

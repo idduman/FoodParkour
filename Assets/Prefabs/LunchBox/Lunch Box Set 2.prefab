@@ -2631,7 +2631,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.41, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &449541045708200096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2644,6 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &3634506799120268707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3488,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.13, z: 0.25}
-  m_Center: {x: 0, y: -0.01, z: 0.025}
+  m_Center: {x: 0, y: -0.01, z: 0.1}
 --- !u!114 &7743385507998232244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3500,6 +3501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806acb1c148ac864399666d36b47e803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
   LiquidType: 2
   FillAmount: 0
   _liquidTransform: {fileID: 5391365723025295490}
@@ -4118,7 +4120,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78, y: 0.38, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &2196165741877635212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4131,6 +4133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &5878898231634117268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,7 +4863,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.36, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &4050281206802511748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4873,6 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!136 &7282646971722597926
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4899,6 +4903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806acb1c148ac864399666d36b47e803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
   LiquidType: 3
   FillAmount: 0
   _liquidTransform: {fileID: 7733080535529123091}
@@ -5664,7 +5669,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78, y: 0.56, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &2757936322872437378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5677,6 +5682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6375034d8e5ac5e4880a6a548a968401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foods: []
 --- !u!1 &8409276103512673629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,6 +5758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d34791f0bdcb47b6644468e2c4349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: Fast Food Box
   _sprite: {fileID: 21300000, guid: f9ac3b0a7e14d824287e98b030e49b85, type: 3}
 --- !u!1 &8439537884635595014
 GameObject:

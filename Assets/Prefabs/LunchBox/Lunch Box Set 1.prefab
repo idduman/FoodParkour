@@ -152,7 +152,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.41, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!114 &449541045708200096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +210,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.13, z: 0.25}
-  m_Center: {x: 0, y: -0.01, z: 0.025}
+  m_Size: {x: 0.32, y: 0.1, z: 0.25}
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!114 &7743385507998232244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78, y: 0.38, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!114 &2196165741877635212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.36, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!114 &4050281206802511748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78, y: 0.56, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!114 &2757936322872437378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d34791f0bdcb47b6644468e2c4349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: Healthy Box
   _sprite: {fileID: 21300000, guid: e3ef342a677ef904c896205a70559317, type: 3}
 --- !u!1001 &445432399128769796
 PrefabInstance:
