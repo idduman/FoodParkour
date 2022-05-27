@@ -12,6 +12,7 @@ namespace Dixy.LunchBoxRun
     {
         [SerializeField] private FoodType _foodType;
         [SerializeField] private float _dropInterval = 0.25f;
+        [SerializeField] private float _foodScaleMultiplier = 1.5f;
         [SerializeField] private Transform _nozzleTransform;
         
         private float _dropTimer;
@@ -76,8 +77,10 @@ namespace Dixy.LunchBoxRun
                 return;
             }
             
-            var food = Instantiate(foodToDrop, _nozzleTransform.position, foodToDrop.transform.rotation);
-            food.transform.SetParent(_nozzleTransform);
+            var foodTransform = Instantiate(foodToDrop, _nozzleTransform.position, foodToDrop.transform.rotation).transform;
+            foodTransform.localScale *= _foodScaleMultiplier;
+            foodTransform.SetParent(_nozzleTransform);
+            foodTransform.RotateAround(foodTransform.position, Vector3.up, Random.Range(-180f, 180f));
         }
     }
 }
