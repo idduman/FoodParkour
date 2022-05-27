@@ -17,7 +17,7 @@ namespace HyperCore
         public int CurrentLevel;
 
         private LevelBehaviour _level;
-
+    
         private void Start()
         {
             if (_levels.Count < 1)

@@ -366,9 +366,9 @@ MonoBehaviour:
   FoodPrefabData: {fileID: 11400000, guid: 30bd6df97e39ad840957ddc2d3ce6457, type: 2}
   FoodSpriteData: {fileID: 11400000, guid: 2ecca083b9dda2a4c9b9c5f064c32942, type: 2}
   _levels:
+  - {fileID: 8969715388329621713, guid: 7f9fbcc6df769e54e8787502e10d9f0f, type: 3}
   - {fileID: 8969715388329621713, guid: abc668c361490214bbecd07ff49c8e16, type: 3}
   - {fileID: 8969715388329621713, guid: e1b1c2bb2f9cf444796cffcebe0bf0d5, type: 3}
-  - {fileID: 8969715388329621713, guid: 7f9fbcc6df769e54e8787502e10d9f0f, type: 3}
   CurrentLevel: 0
 --- !u!4 &722672407
 Transform:
@@ -461,7 +461,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.25666797, y: 0.00000001662996, z: -0.0000000044163255, w: 0.9664997}
+  m_LocalRotation: {x: 0.25666797, y: 0.000000016535889, z: -0.000000004391344, w: 0.9664997}
   m_LocalPosition: {x: 0, y: 4.8, z: 0.8000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

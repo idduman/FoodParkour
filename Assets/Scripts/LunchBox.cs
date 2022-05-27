@@ -118,7 +118,7 @@ namespace Dixy.LunchBoxRun
         private void Shake(float strength)
         {
             _shakeTween.Kill();
-            _shakeTween = transform.DOShakePosition(0.25f, strength, 20, 30);
+            _shakeTween = transform.DOShakePosition(0.2f, strength, 40, 15);
         }
         
 

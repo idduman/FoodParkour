@@ -38,7 +38,7 @@ namespace HyperCore.Runner
             ZCoordinate = transform.position.z;
 
             if (transform.position.z > _finish.position.z)
-                Finish(_lunchBox.FoodPercentage > 0.4f);
+                Finish(_lunchBox.FoodPercentage > 0.5f);
         }
 
         private void OnTriggerEnter(Collider other)
