@@ -391,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3082480543402196427, guid: 7baeef2b0850742f5bcbe3fe7c693d30, type: 3}
       propertyPath: _dropInterval
-      value: 0.32
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7000789499343693614, guid: 7baeef2b0850742f5bcbe3fe7c693d30, type: 3}
       propertyPath: m_RootOrder
@@ -1145,6 +1145,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8969715388329621712}
     m_Modifications:
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000001662996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155479094837615326, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000044163255
+      objectReference: {fileID: 0}
     - target: {fileID: 3227874814768889278, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
       propertyPath: m_Name
       value: Cameras

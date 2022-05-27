@@ -18,6 +18,8 @@ namespace Dixy.LunchBoxRun
         private List<SolidFood> _solidFoods = new List<SolidFood>();
         private List<Plate> _solidPlates = new List<Plate>();
         private List<LiquidPlate> _liquidPlates = new List<LiquidPlate>();
+        
+        private Tween _shakeTween;
 
         private int _foodCount;
         public float FoodPercentage =>
@@ -93,6 +95,7 @@ namespace Dixy.LunchBoxRun
             }
             else
             {
+                Shake(0.1f);
                 RemoveFoodFromPlate(plate);
                 Destroy(food.gameObject);
             }
@@ -104,11 +107,18 @@ namespace Dixy.LunchBoxRun
             ObstacleHit?.Invoke();
             _solidPlates.ForEach(RemoveFoodFromPlate);
             UIController.Instance.SetLevelPercentage(FoodPercentage);
+            Shake(0.2f);
         }
         
         private void OnFill()
         {
             UIController.Instance.SetLevelPercentage(FoodPercentage);
+        }
+
+        private void Shake(float strength)
+        {
+            _shakeTween.Kill();
+            _shakeTween = transform.DOShakePosition(0.25f, strength, 20, 30);
         }
         
 
