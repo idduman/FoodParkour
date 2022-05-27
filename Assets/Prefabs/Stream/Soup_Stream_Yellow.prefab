@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683248187241794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0.110000074, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 136683248346592945}
@@ -287,8 +287,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8235294, g: 0.25611764, b: 0.25611764, a: 1}
-      maxColor: {r: 0.8235294, g: 0, b: 0, a: 1}
+      minColor: {r: 1, g: 0.8369883, b: 0.56700003, a: 1}
+      maxColor: {r: 1, g: 0.62352943, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4836,9 +4836,9 @@ GameObject:
   - component: {fileID: 136683248346592945}
   - component: {fileID: 136683248346592950}
   - component: {fileID: 136683248346592951}
-  - component: {fileID: 4080993552310292771}
+  - component: {fileID: 475162779447910471}
   m_Layer: 0
-  m_Name: Soup_Stream
+  m_Name: Soup_Stream_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4851,7 +4851,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683248346592949}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4923,7 +4923,7 @@ MonoBehaviour:
     Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  color: {r: 0.8235294, g: 0, b: 0, a: 1}
+  color: {r: 1, g: 0.6217326, b: 0, a: 1}
   opacity: 1
   angle: 0
   scale: {x: 1, y: 1, z: 1}
@@ -4937,7 +4937,7 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
---- !u!114 &4080993552310292771
+--- !u!114 &475162779447910471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4976,7 +4976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683248441181293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.8900001, z: 0}
+  m_LocalPosition: {x: 0, y: -1.8899999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 136683248346592945}
@@ -5237,8 +5237,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.305, b: 0.305, a: 1}
-      maxColor: {r: 0.8235294, g: 0, b: 0, a: 1}
+      minColor: {r: 1, g: 0.83811766, b: 0.57, a: 1}
+      maxColor: {r: 1, g: 0.62352943, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9799,7 +9799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683248591818788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.89, z: 0}
+  m_LocalPosition: {x: 0, y: -1.8899999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 136683248346592945}
@@ -9830,7 +9830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136683249491707508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.39, z: 0}
+  m_LocalPosition: {x: 0, y: -1.3899999, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 136683248346592945}
@@ -9855,7 +9855,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d059fb559c303e43883decc383dd2b2, type: 2}
+  - {fileID: 2100000, guid: 6032659c47b967145bba0c6b4859baa4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9877,8 +9877,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: -0.71999997, z: 0}
-  - {x: 0, y: -2.72, z: 0}
+  - {x: -1.8971579, y: 2.5115697, z: 28.114376}
+  - {x: -1.8971579, y: -0.8794544, z: 28.114376}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.05
@@ -9899,8 +9899,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.8235294, g: 0, b: 0, a: 1}
-      key1: {r: 0.8235294, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 0.62352943, b: 0, a: 1}
+      key1: {r: 1, g: 0.62352943, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
