@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2314765241676005237}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: metarig
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800000952112951267}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_pinky.02.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4064146101552402729}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_middle.02.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -103,9 +103,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2954708534137896164}
   - component: {fileID: 2952447513755804972}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: forearm.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8739011884213411164}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_middle.03.L_end
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2919459314180879794}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_index.03.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -209,9 +209,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1184348976521878123}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: thumb.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,9 +240,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8233469257948111833}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: palm.03.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4953383370036897243}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_ring.03.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -302,9 +302,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3025688353396212837}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_index.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6471344639706917896}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: thumb.03.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025075754972989418}
   - component: {fileID: 507579761453536145}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Vert
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6899569636433671273}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_middle.03.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -505,9 +505,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6310757668580094154}
   - component: {fileID: 8924143529165133575}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: hand.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,9 +552,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7509345088832641220}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: palm.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,9 +584,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727819443099789644}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: palm.04.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -615,9 +615,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8491456930529668048}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: palm.02.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8097982872418618819}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_pinky.03.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -677,9 +677,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6455184961195151904}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_middle.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,9 +708,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5809765398031599015}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_ring.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6764661586767539525}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_index.02.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -772,9 +772,9 @@ GameObject:
   - component: {fileID: 6244851357493576546}
   - component: {fileID: 1701795793517186361}
   - component: {fileID: 3347367426512158557}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Arm
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4131389830034097559}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: thumb.03.L_end
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5204001998822217476}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_index.03.L_end
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7206330988212013479}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_ring.03.L_end
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8252657242600728825}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_ring.02.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3655070263650752570}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: thumb.02.L
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -990,7 +990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7275125200588823340}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_pinky.03.L_end
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1020,9 +1020,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7360906557664477214}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: f_pinky.01.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,9 +1052,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6707601393268785173}
   - component: {fileID: 5235679445309870012}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: upper_arm.L
-  m_TagString: Obstacle
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

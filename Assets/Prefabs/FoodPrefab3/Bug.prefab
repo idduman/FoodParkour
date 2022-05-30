@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3609546795769345604}
   - component: {fileID: 5902587977198686623}
   - component: {fileID: 7772332268781225342}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Cylinder.046
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 9153957788927614504}
   - component: {fileID: 7371771543898702008}
   - component: {fileID: 1677455989242181583}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Cylinder.048
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 1540391880995046178}
   - component: {fileID: 4530479805477045350}
   - component: {fileID: 5612412734727237063}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Bug
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 9002494997594177496}
   - component: {fileID: 361618417315161929}
   - component: {fileID: 2534963870005726918}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Sphere.038
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 104210440132252003}
   - component: {fileID: 7340829563467702396}
   - component: {fileID: 6725068318877318806}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Cylinder.047
   m_TagString: SolidFood
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 1030044295383616096}
   - component: {fileID: 762383373036334750}
   - component: {fileID: 6538071853447686045}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Sphere.039
   m_TagString: SolidFood
   m_Icon: {fileID: 0}

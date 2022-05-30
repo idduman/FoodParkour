@@ -28,13 +28,13 @@ namespace Dixy.LunchBoxRun
             Mathf.Clamp(
                 (_solidPlates.Sum(x => x.FillPercentage) 
                  + _liquidPlates.Sum(x => x.FillAmount))
-                / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count + _bugCount/4f),
+                / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count + _bugCount/5f),
                 0f, 1f);
 
-        private const float _angleVariaton = 20f;
-        private const float _throwSpeed = 5f;
+        private const float _angleVariaton = 15f;
+        private const float _throwSpeed = 7f;
         private const float _foodAlignDuration = 0.25f;
-        private const float _jumpAmount = 0.7f;
+        private const float _jumpAmount = 0.8f;
         public void Awake()
         {
             _solidPlates = GetComponentsInChildren<Plate>().ToList();
@@ -59,6 +59,7 @@ namespace Dixy.LunchBoxRun
         public void OnEnable()
         {
             Plate.FoodHit += OnFoodHit;
+            Plate.ArmHit += OnArmHit;
             BugFood.BugHit += OnBugHit;
             LiquidPlate.Filling += OnFill;
         }
@@ -66,6 +67,7 @@ namespace Dixy.LunchBoxRun
         public void OnDisable()
         {
             Plate.FoodHit -= OnFoodHit;
+            Plate.ArmHit -= OnArmHit;
             BugFood.BugHit -= OnBugHit;
             LiquidPlate.Filling -= OnFill;
         }
@@ -125,6 +127,18 @@ namespace Dixy.LunchBoxRun
             UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
 
+        private void OnArmHit(Plate plate, Collider other)
+        {
+            if (_shakeTween is {active: true})
+                return;
+
+            if (!RemoveFoodFromPlate(plate, other))
+                return;
+            
+            Shake(0.1f);
+            UIController.Instance.SetLevelPercentage(FoodPercentage);
+        }
+
         private void OnObstacleHit()
         {
             if (_shakeTween is {active: true})
@@ -132,7 +146,7 @@ namespace Dixy.LunchBoxRun
             
             Shake(0.2f);
             ObstacleHit?.Invoke();
-            _solidPlates.ForEach(RemoveFoodFromPlate);
+            _solidPlates.ForEach(x => RemoveFoodFromPlate(x));
             UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
         
@@ -148,28 +162,32 @@ namespace Dixy.LunchBoxRun
         }
         
 
-        private void RemoveFoodFromPlate(Plate plate)
+        private SolidFood RemoveFoodFromPlate(Plate plate, Collider other = null)
         {
             if (_solidFoods.Count == 0 || _foodCount == 0)
-                return;
+                return null;
             
             var foodToRemove = _solidFoods.LastOrDefault(x => x && x.Placed && (x.transform.parent == plate.transform));
             if (foodToRemove == null)
-                return;
+                return null;
             
             var foodToThrow = Instantiate(foodToRemove, foodToRemove.transform.position, foodToRemove.transform.rotation);
             foodToThrow.transform.parent = transform.parent.parent.parent;
-            foodToThrow.Throw(GenerateRandomVelocity(transform.position, plate.transform.position));
+            foodToThrow.Throw(GenerateRandomVelocity(other ? other.transform.position : transform.position,
+                foodToThrow.transform.position));
             
             foodToRemove.Placed = false;
             foodToRemove.gameObject.SetActive(false);
 
             _foodCount = Mathf.Max(_foodCount - 1, 0);
+            
+            return foodToRemove;
         }
 
         private Vector3 GenerateRandomVelocity(Vector3 from, Vector3 to)
         {
             var vel = (to - from);
+            vel.Normalize();
             vel.y = _jumpAmount;
             vel = vel.normalized * _throwSpeed;
             vel = Quaternion.AngleAxis(Random.Range(-_angleVariaton / 2f, _angleVariaton / 2f), Vector3.up) * vel;

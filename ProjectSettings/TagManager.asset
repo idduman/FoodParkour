@@ -11,6 +11,7 @@ TagManager:
   - SolidFood
   - Machine
   - Obstacle
+  - Arm
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Obstacle
   - Soup
   - Machine
-  - 
-  - 
+  - Bug
+  - Arm
   - 
   - 
   - 
