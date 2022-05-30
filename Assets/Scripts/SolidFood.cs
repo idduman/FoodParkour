@@ -13,12 +13,12 @@ namespace Dixy.LunchBoxRun
         public bool IsStatic = false;
         public bool Placed = false;
 
-        private void OnCollisionEnter(Collision other)
+        protected virtual void OnCollisionEnter(Collision other)
         {
             if (IsStatic)
                 return;
 
-            if (!other.collider.CompareTag("LunchBox"))
+            if (other.collider.CompareTag("Platform") || other.collider.CompareTag("Machine"))
             {
                 Destroy(gameObject);
             }

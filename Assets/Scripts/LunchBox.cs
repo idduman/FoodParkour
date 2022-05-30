@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using DG.Tweening;
 using HyperCore;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,12 +20,16 @@ namespace Dixy.LunchBoxRun
         private List<Plate> _solidPlates = new List<Plate>();
         private List<LiquidPlate> _liquidPlates = new List<LiquidPlate>();
         
-        private Tween _shakeTween;
-
+        private Tweener _shakeTween;
         private int _foodCount;
+        private int _bugCount;
+
         public float FoodPercentage =>
-            (_solidPlates.Sum(x => x.FillPercentage) + _liquidPlates.Sum(x => x.FillAmount))
-                    / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count);
+            Mathf.Clamp(
+                (_solidPlates.Sum(x => x.FillPercentage) 
+                 + _liquidPlates.Sum(x => x.FillAmount))
+                / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count + _bugCount/3f),
+                0f, 1f);
 
         private const float _angleVariaton = 20f;
         private const float _throwSpeed = 5f;
@@ -37,6 +42,7 @@ namespace Dixy.LunchBoxRun
 
             UIController.Instance.SetLevelPercentage(0f, true);
             _foodCount = 0;
+            _bugCount = 0;
 
             UIController.Instance.SetLunchboxPanel(_sprite, _name);
         }
@@ -53,12 +59,14 @@ namespace Dixy.LunchBoxRun
         public void OnEnable()
         {
             Plate.FoodHit += OnFoodHit;
+            BugFood.BugHit += OnBugHit;
             LiquidPlate.Filling += OnFill;
         }
 
         public void OnDisable()
         {
             Plate.FoodHit -= OnFoodHit;
+            BugFood.BugHit -= OnBugHit;
             LiquidPlate.Filling -= OnFill;
         }
 
@@ -73,13 +81,19 @@ namespace Dixy.LunchBoxRun
 
         private void OnFoodHit(Plate plate, SolidFood food)
         {
+            if (food is BugFood)
+                return;
+
             var foodsMatched = _solidFoods.Where(x => x.Type == food.Type).ToList();
             if (foodsMatched.Count > 0)
             {
                 var foodInside = foodsMatched.FirstOrDefault(x => !x.Placed);
                 if (!foodInside)
+                {
+                    Destroy(food.gameObject);
                     return;
-                
+                }
+
                 food.IsStatic = true;
                 foodInside.IsStatic = true;
                 foodInside.Placed = true;
@@ -95,19 +109,31 @@ namespace Dixy.LunchBoxRun
             }
             else
             {
+                Destroy(food.gameObject);
+                if (_shakeTween is {active: true})
+                    return;
                 Shake(0.1f);
                 RemoveFoodFromPlate(plate);
-                Destroy(food.gameObject);
             }
+            UIController.Instance.SetLevelPercentage(FoodPercentage);
+        }
+        
+        private void OnBugHit(BugFood bug)
+        {
+            bug.transform.SetParent(transform);
+            _bugCount++;
             UIController.Instance.SetLevelPercentage(FoodPercentage);
         }
 
         private void OnObstacleHit()
         {
+            if (_shakeTween is {active: true})
+                return;
+            
+            Shake(0.2f);
             ObstacleHit?.Invoke();
             _solidPlates.ForEach(RemoveFoodFromPlate);
             UIController.Instance.SetLevelPercentage(FoodPercentage);
-            Shake(0.2f);
         }
         
         private void OnFill()

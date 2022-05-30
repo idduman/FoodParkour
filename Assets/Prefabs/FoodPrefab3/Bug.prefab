@@ -172,7 +172,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4168349555567271047}
   - component: {fileID: 1540391880995046178}
-  - component: {fileID: 5348866390139398942}
+  - component: {fileID: 4530479805477045350}
+  - component: {fileID: 5612412734727237063}
   m_Layer: 6
   m_Name: Bug
   m_TagString: SolidFood
@@ -215,7 +216,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &5348866390139398942
+--- !u!114 &4530479805477045350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,12 +225,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 3644295527774733885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1271805dab99dbd4e94bdf4c8b78e444, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8f0e98ef86e494fbe2a6e483fce5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 13
   IsStatic: 0
   Placed: 0
+--- !u!135 &5612412734727237063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644295527774733885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5497415110006208403
 GameObject:
   m_ObjectHideFlags: 0
