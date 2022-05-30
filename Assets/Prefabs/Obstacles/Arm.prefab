@@ -771,8 +771,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6244851357493576546}
   - component: {fileID: 1701795793517186361}
+  - component: {fileID: 3347367426512158557}
   m_Layer: 9
-  m_Name: Lunch Box Obstacle
+  m_Name: Arm
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,6 +810,25 @@ MonoBehaviour:
   _elbowTransform: {fileID: 2954708534137896164}
   _rotateDuration: 1.2
   _waitDuration: 1
+--- !u!95 &3347367426512158557
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6764964735008184792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a8b41b770172b7498aa67d76badafc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7006926547064527734
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ namespace Dixy.LunchBoxRun
             Mathf.Clamp(
                 (_solidPlates.Sum(x => x.FillPercentage) 
                  + _liquidPlates.Sum(x => x.FillAmount))
-                / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count + _bugCount/3f),
+                / (_solidPlates.Count(x => !x.IsEmpty) + _liquidPlates.Count + _bugCount/4f),
                 0f, 1f);
 
         private const float _angleVariaton = 20f;
