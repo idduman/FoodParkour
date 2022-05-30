@@ -97,13 +97,13 @@ namespace HyperCore.Runner
             _started = true;
             UIController.Instance.ToggleTutorialPanel(false);
             _moveSpeedTween.Kill();
-            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, _moveSpeed, 0.15f);
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, _moveSpeed, 0.1f);
         }
         
         private void OnRelease(Vector3 obj)
         {
             _moveSpeedTween.Kill();
-            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, 0f, 0.15f);
+            _moveSpeedTween = DOTween.To(() => _currentMoveSpeed, x => _currentMoveSpeed = x, 0f, 0.1f);
         }
     
         private void OnMoved(Vector3 inputDelta)

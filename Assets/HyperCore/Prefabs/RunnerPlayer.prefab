@@ -92,9 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e30d02c33f9281478b111ae24575aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 3
-  _steerSpeed: 6
-  _responsiveness: 10
+  _moveSpeed: 5
+  _steerSpeed: 8
+  _responsiveness: 12
   _clampX: 1.8
 --- !u!114 &8292034659539875482
 MonoBehaviour:

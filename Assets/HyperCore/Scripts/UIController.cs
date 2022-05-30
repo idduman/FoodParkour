@@ -31,6 +31,8 @@ namespace HyperCore
             _endgamePanel.gameObject.SetActive(false);
             _successPanel.gameObject.SetActive(false);
             _failPanel.gameObject.SetActive(false);
+            _endgameFill.fillAmount = 0f;
+            _endgameText.text = "0%";
         }
 
         private void Update()
@@ -53,6 +55,9 @@ namespace HyperCore
             _endgamePanel.gameObject.SetActive(false);
             _successPanel.gameObject.SetActive(false);
             _failPanel.gameObject.SetActive(false);
+            
+            _endgameFill.fillAmount = 0f;
+            _endgameText.text = "0%";
             
             GameManager.Instance.LoadLevel();
         }

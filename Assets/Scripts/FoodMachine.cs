@@ -28,7 +28,7 @@ namespace Dixy.LunchBoxRun
 
             var dist =  transform.position.z - RunnerPlayerBehaviour.ZCoordinate;
 
-            Active = (dist < 10f && dist > ClipDist);
+            Active = (dist < 15f && dist > ClipDist);
             gameObject.SetActive(dist > ClipDist);
         }
     }
