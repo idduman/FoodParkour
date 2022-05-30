@@ -179,6 +179,10 @@ namespace Dixy.LunchBoxRun
             foodToRemove.Placed = false;
             foodToRemove.gameObject.SetActive(false);
 
+            var liquid = foodToRemove.GetComponentInChildren<LiquidPlate>();
+            if(liquid)
+                liquid.ResetLiquid();
+
             _foodCount = Mathf.Max(_foodCount - 1, 0);
             
             return foodToRemove;
