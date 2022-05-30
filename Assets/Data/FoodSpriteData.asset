@@ -34,7 +34,7 @@ MonoBehaviour:
   - FoodType: 10
     Sprite: {fileID: 21300000, guid: 18e7d22334440c246a0a0e57380a9314, type: 3}
   - FoodType: 11
-    Sprite: {fileID: 21300000, guid: 19ec92351092f4944ab7ba1ef64166b2, type: 3}
+    Sprite: {fileID: 21300000, guid: 8f69bcfbf72f7b44ca23f1f4e846eec9, type: 3}
   - FoodType: 12
     Sprite: {fileID: 21300000, guid: 2afcaf22b70840f47a82f263533196ff, type: 3}
   - FoodType: 13
