@@ -66,7 +66,7 @@ namespace Dixy.LunchBoxRun
         {
             if (other.CompareTag("Obstacle"))
             {
-                other.transform.SendMessageUpwards("OpenGate");
+                other.transform.SendMessageUpwards("OpenGate", SendMessageOptions.DontRequireReceiver);
                 OnObstacleHit();
             }
         }
