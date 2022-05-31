@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Dixy.LunchBoxRun;
+using GameAnalyticsSDK;
 using UnityEngine;
 
 namespace HyperCore
@@ -26,7 +27,8 @@ namespace HyperCore
                 return;
             }
             CurrentLevel = PlayerPrefs.GetInt("PlayerLevel", 0);
-            LoadLevel();
+            
+            StartCoroutine(LoadRoutine());
         }
 
         public void LoadLevel()
@@ -52,6 +54,8 @@ namespace HyperCore
         // ReSharper disable Unity.PerformanceAnalysis
         public void FinishGame(bool success)
         {
+            GameAnalytics.NewProgressionEvent(success ? GAProgressionStatus.Complete : GAProgressionStatus.Fail, CurrentLevel.ToString());
+            
             if (success)
                 CurrentLevel++;
             
@@ -72,6 +76,15 @@ namespace HyperCore
             yield return new WaitForSeconds(1.5f);
             EndGame(success);
             yield return null;
+        }
+
+        private IEnumerator LoadRoutine()
+        {
+            yield return new WaitForSeconds(1);
+            
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, CurrentLevel.ToString());
+            
+            LoadLevel();
         }
     }
 }
