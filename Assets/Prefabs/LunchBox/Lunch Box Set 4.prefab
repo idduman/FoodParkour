@@ -5637,8 +5637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d34791f0bdcb47b6644468e2c4349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Fast Food Box
-  _sprite: {fileID: 21300000, guid: f9ac3b0a7e14d824287e98b030e49b85, type: 3}
+  _name: Vegetable Box
+  _sprite: {fileID: 21300000, guid: 97842f2e31c7c0a4ea93a86f98fbea2d, type: 3}
 --- !u!1 &8439537884635595014
 GameObject:
   m_ObjectHideFlags: 0

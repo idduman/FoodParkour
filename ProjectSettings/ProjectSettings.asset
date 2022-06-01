@@ -239,7 +239,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/iddum/Projects/Packages/DixyB.keystore
+  AndroidKeystoreName: '{dedicated}: Unity/DixyB.keystore'
   AndroidKeyaliasName: dixyb
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
