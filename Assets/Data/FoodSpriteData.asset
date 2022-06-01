@@ -15,32 +15,46 @@ MonoBehaviour:
   _solidFoodSprites:
   - FoodType: 1
     Sprite: {fileID: 21300000, guid: 882dd54afa217d04999a1308763960e1, type: 3}
+    DropInterval: 0.25
   - FoodType: 2
     Sprite: {fileID: 21300000, guid: d1d118c9ee1caae4c8fffec18dc7127d, type: 3}
+    DropInterval: 0.32
   - FoodType: 3
     Sprite: {fileID: 21300000, guid: bc70003868afdcc479d63a2e40027ef9, type: 3}
+    DropInterval: 0.4
   - FoodType: 4
     Sprite: {fileID: 21300000, guid: be9638f89991f8247a08c2d9200b699d, type: 3}
+    DropInterval: 0.25
   - FoodType: 5
     Sprite: {fileID: 21300000, guid: 09d46a95070cfe04197f2cd6e76e5006, type: 3}
+    DropInterval: 0.25
   - FoodType: 6
     Sprite: {fileID: 21300000, guid: 712c083a33d97da498e0faa7c3243c3f, type: 3}
+    DropInterval: 0.4
   - FoodType: 7
     Sprite: {fileID: 21300000, guid: add21bfe745f7994ebef629f6b5eb9b7, type: 3}
+    DropInterval: 0.4
   - FoodType: 8
     Sprite: {fileID: 21300000, guid: e6169bccfff0df440bab1730b14b9824, type: 3}
+    DropInterval: 0.32
   - FoodType: 9
     Sprite: {fileID: 21300000, guid: 19ec92351092f4944ab7ba1ef64166b2, type: 3}
+    DropInterval: 0.32
   - FoodType: 10
     Sprite: {fileID: 21300000, guid: 18e7d22334440c246a0a0e57380a9314, type: 3}
+    DropInterval: 0.11
   - FoodType: 11
     Sprite: {fileID: 21300000, guid: 8f69bcfbf72f7b44ca23f1f4e846eec9, type: 3}
+    DropInterval: 0.45
   - FoodType: 12
     Sprite: {fileID: 21300000, guid: 2afcaf22b70840f47a82f263533196ff, type: 3}
+    DropInterval: 0.4
   - FoodType: 13
     Sprite: {fileID: 21300000, guid: 07f3f80469489c04aae7c74ac703683f, type: 3}
+    DropInterval: 0.25
   - FoodType: 14
     Sprite: {fileID: 21300000, guid: 80744ad4bf69a4842b0d8350f0e9ff3a, type: 3}
+    DropInterval: 0.5
   _liquidFoodSprites:
   - LiquidType: 1
     Sprite: {fileID: 21300000, guid: ba79aeceaf5d15e4d9f7f6485d0cc994, type: 3}

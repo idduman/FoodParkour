@@ -16,6 +16,7 @@ namespace Dixy.LunchBoxRun
         {
             public FoodType FoodType;
             public Sprite Sprite;
+            public float DropInterval;
         }
         [Serializable]
         public struct LiquidSprite
@@ -33,6 +34,11 @@ namespace Dixy.LunchBoxRun
         public Sprite GetSolidFoodSprite(FoodType foodType)
         {
             return _solidFoodSprites.FirstOrDefault(x => x.FoodType == foodType).Sprite;
+        }
+
+        public float GetFoodDropInterval(FoodType foodType)
+        {
+            return _solidFoodSprites.FirstOrDefault(x => x.FoodType == foodType).DropInterval;
         }
 
         public Sprite GetLiquidFoodSprite(LiquidType liquidType)

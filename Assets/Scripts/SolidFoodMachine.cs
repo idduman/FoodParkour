@@ -26,6 +26,8 @@ namespace Dixy.LunchBoxRun
         {
             base.Start();
 
+            _dropInterval = GameManager.Instance.FoodSpriteData.GetFoodDropInterval(_foodType);
+
             _dropTimer = _dropInterval + Random.Range(-_dropInterval/2f, _dropInterval/2f);
             foreach (var s in _sprites)
             {
