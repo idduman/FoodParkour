@@ -16,9 +16,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 3229092440706275
+  - 0000000000000000
   appLabels:
-  - LunchBox
+  - FoodParkour
   cookie: 1
   logging: 1
   status: 1

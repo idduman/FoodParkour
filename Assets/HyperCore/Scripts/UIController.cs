@@ -16,11 +16,7 @@ namespace HyperCore
         [SerializeField] private RectTransform _endgamePanel;
         [SerializeField] private RectTransform _successPanel;
         [SerializeField] private RectTransform _failPanel;
-        [SerializeField] private RectTransform _boxPanel;
-        [SerializeField] private RectTransform _boxPanelEndgame;
         [SerializeField] private RectTransform _tutorialPanel;
-        [SerializeField] private Image _lunchboxSprite;
-        [SerializeField] private TextMeshProUGUI _lunchboxText;
         [SerializeField] private Image _endgameFill;
         [SerializeField] private TextMeshProUGUI _endgameText;
 
@@ -29,7 +25,6 @@ namespace HyperCore
 
         private void Awake()
         {
-            _lunchBoxPos = _lunchboxSprite.rectTransform.position; 
             ResetUI();
         }
 
@@ -81,19 +76,9 @@ namespace HyperCore
             _successPanel.gameObject.SetActive(false);
             _failPanel.gameObject.SetActive(false);
             _levelBar.gameObject.SetActive(true);
-            _lunchboxText.gameObject.SetActive(true);
 
-            _lunchboxSprite.rectTransform.position = _lunchBoxPos;
-            _lunchboxSprite.rectTransform.localScale = Vector3.one;
-            
             _endgameFill.fillAmount = 0f;
             _endgameText.text = "0%";
-        }
-
-        public void SetLunchboxPanel(Sprite sprite, String name)
-        {
-            _lunchboxSprite.sprite = sprite;
-            _lunchboxText.text = name;
         }
 
         private void EndgameFill()
@@ -110,11 +95,8 @@ namespace HyperCore
         private IEnumerator EndGameRoutine(bool success)
         {
             _levelBar.gameObject.SetActive(false);
-            _lunchboxText.gameObject.SetActive(false);
             _endgamePanel.gameObject.SetActive(true);
-            _lunchboxSprite.transform.DOMove(_boxPanelEndgame.position, 0.5f);
-            _lunchboxSprite.transform.DOScale(2.2f * Vector3.one, 0.5f);
-            
+
             yield return new WaitForSeconds(0.5f);
             
             EndgameFill();
