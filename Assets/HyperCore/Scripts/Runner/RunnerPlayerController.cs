@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Dixy.LunchBoxRun;
 using UnityEngine;
 
 namespace HyperCore.Runner
@@ -76,8 +75,6 @@ namespace HyperCore.Runner
             InputController.Instance.Pressed += OnPressed;
             InputController.Instance.Released += OnRelease;
             InputController.Instance.Moved += OnMoved;
-            LunchBox.ObstacleHit += Stagger;
-            LiquidPlate.Filling += Stagger;
         }
 
         private void Unsubscribe()
@@ -88,8 +85,6 @@ namespace HyperCore.Runner
             InputController.Instance.Pressed -= OnPressed;
             InputController.Instance.Released -= OnRelease;
             InputController.Instance.Moved -= OnMoved;
-            LunchBox.ObstacleHit -= Stagger;
-            LiquidPlate.Filling -= Stagger;
         }
         
         private void OnPressed(Vector3 pos)
