@@ -4,14 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - LunchBox
-  - Plate
   - Platform
-  - SolidFood
-  - Machine
-  - Obstacle
-  - Arm
+  - Fan
+  - Belt
   layers:
   - Default
   - TransparentFX
@@ -19,14 +14,14 @@ TagManager:
   - 
   - Water
   - UI
-  - Food
-  - Plate
-  - LunchBox
-  - Obstacle
-  - Soup
-  - Machine
-  - Bug
-  - Arm
+  - Player
+  - Belt
+  - Fan
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

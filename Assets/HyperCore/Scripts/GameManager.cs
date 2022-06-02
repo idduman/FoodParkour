@@ -9,6 +9,7 @@ namespace HyperCore
     public class GameManager : SingletonBehaviour<GameManager>
     {
         public static event Action LevelLoaded;
+        public static event Action Finished;
         
         [SerializeField] private List<LevelBehaviour> _levels = new List<LevelBehaviour>();
 
@@ -52,6 +53,8 @@ namespace HyperCore
         public void FinishGame(bool success)
         {
             GameAnalytics.NewProgressionEvent(success ? GAProgressionStatus.Complete : GAProgressionStatus.Fail, CurrentLevel.ToString());
+            
+            Finished?.Invoke();
             
             if (success)
                 CurrentLevel++;
