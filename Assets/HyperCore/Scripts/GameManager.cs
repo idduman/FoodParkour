@@ -75,6 +75,7 @@ namespace HyperCore
             yield return null;
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         private IEnumerator LoadRoutine()
         {
             yield return new WaitForSeconds(1);
