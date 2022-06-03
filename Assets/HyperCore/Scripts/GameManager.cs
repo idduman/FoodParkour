@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dixy.FoodParkour;
 using GameAnalyticsSDK;
 using UnityEngine;
 
@@ -10,12 +11,13 @@ namespace HyperCore
     {
         public static event Action LevelLoaded;
         public static event Action Finished;
-        
+        public GameConfig Config;
+
         [SerializeField] private List<LevelBehaviour> _levels = new List<LevelBehaviour>();
 
         public int CurrentLevel;
 
-        private LevelBehaviour _level;
+        public LevelBehaviour Level { get; private set; }
     
         private void Start()
         {
@@ -31,15 +33,15 @@ namespace HyperCore
 
         public void LoadLevel()
         {
-            if(_level)
-                DestroyImmediate(_level.gameObject);
+            if(Level)
+                DestroyImmediate(Level.gameObject);
 
             var index = CurrentLevel % _levels.Count;
             
-            _level = Instantiate(_levels[index]);
-            if (_level.Skybox)
+            Level = Instantiate(_levels[index]);
+            if (Level.Skybox)
             {
-                RenderSettings.skybox = _level.Skybox;
+                RenderSettings.skybox = Level.Skybox;
             }
             
             UIController.Instance.SetLevelText(index);

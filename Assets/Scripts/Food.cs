@@ -29,6 +29,12 @@ namespace Dixy.FoodParkour
                 _rb.isKinematic = false;
                 _rb.constraints = RigidbodyConstraints.None;
                 _rb.AddForce(throwVector * 5f, ForceMode.VelocityChange);
+                return;
+            }
+
+            if (other.gameObject.CompareTag("Player") && _thrown)
+            {
+                
             }
         }
     }

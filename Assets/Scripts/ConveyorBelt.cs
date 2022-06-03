@@ -7,7 +7,6 @@ namespace Dixy.FoodParkour
     public class ConveyorBelt : MonoBehaviour
     {
         public bool Active;
-        [SerializeField] private float _moveSpeed = 2f;
 
         private Rigidbody _rb;
 
@@ -15,7 +14,7 @@ namespace Dixy.FoodParkour
         void Start()
         {
             Active = true;
-            _currentMoveSpeed = _moveSpeed;
+            _currentMoveSpeed = GameManager.Instance.Config.ConveyorMoveSpeed;
             _rb = GetComponent<Rigidbody>();
         }
 

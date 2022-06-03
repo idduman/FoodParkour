@@ -6,7 +6,6 @@ namespace Dixy.FoodParkour
     public class PlayerBehaviour : MonoBehaviour
     {
         private Transform _finish;
-        
         private bool _finished;
 
         void Start()
@@ -60,6 +59,7 @@ namespace Dixy.FoodParkour
 
         private void OnPressed(Vector3 obj)
         {
+            UIController.Instance.ToggleTutorialPanel(false);
         }
         
 

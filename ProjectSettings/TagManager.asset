@@ -7,6 +7,8 @@ TagManager:
   - Platform
   - Fan
   - Belt
+  - Arm
+  - Table
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - Player
   - Belt
   - Fan
-  - 
-  - 
-  - 
+  - Machine
+  - Table
+  - Arm
   - 
   - 
   - 
