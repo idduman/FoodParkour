@@ -1,4 +1,5 @@
 using System;
+using HyperCore;
 using UnityEngine;
 
 namespace Dixy.FoodParkour
@@ -25,10 +26,10 @@ namespace Dixy.FoodParkour
             if (other.gameObject.layer == _fanLayer && !_thrown)
             {
                 _thrown = true;
-                transform.parent = other.transform.parent;
+                transform.parent = GameManager.Instance.Level.transform;
                 _rb.isKinematic = false;
                 _rb.constraints = RigidbodyConstraints.None;
-                _rb.AddForce(throwVector * 5f, ForceMode.VelocityChange);
+                _rb.AddForce(throwVector * 20f, ForceMode.VelocityChange);
                 return;
             }
 
