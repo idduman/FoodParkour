@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using HyperCore;
 using UnityEngine;
 
@@ -8,15 +9,17 @@ namespace Dixy.FoodParkour
     public class Food : MonoBehaviour
     {
         private int _fanLayer;
+        private int _floorLayer;
+        private int _noclipLayer;
         private Rigidbody _rb;
 
         private bool _thrown;
-        private readonly Vector3 throwVector = new Vector3(7, 1, 0).normalized;
 
         private void Start()
         {
             _fanLayer = LayerMask.NameToLayer("Fan");
-            //_beltLayer = LayerMask.NameToLayer("Belt");
+            _floorLayer = LayerMask.NameToLayer("Floor");
+            _noclipLayer = LayerMask.NameToLayer("Food_Noclip");
             _rb = GetComponent<Rigidbody>();
             _thrown = false;
         }
@@ -29,13 +32,24 @@ namespace Dixy.FoodParkour
                 transform.parent = GameManager.Instance.Level.transform;
                 _rb.isKinematic = false;
                 _rb.constraints = RigidbodyConstraints.None;
-                _rb.AddForce(throwVector * 20f, ForceMode.VelocityChange);
+                _rb.AddForce(GameManager.Instance.Config.FoodFlyVector.normalized * GameManager.Instance.Config.FoodFlySpeed, ForceMode.VelocityChange);
+                _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
                 return;
             }
-
             if (other.gameObject.CompareTag("Player") && _thrown)
             {
-                
+                gameObject.layer = _noclipLayer;
+                /*transform.parent = other.transform;
+                _rb.velocity = Vector3.zero;
+                _rb.isKinematic = true;*/
+            }
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.layer == _floorLayer)
+            {
+                Destroy(gameObject);
             }
         }
     }

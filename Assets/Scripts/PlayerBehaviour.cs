@@ -1,3 +1,4 @@
+using DG.Tweening;
 using HyperCore;
 using UnityEngine;
 
@@ -5,14 +6,24 @@ namespace Dixy.FoodParkour
 {
     public class PlayerBehaviour : MonoBehaviour
     {
+        [SerializeField] private Transform _mouthTrigger;
+
+        private Animator _anim;
         private Transform _finish;
         private bool _finished;
+        private Tweener _mouthTween;
+        private Vector3 _mouthScale;
+        private static readonly int MouthOpen = Animator.StringToHash("MouthOpen");
 
         void Start()
         {
+            _anim = GetComponent<Animator>();
             _finish = GameObject.FindGameObjectWithTag("Finish").transform;
             if(!_finish)
                 Debug.LogError("No finish line found in level!");
+
+            _mouthScale = _mouthTrigger.localScale;
+            _mouthTrigger.localScale = new Vector3(_mouthScale.x, 0f, _mouthScale.z);
             
             Subscribe();
         }
@@ -55,13 +66,14 @@ namespace Dixy.FoodParkour
 
         private void OnRelease(Vector3 obj)
         {
+            ToggleMouth(false);
         }
 
         private void OnPressed(Vector3 obj)
         {
             UIController.Instance.ToggleTutorialPanel(false);
+            ToggleMouth(true);
         }
-        
 
         private void Finish(bool success)
         {
@@ -72,6 +84,29 @@ namespace Dixy.FoodParkour
             StopAllCoroutines();
             Unsubscribe();
             GameManager.Instance.FinishGame(success);
+        }
+
+        private void ToggleMouth(bool open)
+        {
+            var scale = _mouthScale;
+            scale.y = open ? _mouthScale.y : 0f;
+            _mouthTween.Kill();
+            _anim.SetBool(MouthOpen, open);
+            _mouthTween = _mouthTrigger.DOScale(scale, 0.3f)
+                .OnComplete(() =>
+                {
+                    if(!open)
+                        MoveAllChildren();
+                });
+        }
+
+        private void MoveAllChildren()
+        {
+            /*var foods = GetComponentsInChildren<Food>();
+            foreach (var food in foods)
+            {
+                food.transform.position += 2f * Vector3.down;
+            }*/
         }
     }
 }
