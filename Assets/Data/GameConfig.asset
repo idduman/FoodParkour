@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c82e9d4a78b8e2449b1bb7a3eb11a98, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  ConveyorMoveSpeed: 0.6
+  ConveyorMoveSpeed: 0.7
   BarrierToggleDuration: 1
   FoodFlySpeed: 5
   FoodFlyVector: {x: 3, y: 1, z: 0}
+  TrainMoveDuration: 3
+  SoupFallDuration: 0.15
+  SoupTurnDuration: 1

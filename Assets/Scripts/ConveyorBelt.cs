@@ -7,6 +7,7 @@ namespace Dixy.FoodParkour
     public class ConveyorBelt : MonoBehaviour
     {
         public bool Active;
+        private bool _started;
 
         private Rigidbody _rb;
 
@@ -21,21 +22,30 @@ namespace Dixy.FoodParkour
         private void OnEnable()
         {
             GameManager.Finished += OnFinish;
+            InputController.Instance.Pressed += OnPressed;
         }
 
         private void OnDisable()
         {
             GameManager.Finished -= OnFinish;
+            if(InputController.Instance)
+                InputController.Instance.Pressed -= OnPressed;
+        }
+        
+        private void OnPressed(Vector3 obj)
+        {
+            _started = true;
         }
 
         private void OnFinish()
         {
             Active = false;
+            InputController.Instance.Pressed -= OnPressed;
         }
 
         void FixedUpdate()
         {
-            if (!Active)
+            if (!_started ||  !Active)
                 return;
 
             var pos = _rb.position;

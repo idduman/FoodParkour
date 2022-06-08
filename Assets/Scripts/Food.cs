@@ -11,6 +11,7 @@ namespace Dixy.FoodParkour
         private int _fanLayer;
         private int _floorLayer;
         private int _noclipLayer;
+        private int _playerLayer;
         private Rigidbody _rb;
 
         private bool _thrown;
@@ -20,6 +21,7 @@ namespace Dixy.FoodParkour
             _fanLayer = LayerMask.NameToLayer("Fan");
             _floorLayer = LayerMask.NameToLayer("Floor");
             _noclipLayer = LayerMask.NameToLayer("Food_Noclip");
+            _playerLayer = LayerMask.NameToLayer("Player");
             _rb = GetComponent<Rigidbody>();
             _thrown = false;
         }
@@ -36,7 +38,7 @@ namespace Dixy.FoodParkour
                 _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
                 return;
             }
-            if (other.gameObject.CompareTag("Player") && _thrown)
+            if (other.gameObject.CompareTag("Mouth") && _thrown)
             {
                 gameObject.layer = _noclipLayer;
                 /*transform.parent = other.transform;
@@ -50,6 +52,13 @@ namespace Dixy.FoodParkour
             if (other.gameObject.layer == _floorLayer)
             {
                 Destroy(gameObject);
+                return;
+            }
+            if (other.gameObject.layer == _playerLayer && !_thrown)
+            {
+                _thrown = true;
+                transform.parent = GameManager.Instance.Level.transform;
+                _rb.isKinematic = false;
             }
         }
     }

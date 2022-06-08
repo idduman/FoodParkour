@@ -16,6 +16,9 @@ namespace Dixy.FoodParkour
         public float BarrierToggleDuration;
         public float FoodFlySpeed;
         public Vector3 FoodFlyVector;
+        public float TrainMoveDuration;
+        public float SoupFallDuration;
+        public float SoupTurnDuration;
     }
 
 }
