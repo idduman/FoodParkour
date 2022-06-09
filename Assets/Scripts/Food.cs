@@ -38,9 +38,16 @@ namespace Dixy.FoodParkour
                 _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
                 return;
             }
-            if (other.gameObject.CompareTag("Mouth") && _thrown)
+            if (other.gameObject.CompareTag("ReleaseFood"))
+            {
+                transform.parent = GameManager.Instance.Level.transform;
+                _rb.isKinematic = false;
+            }
+            else if (other.gameObject.CompareTag("Mouth"))
             {
                 gameObject.layer = _noclipLayer;
+                _rb.isKinematic = false;
+                _rb.AddForce(Vector3.right * 2f, ForceMode.VelocityChange);
                 /*transform.parent = other.transform;
                 _rb.velocity = Vector3.zero;
                 _rb.isKinematic = true;*/
