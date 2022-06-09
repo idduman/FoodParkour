@@ -13,12 +13,20 @@ namespace Dixy.FoodParkour
         private const string MenuName = "Data/" + TypeName;
         
         public float ConveyorMoveSpeed;
+        
         public float BarrierToggleDuration;
+        
         public float FoodFlySpeed;
         public Vector3 FoodFlyVector;
+        
         public float TrainMoveDuration;
+        
         public float SoupFallDuration;
         public float SoupTurnDuration;
+        
+        public float CatapultLaunchDuration;
+        public float CatapultThrowSpeed;
+        public Vector3 CatapultThrowVector;
     }
 
 }

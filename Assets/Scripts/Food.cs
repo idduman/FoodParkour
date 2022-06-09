@@ -15,6 +15,9 @@ namespace Dixy.FoodParkour
         private Rigidbody _rb;
 
         private bool _thrown;
+        private bool _eaten;
+
+        public bool Eaten => _eaten;
 
         private void Start()
         {
@@ -28,14 +31,11 @@ namespace Dixy.FoodParkour
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == _fanLayer && !_thrown)
+            if (Eaten)
+                return;
+            if (other.gameObject.layer == _fanLayer)
             {
-                _thrown = true;
-                transform.parent = GameManager.Instance.Level.transform;
-                _rb.isKinematic = false;
-                _rb.constraints = RigidbodyConstraints.None;
-                _rb.AddForce(GameManager.Instance.Config.FoodFlyVector.normalized * GameManager.Instance.Config.FoodFlySpeed, ForceMode.VelocityChange);
-                _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
+                Throw(GameManager.Instance.Config.FoodFlyVector.normalized * GameManager.Instance.Config.FoodFlySpeed, true);
                 return;
             }
             if (other.gameObject.CompareTag("ReleaseFood"))
@@ -43,19 +43,12 @@ namespace Dixy.FoodParkour
                 transform.parent = GameManager.Instance.Level.transform;
                 _rb.isKinematic = false;
             }
-            else if (other.gameObject.CompareTag("Mouth"))
-            {
-                gameObject.layer = _noclipLayer;
-                _rb.isKinematic = false;
-                _rb.AddForce(Vector3.right * 2f, ForceMode.VelocityChange);
-                /*transform.parent = other.transform;
-                _rb.velocity = Vector3.zero;
-                _rb.isKinematic = true;*/
-            }
         }
 
         private void OnCollisionEnter(Collision other)
         {
+            if (Eaten)
+                return;
             if (other.gameObject.layer == _floorLayer)
             {
                 Destroy(gameObject);
@@ -67,6 +60,28 @@ namespace Dixy.FoodParkour
                 transform.parent = GameManager.Instance.Level.transform;
                 _rb.isKinematic = false;
             }
+        }
+
+        public void Throw(Vector3 velocity, bool addTorque = false)
+        {
+            if (Eaten || _thrown)
+                return;
+            
+            _thrown = true;
+            
+            transform.parent = GameManager.Instance.Level.transform;
+            _rb.isKinematic = false;
+            _rb.constraints = RigidbodyConstraints.None;
+            _rb.AddForce(velocity, ForceMode.VelocityChange);
+            if(addTorque)
+                _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
+        }
+
+        public void OnEaten()
+        {
+            _eaten = true;
+            gameObject.layer = _noclipLayer;
+            _rb.isKinematic = true;
         }
     }
 }

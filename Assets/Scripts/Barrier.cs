@@ -20,6 +20,7 @@ namespace Dixy.FoodParkour
         {
             _duration = GameManager.Instance.Config.BarrierToggleDuration;
             IsOpen = true;
+            _armTransform.localRotation = Quaternion.Euler(0f, 0f, 90f);
         }
 
         private void OnDestroy()

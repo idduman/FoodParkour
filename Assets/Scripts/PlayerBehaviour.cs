@@ -7,6 +7,7 @@ namespace Dixy.FoodParkour
     public class PlayerBehaviour : MonoBehaviour
     {
         [SerializeField] private Transform _mouthTrigger;
+        [SerializeField] private bool _keepMouthOpen;
 
         private Animator _anim;
         private Transform _finish;
@@ -39,6 +40,9 @@ namespace Dixy.FoodParkour
         {
             if (_finished)
                 return;
+            
+            if(_keepMouthOpen)
+                ToggleMouth(true);
 
             if (transform.position.z > _finish.position.z)
                 Finish(true);
