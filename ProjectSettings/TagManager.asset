@@ -11,6 +11,7 @@ TagManager:
   - Table
   - Mouth
   - ReleaseFood
+  - Car
   layers:
   - Default
   - TransparentFX

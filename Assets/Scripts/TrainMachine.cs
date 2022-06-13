@@ -26,7 +26,7 @@ namespace Dixy.FoodParkour
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!_triggered && other.gameObject.layer == _tableLayer)
+            if (!_triggered && other.gameObject.CompareTag("Car"))
             {
                 _triggered = true;
                 _trainArmature.DOKill();

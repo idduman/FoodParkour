@@ -16,9 +16,9 @@ MonoBehaviour:
   BarrierToggleDuration: 1
   FoodFlySpeed: 5
   FoodFlyVector: {x: 3, y: 1, z: 0}
-  TrainMoveDuration: 3
+  TrainMoveDuration: 3.5
   SoupFallDuration: 0.15
-  SoupTurnDuration: 1
+  SoupTurnDuration: 0.75
   CatapultLaunchDuration: 4
   CatapultThrowSpeed: 6.5
   CatapultThrowVector: {x: 2.2, y: 1, z: 0}

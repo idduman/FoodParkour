@@ -1,7 +1,7 @@
-using System;
+using System.Collections;
 using DG.Tweening;
 using HyperCore;
-using UnityEditor.Experimental.GraphView;
+using Obi;
 using UnityEngine;
 
 namespace Dixy.FoodParkour
@@ -9,6 +9,7 @@ namespace Dixy.FoodParkour
     public class SoupTable : MonoBehaviour
     {
         [SerializeField] private Transform _armature;
+        [SerializeField] private ObiEmitter _obiEmitter;
 
         private Vector3 _armatureRotation;
         private Vector3 _handleRotation;
@@ -20,6 +21,7 @@ namespace Dixy.FoodParkour
         {
             _armatureRotation = _armature.localRotation.eulerAngles;
             _machineLayer = LayerMask.NameToLayer("Machine");
+            _obiEmitter.enabled = false;
         }
         private void OnDestroy()
         {
@@ -38,8 +40,10 @@ namespace Dixy.FoodParkour
                 _fallSequence = DOTween.Sequence();
                 
                 _fallSequence.Append(
-                    _armature.DOLocalRotate(new Vector3(_armatureRotation.x - 25f, _armatureRotation.y, _armatureRotation.z),
-                        fDuration)).SetEase(Ease.OutQuad);
+                        _armature.DOLocalRotate(new Vector3(_armatureRotation.x - 25f, _armatureRotation.y, _armatureRotation.z),
+                        fDuration))
+                    .SetEase(Ease.OutQuad)
+                    .OnComplete(ActivateLiquid);
                 
                 _fallSequence.Append(
                     _armature.DOLocalRotate(new Vector3(_armatureRotation.x - 45f, _armatureRotation.y, _armatureRotation.z),
@@ -47,6 +51,19 @@ namespace Dixy.FoodParkour
                 
                 _fallSequence.Play();
             }
+        }
+
+        private void ActivateLiquid()
+        {
+            if(!_obiEmitter.enabled)
+                StartCoroutine(LiquidRoutine());
+        }
+
+        private IEnumerator LiquidRoutine()
+        {
+            _obiEmitter.enabled = true;
+            yield return new WaitForSeconds(3);
+            _obiEmitter.enabled = false;
         }
 
     }

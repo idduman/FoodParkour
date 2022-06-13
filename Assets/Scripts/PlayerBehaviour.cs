@@ -97,20 +97,11 @@ namespace Dixy.FoodParkour
             scale.y = open ? _mouthScale.y : 0f;
             _mouthTween.Kill();
             _anim.SetBool(MouthOpen, open);
-            _mouthTween = _mouthTrigger.DOScale(scale, 0.5f)
+            _mouthTween = _mouthTrigger.DOScale(scale, 0.15f)
                 .OnUpdate(() =>
                 {
-                    _mouthTrigger.gameObject.SetActive(_mouthTrigger.localScale.y > 0.01f);
+                    _mouthTrigger.gameObject.SetActive(_mouthTrigger.localScale.y > 0.4f);
                 });
-        }
-
-        private void MoveAllChildren()
-        {
-            /*var foods = GetComponentsInChildren<Food>();
-            foreach (var food in foods)
-            {
-                food.transform.position += 2f * Vector3.down;
-            }*/
         }
     }
 }

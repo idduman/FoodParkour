@@ -645,12 +645,12 @@ MonoBehaviour:
     ambientMultiplier: 1
     generateReflection: 1
     reflection: 0.2
-    generateRefraction: 1
+    generateRefraction: 0
     transparency: 1
     absorption: 5
     refraction: 0.01
     refractionDownsample: 1
-    generateFoam: 1
+    generateFoam: 0
     foamDownsample: 1
 --- !u!850595691 &2048709317
 LightingSettings:

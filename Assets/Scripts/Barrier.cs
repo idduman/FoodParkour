@@ -30,7 +30,7 @@ namespace Dixy.FoodParkour
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("Table"))
+            if (other.CompareTag("Table") || other.CompareTag("Car"))
             {
                 ToggleGate(true);
             }

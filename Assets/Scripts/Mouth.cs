@@ -12,7 +12,7 @@ namespace Dixy.FoodParkour
         [SerializeField] private Transform _throat;
         private void OnTriggerEnter(Collider other)
         {
-            if (other.attachedRigidbody.TryGetComponent<Food>(out var food) && !food.Eaten)
+            if (other.attachedRigidbody.TryGetComponent<Food>(out var food) && !food.Eaten && food.enabled)
             {
                 food.OnEaten();
                 food.transform.DOMove(_throat.position, 0.5f)

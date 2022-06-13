@@ -9,6 +9,7 @@ namespace Dixy.FoodParkour
     public class CornTable : MonoBehaviour
     {
         [SerializeField] private Transform _cornArmature;
+        //[SerializeField] private Transform _cornTransform;
         
         private int _machineLayer;
         private int _barrierLayer;
@@ -31,10 +32,20 @@ namespace Dixy.FoodParkour
             {
                 _triggered = true;
                 _cornArmature.DOKill();
-                _cornArmature.DORotate(360 * Vector3.forward, 1f,
+                _cornArmature.DORotate(360 * Vector3.right, 1f,
                         RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1);
+                    
+                /*if(!_cornTransform)
+                    return;
+                    
+                _cornTransform.DOKill();
+                _cornTransform.DORotate(360 * Vector3.forward, 1f,
+                        RotateMode.LocalAxisAdd)
+                    .SetEase(Ease.Linear)
+                    .SetLoops(-1);*/
+                    
             }
         }
         
@@ -44,6 +55,8 @@ namespace Dixy.FoodParkour
             {
                 _triggered = false;
                 _cornArmature.DOKill();
+                /*if (_cornTransform)
+                    _cornTransform.DOKill();*/
             }
         }
     }

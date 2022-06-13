@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 4615432370108466135}
   - component: {fileID: 6970786962570889834}
   - component: {fileID: 8491253456573945559}
+  - component: {fileID: 709520883189694673}
   m_Layer: 6
   m_Name: FEMALE  BASE CHARCATER.001
   m_TagString: Player
@@ -1874,6 +1875,23 @@ MonoBehaviour:
   activated: 0
   current: {fileID: 0}
   preview: {fileID: 0}
+--- !u!114 &709520883189694673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206628786748979198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 2445819593678945538}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &211303652275680613
 GameObject:
   m_ObjectHideFlags: 0
@@ -9430,7 +9448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774743659595339429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: 0.42, z: 0}
+  m_LocalPosition: {x: 1.92, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5696629323399805946}
@@ -14396,6 +14414,7 @@ GameObject:
   - component: {fileID: 1365711860486465608}
   - component: {fileID: 3189818458448562427}
   - component: {fileID: 4117883828777292216}
+  - component: {fileID: 8239456636590928096}
   m_Layer: 6
   m_Name: FEMALE  BASE CHARCATER.002
   m_TagString: Untagged
@@ -15272,6 +15291,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 83a100d764d003b438a8bfbd577fd2a0, type: 2}
+--- !u!114 &8239456636590928096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482839450446134786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 4117883828777292216}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &2496274949362548664
 GameObject:
   m_ObjectHideFlags: 0
@@ -20443,7 +20479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3311094733706796045}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.023567904, y: -1.4099029, z: -0.22585948}
+  m_LocalPosition: {x: -0.02, y: -1.4099029, z: -0.274}
   m_LocalScale: {x: 0.24549931, y: 3.6824906, z: 3.6824896}
   m_Children: []
   m_Father: {fileID: 1633596146702811901}
@@ -24266,8 +24302,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.1888869, y: 1.0967315, z: 1}
+  m_Center: {x: -0.09444331, y: -0.04836572, z: 0}
 --- !u!114 &7429269088295229389
 MonoBehaviour:
   m_ObjectHideFlags: 0
