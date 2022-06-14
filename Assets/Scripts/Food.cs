@@ -8,6 +8,10 @@ namespace Dixy.FoodParkour
     [RequireComponent(typeof(Rigidbody))]
     public class Food : MonoBehaviour
     {
+        public static event Action<float> FoodEaten;
+        
+        [SerializeField] private float _points = 1f;
+    
         private int _fanLayer;
         private int _floorLayer;
         private int _noclipLayer;
@@ -92,6 +96,8 @@ namespace Dixy.FoodParkour
             gameObject.layer = _noclipLayer;
             if(_rb)
                 _rb.isKinematic = true;
+            
+            FoodEaten?.Invoke(_points);
         }
     }
 }

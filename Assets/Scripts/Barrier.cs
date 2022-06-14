@@ -9,6 +9,7 @@ namespace Dixy.FoodParkour
 {
     public class Barrier : MonoBehaviour
     {
+        public static event Action GateOpen;
         public bool IsOpen;
         
         [SerializeField] private Transform _armTransform;
@@ -42,8 +43,17 @@ namespace Dixy.FoodParkour
                 return;
 
             IsOpen = open;
+
             _armTween.Kill();
-            _armTween = _armTransform.DOLocalRotate(new Vector3(0f, 0f, open ? 90f : 0f), _duration);
+            _armTween = _armTransform.DOLocalRotate(new Vector3(0f, 0f, open ? 90f : 0f), _duration)
+                .OnComplete(FireEvents);
+        }
+
+        private void FireEvents()
+        {
+            if(IsOpen)
+                GateOpen?.Invoke();
+
         }
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Paint in 3D/Solid
   target: {fileID: 4800000, guid: d2862e538ed34704297d434d0ab8c398, type: 3}
   variantHash: 95242077
-  projectHash: 994888159
+  projectHash: -1663521319
   variants:
   - Pipe: 0
     Code: "//<HASH>95242077</HASH>\n////////////////////////////////////////\n//

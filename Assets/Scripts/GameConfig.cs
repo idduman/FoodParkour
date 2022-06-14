@@ -13,6 +13,9 @@ namespace Dixy.FoodParkour
         private const string MenuName = "Data/" + TypeName;
         
         public float ConveyorMoveSpeed;
+
+        public float MaxScore = 10f;
+        public float MaxNausea = 5f;
         
         public float BarrierToggleDuration;
         
