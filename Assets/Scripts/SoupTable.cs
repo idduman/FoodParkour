@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using HyperCore;
 using Obi;
@@ -10,22 +11,48 @@ namespace Dixy.FoodParkour
     {
         [SerializeField] private Transform _armature;
         [SerializeField] private ObiEmitter _obiEmitter;
+        [SerializeField] private ObiSolver _obiSolver;
+        [SerializeField] private GameObject _painterPrefab;
 
         private Vector3 _armatureRotation;
         private Vector3 _handleRotation;
         private int _machineLayer;
         private bool _triggered;
         private Sequence _fallSequence;
+        private List<Transform> _painters = new List<Transform>();
+        private Transform _particlePool;
+
+        private int _particleCounter;
         
         private void Start()
         {
             _armatureRotation = _armature.localRotation.eulerAngles;
             _machineLayer = LayerMask.NameToLayer("Machine");
             _obiEmitter.enabled = false;
+            
+            _particlePool = transform.Find("Pool");
+            for (int i = 0; i < GameManager.Instance.Config.SoupPainterParticleAmount; i++)
+            {
+                _painters.Add(Instantiate(_painterPrefab, _particlePool).transform);
+            }
         }
+        
+        private void Update()
+        {
+            if (!_obiEmitter.enabled)
+                return;
+
+            for (int i = 0; i < _painters.Count; i++)
+            {
+                var index = (i * 5) % _particleCounter;
+                _painters[i].position = _obiEmitter.GetParticlePosition(index);
+            }
+        }
+
         private void OnDestroy()
         {
             _fallSequence.Kill();
+            _obiEmitter.OnEmitParticle -= OnEmitParticle;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -55,15 +82,28 @@ namespace Dixy.FoodParkour
 
         private void ActivateLiquid()
         {
+            _obiEmitter.OnEmitParticle += OnEmitParticle;
             if(!_obiEmitter.enabled)
                 StartCoroutine(LiquidRoutine());
+        }
+
+        private void OnEmitParticle(ObiEmitter emitter, int particleIndex)
+        {
+            _particleCounter++;
         }
 
         private IEnumerator LiquidRoutine()
         {
             _obiEmitter.enabled = true;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(3f);
+            Debug.Log("Particle count" + _particleCounter);
+            _obiEmitter.OnEmitParticle -= OnEmitParticle;
             _obiEmitter.enabled = false;
+        }
+
+        private IEnumerator PainterFollow()
+        {
+            yield return null;
         }
 
     }

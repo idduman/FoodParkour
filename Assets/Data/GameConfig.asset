@@ -21,6 +21,7 @@ MonoBehaviour:
   TrainMoveDuration: 3.5
   SoupFallDuration: 0.15
   SoupTurnDuration: 0.75
+  SoupPainterParticleAmount: 200
   CatapultLaunchDuration: 4
   CatapultThrowSpeed: 6.5
   CatapultThrowVector: {x: 2.2, y: 1, z: 0}

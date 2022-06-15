@@ -26,6 +26,7 @@ namespace Dixy.FoodParkour
         
         public float SoupFallDuration;
         public float SoupTurnDuration;
+        public int SoupPainterParticleAmount = 100;
         
         public float CatapultLaunchDuration;
         public float CatapultThrowSpeed;
