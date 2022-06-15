@@ -634,16 +634,16 @@ MonoBehaviour:
     particleBlendSource: 2
     particleBlendDestination: 0
     particleZWrite: 0
-    thicknessCutoff: 1.2
+    thicknessCutoff: 1
     thicknessDownsample: 2
     generateSurface: 1
     blurRadius: 0.02
-    surfaceDownsample: 1
+    surfaceDownsample: 3
     lighting: 1
     smoothness: 0.8
     metalness: 0
     ambientMultiplier: 1
-    generateReflection: 1
+    generateReflection: 0
     reflection: 0.2
     generateRefraction: 0
     transparency: 1

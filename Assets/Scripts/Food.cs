@@ -53,12 +53,12 @@ namespace Dixy.FoodParkour
 
         private void OnCollisionEnter(Collision other)
         {
-            if (Eaten)
-                return;
-
             if (other.gameObject.layer == _beltLayer)
             {
-                OnEaten();
+                _eaten = true;
+                gameObject.layer = _noclipLayer;
+                if(_rb)
+                    _rb.isKinematic = true;
                 transform.parent = other.transform;
             }
             else if (other.gameObject.layer == _floorLayer)
@@ -67,9 +67,14 @@ namespace Dixy.FoodParkour
                 Destroy(gameObject);
                 return;
             }
-            else if (other.gameObject.layer == _playerLayer && !_thrown)
+            
+            if (Eaten)
+                return;
+            
+            else if (other.gameObject.layer == _playerLayer)
             {
                 _thrown = true;
+                _eaten = true;
                 transform.parent = GameManager.Instance.Level.transform;
                 _rb.isKinematic = false;
             }

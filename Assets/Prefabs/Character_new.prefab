@@ -5191,7 +5191,7 @@ GameObject:
   - component: {fileID: 5751042996504488984}
   - component: {fileID: 119895772662097660}
   - component: {fileID: 2314488373503083341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Smile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15132,7 +15132,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 93436acd2fe6c204ab973d3a1496ee2d, type: 2}
-  - {fileID: 2100000, guid: da80bf2e61a4b1144aedee4744d58db3, type: 2}
+  - {fileID: 2100000, guid: 7117d56dcd11e394387211404850aae0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23349,7 +23349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2762860266069558133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31698,7 +31698,7 @@ GameObject:
   - component: {fileID: 547887251973941681}
   - component: {fileID: 115125121590679888}
   - component: {fileID: 9009652183626779228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57418,6 +57418,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmojiPuke
       objectReference: {fileID: 0}
+    - target: {fileID: 135792, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 159426, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 475896, guid: 72e06155695f11040b722d672293fe98, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57496,6 +57504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmojiSmile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 169426, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 407730, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -57569,6 +57581,14 @@ PrefabInstance:
     - target: {fileID: 135792, guid: 72e06155695f11040b722d672293fe98, type: 3}
       propertyPath: m_Name
       value: EmojiPuke (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135792, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 159426, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 475896, guid: 72e06155695f11040b722d672293fe98, type: 3}
       propertyPath: m_RootOrder
@@ -57652,6 +57672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmojiSmile
       objectReference: {fileID: 0}
+    - target: {fileID: 169426, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 407730, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57721,6 +57745,10 @@ PrefabInstance:
     - target: {fileID: 169426, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
       propertyPath: m_Name
       value: EmojiSmile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 169426, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 407730, guid: ab519ef83513b594cad24b0df6fc5d72, type: 3}
       propertyPath: m_RootOrder
@@ -57795,6 +57823,14 @@ PrefabInstance:
     - target: {fileID: 135792, guid: 72e06155695f11040b722d672293fe98, type: 3}
       propertyPath: m_Name
       value: EmojiPuke (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135792, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 159426, guid: 72e06155695f11040b722d672293fe98, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 475896, guid: 72e06155695f11040b722d672293fe98, type: 3}
       propertyPath: m_RootOrder

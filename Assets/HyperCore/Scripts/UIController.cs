@@ -83,13 +83,13 @@ namespace HyperCore
 
         private void EndgameFill()
         {
-            _endgameFill.fillAmount = 0f;
+            /*_endgameFill.fillAmount = 0f;
             _endgameText.text = "0%";
             _endgameFill.gameObject.SetActive(true);
             _endgameText.gameObject.SetActive(true);
             DOTween.To(() => _endgameFill.fillAmount, x => _endgameFill.fillAmount = x,
                     _levelBar.value, _endgmaeFillDuration)
-                .SetEase(Ease.InOutQuad);
+                .SetEase(Ease.InOutQuad);*/
         }
 
         private IEnumerator EndGameRoutine(bool success)

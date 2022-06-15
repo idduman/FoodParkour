@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using HyperCore;
+using Obi;
 using UnityEngine;
 
 namespace Dixy.FoodParkour
@@ -71,12 +72,6 @@ namespace Dixy.FoodParkour
                 return;
             }
             
-            if (_anim.GetAnimatorTransitionInfo(0).IsName("Sad -> Idle"))
-            {
-                _nausea = 0f;
-                SetFaceColor();
-            }
-
         }
         
         private void Subscribe()
@@ -123,15 +118,19 @@ namespace Dixy.FoodParkour
 
         private void Gesture()
         {
-            if (_nausea < _maxNausea * 0.4f)
+            if (_nausea > _maxNausea * 0.95f)
             {
-                _anim.SetTrigger(Happy);
-                _happyParticles.Play();
+                Finish(false);
             }
-            else
+            else if (_nausea > _maxNausea * 0.3f)
             {
                 _anim.SetTrigger(Sad);
                 _sadParticles.Play();
+            }
+            else
+            {
+                _anim.SetTrigger(Happy);
+                _happyParticles.Play();
             }
         }
 
