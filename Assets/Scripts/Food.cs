@@ -1,7 +1,8 @@
 using System;
-using System.Security.Cryptography;
+using System.Collections;
 using HyperCore;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Dixy.FoodParkour
 {
@@ -11,12 +12,18 @@ namespace Dixy.FoodParkour
         public static event Action<float> FoodEaten;
         
         [SerializeField] private float _points = 1f;
-    
+        [SerializeField] private bool _sticky = false;
+        [SerializeField] private float _stickDuration = 1f;
+        [SerializeField] private float _stickVariance = 0.15f;
+
         private int _fanLayer;
         private int _floorLayer;
         private int _noclipLayer;
         private int _playerLayer;
         private int _beltLayer;
+
+        private float _stickyTimer;
+        
         private Rigidbody _rb;
 
         private bool _thrown;
@@ -67,16 +74,19 @@ namespace Dixy.FoodParkour
                 Destroy(gameObject);
                 return;
             }
-            
+
             if (Eaten)
                 return;
-            
-            else if (other.gameObject.layer == _playerLayer)
+
+            if (other.gameObject.layer == _playerLayer)
             {
-                _thrown = true;
                 _eaten = true;
+                _thrown = true;
                 transform.parent = GameManager.Instance.Level.transform;
-                _rb.isKinematic = false;
+                if (_sticky)
+                    Stick();
+                else
+                    _rb.isKinematic = false;
             }
         }
 
@@ -95,6 +105,15 @@ namespace Dixy.FoodParkour
                 _rb.AddTorque(Vector3.forward, ForceMode.VelocityChange);
         }
 
+        public void Stick()
+        {
+            if (_rb.isKinematic)
+                return;
+
+            _rb.isKinematic = true;
+            StartCoroutine(StickRoutine());
+        }
+
         public void OnEaten()
         {
             _eaten = true;
@@ -103,6 +122,12 @@ namespace Dixy.FoodParkour
                 _rb.isKinematic = true;
             
             FoodEaten?.Invoke(_points);
+        }
+
+        private IEnumerator StickRoutine()
+        {
+            yield return new WaitForSeconds(_stickDuration + Random.Range(-_stickVariance, _stickVariance));
+            _rb.isKinematic = false;
         }
     }
 }

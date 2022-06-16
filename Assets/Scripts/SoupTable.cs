@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
+using GameAnalyticsSDK.Setup;
 using HyperCore;
 using Obi;
 using UnityEngine;
@@ -13,6 +15,7 @@ namespace Dixy.FoodParkour
         [SerializeField] private ObiEmitter _obiEmitter;
         [SerializeField] private ObiSolver _obiSolver;
         [SerializeField] private GameObject _painterPrefab;
+        [SerializeField] private Transform _foodsParent;
 
         private Vector3 _armatureRotation;
         private Vector3 _handleRotation;
@@ -20,7 +23,9 @@ namespace Dixy.FoodParkour
         private bool _triggered;
         private Sequence _fallSequence;
         private List<Transform> _painters = new List<Transform>();
+        private List<Food> _foods;
         private Transform _particlePool;
+        private float _flySpeed;
 
         private int _particleCounter;
         
@@ -29,12 +34,16 @@ namespace Dixy.FoodParkour
             _armatureRotation = _armature.localRotation.eulerAngles;
             _machineLayer = LayerMask.NameToLayer("Machine");
             _obiEmitter.enabled = false;
+            _flySpeed = GameManager.Instance.Config.FoodFlySpeed;
             
             _particlePool = transform.Find("Pool");
             for (int i = 0; i < GameManager.Instance.Config.SoupPainterParticleAmount; i++)
             {
                 _painters.Add(Instantiate(_painterPrefab, _particlePool).transform);
             }
+
+            _foods = _foodsParent.GetComponentsInChildren<Food>().ToList();
+            StartCoroutine(FoodDeactivate());
         }
         
         private void Update()
@@ -90,6 +99,20 @@ namespace Dixy.FoodParkour
         private void OnEmitParticle(ObiEmitter emitter, int particleIndex)
         {
             _particleCounter++;
+            if(_particleCounter % 5 == 0)
+                ThrowRandomFood();
+        }
+
+        private void ThrowRandomFood()
+        {
+            if (_foods.Count < 1)
+                return;
+
+            var index = Random.Range(0, _foods.Count);
+            var foodToThrow = _foods[index];
+            _foods.RemoveAt(index);
+            foodToThrow.gameObject.SetActive(true);
+            foodToThrow.Throw(_obiEmitter.transform.forward * _flySpeed, true);
         }
 
         private IEnumerator LiquidRoutine()
@@ -98,6 +121,12 @@ namespace Dixy.FoodParkour
             yield return new WaitForSeconds(2.5f);
             _obiEmitter.OnEmitParticle -= OnEmitParticle;
             _obiEmitter.enabled = false;
+        }
+
+        private IEnumerator FoodDeactivate()
+        {
+            yield return new WaitForSeconds(0.5f);
+            _foods.ForEach(food => food.gameObject.SetActive(false));
         }
     }
 }
