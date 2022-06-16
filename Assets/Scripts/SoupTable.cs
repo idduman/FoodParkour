@@ -95,17 +95,10 @@ namespace Dixy.FoodParkour
         private IEnumerator LiquidRoutine()
         {
             _obiEmitter.enabled = true;
-            yield return new WaitForSeconds(3f);
-            Debug.Log("Particle count" + _particleCounter);
+            yield return new WaitForSeconds(2.5f);
             _obiEmitter.OnEmitParticle -= OnEmitParticle;
             _obiEmitter.enabled = false;
         }
-
-        private IEnumerator PainterFollow()
-        {
-            yield return null;
-        }
-
     }
 }
 

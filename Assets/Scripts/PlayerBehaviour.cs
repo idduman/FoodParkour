@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using HyperCore;
 using Obi;
+using PaintIn3D;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,6 +16,8 @@ namespace Dixy.FoodParkour
         [SerializeField] private bool _keepMouthOpen;
         [SerializeField] private ParticleSystem _happyParticles;
         [SerializeField] private ParticleSystem _sadParticles;
+        [SerializeField] private Texture _faceReplaceTexture;
+        [SerializeField] private P3dPaintableTexture _facePaintableTexture;
 
         private Animator _anim;
         private Transform _finish;
@@ -21,14 +25,15 @@ namespace Dixy.FoodParkour
         private Tweener _mouthTween;
         private Tweener _faceTween;
         private Vector3 _mouthScale;
-        private static readonly int MouthOpen = Animator.StringToHash("MouthOpen");
 
         private float _score;
         private float _maxScore;
         private float _nausea;
         private float _maxNausea;
-
+        
         private Vector3 _faceHSV;
+        
+        private static readonly int MouthOpen = Animator.StringToHash("MouthOpen");
         private static readonly int Happy = Animator.StringToHash("Happy");
         private static readonly int Sad = Animator.StringToHash("Sad");
 
@@ -50,7 +55,7 @@ namespace Dixy.FoodParkour
             _maxNausea = GameManager.Instance.Config.MaxNausea;
 
             Subscribe();
-            
+            StartCoroutine(SaveState());
         }
         
         private void OnDestroy()
@@ -59,7 +64,7 @@ namespace Dixy.FoodParkour
             StopAllCoroutines();
         }
 
-        void Update()
+        private void Update()
         {
             if (_finished)
                 return;
@@ -74,7 +79,15 @@ namespace Dixy.FoodParkour
             }
             
         }
-        
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Napkin"))
+            {
+                OnNapkinClean();
+            }
+        }
+
         private void Subscribe()
         {
             InputController.Instance.Pressed += OnPressed;
@@ -115,6 +128,11 @@ namespace Dixy.FoodParkour
             
             SetFaceColor();
             UIController.Instance.SetLevelPercentage(_score / _maxScore);
+        }
+
+        private void OnNapkinClean()
+        {
+            _facePaintableTexture.Load();
         }
 
         private void Gesture()
@@ -169,6 +187,12 @@ namespace Dixy.FoodParkour
                 {
                     _mouthTrigger.gameObject.SetActive(_mouthTrigger.localScale.y > 0.4f);
                 });
+        }
+
+        private IEnumerator SaveState()
+        {
+            yield return new WaitForSeconds(1f);
+            _facePaintableTexture.Save();
         }
     }
 }

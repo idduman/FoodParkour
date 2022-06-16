@@ -12,6 +12,7 @@ TagManager:
   - Mouth
   - ReleaseFood
   - Car
+  - Napkin
   layers:
   - Default
   - TransparentFX
