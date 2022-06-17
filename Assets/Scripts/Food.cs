@@ -15,6 +15,7 @@ namespace Dixy.FoodParkour
         [SerializeField] private bool _sticky = false;
         [SerializeField] private float _stickDuration = 1f;
         [SerializeField] private float _stickVariance = 0.15f;
+        [SerializeField] private bool _stickToShirt = false;
 
         private int _fanLayer;
         private int _floorLayer;
@@ -28,6 +29,7 @@ namespace Dixy.FoodParkour
 
         private bool _thrown;
         private bool _eaten;
+        private bool _sticked;
 
         public bool Eaten => _eaten;
 
@@ -74,8 +76,14 @@ namespace Dixy.FoodParkour
                 Destroy(gameObject);
                 return;
             }
+            else if (_stickToShirt && !_sticked && other.collider.CompareTag("TShirt"))
+            {
+                _sticked = true;
+                _rb.isKinematic = true;
+                gameObject.layer = _noclipLayer;
+            }
 
-            if (Eaten)
+            if (Eaten || _sticked)
                 return;
 
             if (other.gameObject.layer == _playerLayer)

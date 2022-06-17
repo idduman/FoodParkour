@@ -13,6 +13,7 @@ TagManager:
   - ReleaseFood
   - Car
   - Napkin
+  - TShirt
   layers:
   - Default
   - TransparentFX

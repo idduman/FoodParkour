@@ -16,7 +16,6 @@ namespace Dixy.FoodParkour
         [SerializeField] private bool _keepMouthOpen;
         [SerializeField] private ParticleSystem _happyParticles;
         [SerializeField] private ParticleSystem _sadParticles;
-        [SerializeField] private Texture _faceReplaceTexture;
         [SerializeField] private P3dPaintableTexture _facePaintableTexture;
 
         private Animator _anim;
@@ -28,14 +27,17 @@ namespace Dixy.FoodParkour
 
         private float _score;
         private float _maxScore;
+        private float _previousScore;
         private float _nausea;
         private float _maxNausea;
+        private float _previousNausea;
         
         private Vector3 _faceHSV;
         
         private static readonly int MouthOpen = Animator.StringToHash("MouthOpen");
         private static readonly int Happy = Animator.StringToHash("Happy");
         private static readonly int Sad = Animator.StringToHash("Sad");
+        private static readonly int Lose = Animator.StringToHash("Lose");
 
         void Start()
         {
@@ -49,9 +51,9 @@ namespace Dixy.FoodParkour
             _mouthTrigger.gameObject.SetActive(false);
             
             Color.RGBToHSV(_faceRenderer.material.color, out _faceHSV.x,out _faceHSV.y, out _faceHSV.z);
-            _score = 0f;
+            _score = _previousScore = 0f;
             _score = _maxScore = GameManager.Instance.Config.MaxScore;
-            _nausea = 0f;
+            _nausea = _previousNausea = 0f;
             _maxNausea = GameManager.Instance.Config.MaxNausea;
 
             Subscribe();
@@ -141,16 +143,18 @@ namespace Dixy.FoodParkour
             {
                 Finish(false);
             }
-            else if (_nausea > _maxNausea * 0.3f)
+            else if (_nausea > _previousNausea + 2)
             {
                 _anim.SetTrigger(Sad);
                 _sadParticles.Play();
             }
-            else
+            else if(_score > _previousScore)
             {
                 _anim.SetTrigger(Happy);
                 _happyParticles.Play();
             }
+            _previousNausea = _nausea;
+            _previousScore = _score;
         }
 
         private void SetFaceColor()
@@ -174,6 +178,7 @@ namespace Dixy.FoodParkour
             StopAllCoroutines();
             Unsubscribe();
             GameManager.Instance.FinishGame(success);
+            StartCoroutine(FinishRoutine(success));
         }
 
         private void ToggleMouth(bool open)
@@ -193,6 +198,12 @@ namespace Dixy.FoodParkour
         {
             yield return new WaitForSeconds(1f);
             _facePaintableTexture.Save();
+        }
+
+        private IEnumerator FinishRoutine(bool success)
+        {
+            yield return new WaitForSeconds(1f);
+            _anim.SetTrigger(success ? Happy : Lose);
         }
     }
 }

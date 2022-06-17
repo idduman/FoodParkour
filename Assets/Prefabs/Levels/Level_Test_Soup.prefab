@@ -1,100 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1832799464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1832799465}
-  - component: {fileID: 1832799468}
-  - component: {fileID: 1832799467}
-  - component: {fileID: 1832799466}
-  m_Layer: 0
-  m_Name: PlatformCube (1)
-  m_TagString: Platform
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1832799465
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832799464}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.4, y: -3.9, z: 50}
-  m_LocalScale: {x: 4.5, y: 46.2105, z: 100}
-  m_Children: []
-  m_Father: {fileID: 8969715388053899130}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1832799468
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832799464}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1832799467
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832799464}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 613ab69fe2e886f4bbf2f016a25498a7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1832799466
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832799464}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8193222088106620
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +273,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &114255167351956525
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,101 +362,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000046491623, y: 0.0050719595, z: -0.0000028808136}
     m_Extent: {x: 0.0005036209, y: 0.007962598, z: 0.00061045814}
   m_DirtyAABB: 0
---- !u!1 &136298128743874976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 834393226049479209}
-  - component: {fileID: 4700802689599835109}
-  - component: {fileID: 4688255114817052558}
-  - component: {fileID: 6508940391411834304}
-  m_Layer: 0
-  m_Name: PlatformCube
-  m_TagString: Platform
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &834393226049479209
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136298128743874976}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.8, z: 50}
-  m_LocalScale: {x: 4.5, y: 15, z: 100}
-  m_Children: []
-  m_Father: {fileID: 8969715388053899130}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4700802689599835109
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136298128743874976}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4688255114817052558
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136298128743874976}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5707cad0b78f0bd4095b148cc542ccad, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6508940391411834304
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136298128743874976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &137696438389818309
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2234246404076326345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,6 +937,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6820144060630515282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5645773961422903176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &573707032141926669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,6 +1609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2525692003239910946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,6 +1812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7769646650759009160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2015,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6432431789232159300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2641,6 +2475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4648403168325786873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2841,6 +2678,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3776202418236349872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3042,6 +2882,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6208506347757495606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3242,6 +3085,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5367502850069935710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3442,6 +3288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4221335628952765042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3522,6 +3371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 946365153108583554}
+  - component: {fileID: 2511876757210649620}
   m_Layer: 0
   m_Name: Soup
   m_TagString: Untagged
@@ -3545,6 +3395,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &2511876757210649620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462176118391717432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &463787968847870904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,6 +3535,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &464249278320479252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,6 +3667,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3285587567648366550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4002,6 +3870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9109844725958366416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4201,6 +4072,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &512561524546885870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,6 +4295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7141201151203347972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4707,6 +4584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &607825469144493781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4836,6 +4716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9031812774934084988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5037,6 +4920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &977003498174560437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5238,6 +5124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6144689752990934709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5438,6 +5327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4514274533975828671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,6 +5530,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4056295514605823640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5919,6 +5814,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7215282039330716842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6119,6 +6017,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6575622468776084267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6432,6 +6333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5569573097565792174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6503,101 +6407,6 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
---- !u!1 &766853389478371645
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5095937595275021980}
-  - component: {fileID: 8838386084678711153}
-  - component: {fileID: 8141321168240615706}
-  - component: {fileID: 8305723896061449926}
-  m_Layer: 11
-  m_Name: ArmCube
-  m_TagString: Arm
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5095937595275021980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766853389478371645}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 0.11200011, z: 0.020000458}
-  m_LocalScale: {x: 2.5, y: 0.2, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 8303265132053227951}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8838386084678711153
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766853389478371645}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8141321168240615706
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766853389478371645}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 241f1f6956060a34284d159b175a6a48, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8305723896061449926
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766853389478371645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &783909152411732504
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,6 +6536,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7950032445505269377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6957,6 +6769,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7723292534898135439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7157,6 +6972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1737022675596595992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7259,35 +7077,6 @@ Transform:
   m_Father: {fileID: 8451351699357337816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6287975927940800075
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843696776708853672}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3140493971407750779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843696776708853672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kinematicForParticles: 0
 --- !u!1 &852639207703713213
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,6 +7287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1272369840335499057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7698,6 +7490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8788621517526165852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7898,6 +7693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2200336950024490368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8098,6 +7896,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2272567709098793999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8298,6 +8099,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2690267917748289776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8498,6 +8302,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5764088172502939989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8780,6 +8587,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &949215976390076894
 GameObject:
   m_ObjectHideFlags: 0
@@ -9071,6 +8881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1640041748107804540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9271,6 +9084,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5187284074238758419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9471,6 +9287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3624500951773985603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9671,6 +9490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5551869799603129018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9901,6 +9723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7645352429846379658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10101,6 +9926,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6568510640134350373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10345,6 +10173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4969758702892494956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10545,6 +10376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3579326162316460748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10828,6 +10662,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1385115507294664557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11028,6 +10865,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6184941778678399681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11309,6 +11149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3437980978527550398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11510,6 +11353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1842965576531649610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11821,6 +11667,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5402942161497186545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12021,6 +11870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5029003340802489637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12221,6 +12073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7863316714867554988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12592,6 +12447,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6948111114441015767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12793,6 +12651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6812224310818282338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12993,6 +12854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8605834751137476654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13194,6 +13058,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8119922124026274966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13394,6 +13261,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7668580112696006807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13675,6 +13545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2833030943344276343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13972,6 +13845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1459389232192603020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14203,6 +14079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7971931098573612293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14403,6 +14282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6588759998218482615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14604,6 +14486,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7514186992827083653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14887,6 +14772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4799187299440793109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15087,6 +14975,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1390323919513594309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15287,6 +15178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5686452093042905495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15487,6 +15381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3571727510148453787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15687,6 +15584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2417720402623289170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15758,162 +15658,6 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
---- !u!1 &1659184484358319549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3513551381925374050}
-  - component: {fileID: 6935558860860423737}
-  - component: {fileID: 657604316368667482}
-  - component: {fileID: 6862204799533501184}
-  - component: {fileID: 2893291468774312781}
-  - component: {fileID: 6340647382626090954}
-  - component: {fileID: 5423492093215526360}
-  - component: {fileID: 3627124052357577162}
-  m_Layer: 15
-  m_Name: Barrier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3513551381925374050
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.72, y: -0.4, z: 13.27}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8303265132053227951}
-  m_Father: {fileID: 8969715388329621712}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6935558860860423737
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &657604316368667482
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 90de3967dac36904cb9a445d3ad61eb0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6862204799533501184
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &2893291468774312781
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.6453257, y: 2.5555563, z: 1.6404028}
-  m_Center: {x: 2.3226624, y: 0.77777815, z: 0.9393277}
---- !u!114 &6340647382626090954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a2d63f97ced6e24888f15c3f97202c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsOpen: 0
-  _armTransform: {fileID: 8303265132053227951}
---- !u!54 &5423492093215526360
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3627124052357577162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659184484358319549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kinematicForParticles: 0
 --- !u!1 &1678472512482051641
 GameObject:
   m_ObjectHideFlags: 0
@@ -16043,6 +15787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2249281320557055512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16274,6 +16021,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2491841670925023448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16475,6 +16225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7737859825469935325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16675,6 +16428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8620798844699512133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16965,6 +16721,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6286574880467404581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17165,6 +16924,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1855057955767678005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17365,6 +17127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9124753637051835976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17445,6 +17210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382959456851208389}
+  - component: {fileID: 6723019476836990480}
   m_Layer: 0
   m_Name: Catapult
   m_TagString: Untagged
@@ -17468,6 +17234,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &6723019476836990480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763883698711851647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1786801197100576617
 GameObject:
   m_ObjectHideFlags: 0
@@ -17597,6 +17375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5475348380003677936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17798,6 +17579,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &383907936192764691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17998,6 +17782,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8735921065482687110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18197,6 +17984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &1820775114242995656
 GameObject:
   m_ObjectHideFlags: 0
@@ -18326,6 +18116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5717224388418537531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18526,6 +18319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5637514213370781422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18726,6 +18522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1095743306274403277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18927,6 +18726,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3198450267263328483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19291,6 +19093,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4047627470585415036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19571,6 +19376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &1923186786425319717
 GameObject:
   m_ObjectHideFlags: 0
@@ -19782,6 +19590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5530490986171670269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19982,6 +19793,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &881255902347622004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20182,6 +19996,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2889578863375503573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20463,6 +20280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8716970709672107344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20663,6 +20483,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3370168886698721981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20863,6 +20686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4467884635524306616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21063,6 +20889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7135332531374550673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21344,6 +21173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6105932038086592249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21544,6 +21376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &928837661597103476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21828,6 +21663,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7101720697474585371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22109,6 +21947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5119429570793113169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22394,6 +22235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6001571866328022084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22594,6 +22438,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1966327232228450925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22794,6 +22641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3451200953715952637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23026,6 +22876,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1755194040507852104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23435,6 +23288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8810773217596367852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23634,6 +23490,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &2308197014299943464
 GameObject:
   m_ObjectHideFlags: 0
@@ -23848,6 +23707,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6143722537917181742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24048,6 +23910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7968403424636459491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24248,6 +24113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4842865191552948093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24448,6 +24316,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6652293018028811660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24811,6 +24682,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2049433179999149122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25011,6 +24885,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4235185939321025223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25211,6 +25088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2733461447990302909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25412,6 +25292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6925789100988931950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25682,6 +25565,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6463625729057946257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25883,6 +25769,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3300059573856290342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26083,6 +25972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1145325124203812235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26283,6 +26175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7805247011988635937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26647,6 +26542,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2516779110434969098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26848,6 +26746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7729146365584559109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27133,6 +27034,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3501220464393225090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27213,6 +27117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3291130581612593959}
+  - component: {fileID: 1965684852742774269}
   m_Layer: 9
   m_Name: Hair_Dryer
   m_TagString: Untagged
@@ -27236,6 +27141,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1965684852742774269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803386860712352157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2833675182861155115
 GameObject:
   m_ObjectHideFlags: 0
@@ -27365,6 +27282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8950099823316819210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27565,6 +27485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9008196540910404554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27765,6 +27688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2906692431126424610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27965,6 +27891,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8557702985694110934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28165,6 +28094,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6621496661281415118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28366,6 +28298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4216245496341248033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28656,6 +28591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3371891798564704206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28857,6 +28795,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &571957998525921151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29057,6 +28998,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &412254440041641021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29257,6 +29201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1918978703114523177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29489,6 +29436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3159014003531145446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29689,6 +29639,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4837007933095781445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29970,6 +29923,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6352989063990323448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30232,6 +30188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1843139263057241057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30432,6 +30391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2312412357234879489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30633,6 +30595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6824319550118645352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30833,6 +30798,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3265465125603202955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31033,6 +31001,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5540816949640920415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31233,6 +31204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2957570258552715234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31603,6 +31577,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1167808230105334999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31803,6 +31780,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1920697800946147176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32003,6 +31983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4028937526551633358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32203,6 +32186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6522579680417522162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32403,6 +32389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4405806203037040876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32603,6 +32592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4889542651711010453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32803,6 +32795,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5137417296622490174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33003,6 +32998,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5328877351024162638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33203,6 +33201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8866812667374694026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33494,6 +33495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3858490608275882112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33778,6 +33782,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9175911464588629911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34068,6 +34075,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2327549497878402477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34139,119 +34149,6 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
---- !u!1 &3460512542033445683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3056500201691006980}
-  - component: {fileID: 5231718517094213630}
-  - component: {fileID: 4384349286683138565}
-  - component: {fileID: 8438140257580439185}
-  - component: {fileID: 7996013948807346142}
-  m_Layer: 14
-  m_Name: Floor
-  m_TagString: Platform
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3056500201691006980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460512542033445683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -10.2, z: 50}
-  m_LocalScale: {x: 150, y: 1, z: 150}
-  m_Children: []
-  m_Father: {fileID: 8969715388053899130}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5231718517094213630
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460512542033445683}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4384349286683138565
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460512542033445683}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8438140257580439185
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460512542033445683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7996013948807346142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460512542033445683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thickness: 0
-  material: {fileID: 0}
-  filter: -65535
-  m_SourceCollider: {fileID: 8438140257580439185}
-  m_DistanceField: {fileID: 0}
 --- !u!1 &3461360374941803411
 GameObject:
   m_ObjectHideFlags: 0
@@ -34380,6 +34277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &3476946291636289711
 GameObject:
   m_ObjectHideFlags: 0
@@ -34510,6 +34410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8863897808761105941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34710,6 +34613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5440632387729156340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34910,6 +34816,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3918679285305560938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35272,6 +35181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7386797762179240266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35473,6 +35385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &60649421177617761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35754,6 +35669,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8823222751992685957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35954,6 +35872,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &696310139261887668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36155,6 +36076,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1907475650045252975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36355,6 +36279,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &846911374631150037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36624,6 +36551,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!64 &1483489963648828838
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36919,6 +36849,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7557861695898222311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37617,6 +37550,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4021271418994495689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37817,6 +37753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5814340330531298672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38098,6 +38037,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2730152403520669586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38350,6 +38292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4351291812992541095}
+  - component: {fileID: 753614301561207427}
   m_Layer: 0
   m_Name: Napkin
   m_TagString: Untagged
@@ -38378,6 +38321,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &753614301561207427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974765823545588509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3978217798271479827
 GameObject:
   m_ObjectHideFlags: 0
@@ -38619,6 +38574,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &821812058167545606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38850,6 +38808,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3985487816859448100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39141,6 +39102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3533107185055780936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39424,6 +39388,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7484191037957792442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39737,6 +39704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8240391577915442773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40019,6 +39989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6069484079893681726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40219,6 +40192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8443210517841321862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40419,6 +40395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2270497038492296340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40650,6 +40629,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7548162742168710317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40835,8 +40817,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3858fc1ebde0944b41877c436d5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points: 2
+  _points: 10
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!64 &8371985365394405123
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41137,6 +41122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &727732574337072188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41337,6 +41325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3572851112201226186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41448,6 +41439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8721342097828716836}
+  - component: {fileID: 4439234474893278113}
   m_Layer: 9
   m_Name: Train
   m_TagString: Untagged
@@ -41471,37 +41463,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4276175286800153054
-GameObject:
+--- !u!114 &4439234474893278113
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8303265132053227951}
-  m_Layer: 11
-  m_Name: Arm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8303265132053227951
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4276175286800153054}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.110000014, y: 0.4979999, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5095937595275021980}
-  m_Father: {fileID: 3513551381925374050}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4273601852917430381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4374439290817646576
 GameObject:
   m_ObjectHideFlags: 0
@@ -41533,7 +41506,7 @@ Transform:
   m_Children:
   - {fileID: 3471149476712854910}
   m_Father: {fileID: 8969715388329621712}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &8872182952126947064
 MonoBehaviour:
@@ -41788,6 +41761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6341368963795019271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41987,6 +41963,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &4401341192789148655
 GameObject:
   m_ObjectHideFlags: 0
@@ -42116,6 +42095,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4437380775913674333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42316,6 +42298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7473471759526967144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42516,6 +42501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3687217896738883612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42716,6 +42704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1007710331403158262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42917,6 +42908,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6123657365754947485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43117,6 +43111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5576873522563551867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43317,6 +43314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3803435991304109267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43583,6 +43583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9054179961895199713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43783,6 +43786,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5330470208692406486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44075,6 +44081,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1207490135040189801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44274,6 +44283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &4559576715638712091
 GameObject:
   m_ObjectHideFlags: 0
@@ -44402,6 +44414,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &4566594882619083455
 GameObject:
   m_ObjectHideFlags: 0
@@ -44531,6 +44546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &260538425766731112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44731,6 +44749,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5688595738600649895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44931,6 +44952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &89167629905050186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45212,6 +45236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5104462582112287302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45413,6 +45440,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4517923069861019798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45857,6 +45887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5416397947036288688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46058,6 +46091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3105435901938863940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46289,6 +46325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8557109567911078583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46489,6 +46528,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7495872604648787720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46776,8 +46818,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3858fc1ebde0944b41877c436d5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points: 2
+  _points: 10
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2290081540264769867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47060,6 +47105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8238744493697225566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47261,6 +47309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1738378847513371673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47461,6 +47512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2295266825753983551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47661,6 +47715,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6800814231100652256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47860,6 +47917,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &4944212676204161657
 GameObject:
   m_ObjectHideFlags: 0
@@ -47990,6 +48050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8709408719516938837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48190,6 +48253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5790030707328543439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48390,6 +48456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &677260926855237368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48590,6 +48659,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7328565840270557324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48790,6 +48862,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8959324188511858741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49112,6 +49187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &5095544239743493301
 GameObject:
   m_ObjectHideFlags: 0
@@ -49352,6 +49430,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5851036635885145014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49553,6 +49634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1686705754076734182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49837,6 +49921,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3815158728948852771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50037,6 +50124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3802117926652661542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50267,6 +50357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3408153163380743765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50467,6 +50560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5936690878643658606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50667,6 +50763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5461569462657549291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50996,6 +51095,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &13678616846358654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51278,6 +51380,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &597930214001539308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51479,6 +51584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &463391693879180217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51679,6 +51787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1140458253420661149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51865,8 +51976,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3858fc1ebde0944b41877c436d5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points: -2
+  _points: -5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!64 &2122360175217880310
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52162,6 +52276,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4795546291790951370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52361,6 +52478,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &5360037959572804714
 GameObject:
   m_ObjectHideFlags: 0
@@ -52490,6 +52610,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6216673674405056176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52690,6 +52813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2757781454333283534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52890,6 +53016,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8005390648844715270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53179,6 +53308,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &288681475942084818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53379,6 +53511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3664967601732530098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53611,6 +53746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5207414806525290132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53811,6 +53949,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7605212385029958184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54094,6 +54235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2879736357032603270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54471,6 +54615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6457494276457022704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54706,6 +54853,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5179772806019398436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54906,6 +55056,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1915666797572343955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55107,6 +55260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4860123141544236983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55551,6 +55707,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8723128554308696435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55834,6 +55993,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &5788510968266920866
 GameObject:
   m_ObjectHideFlags: 0
@@ -55962,6 +56124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &5814666354444441337
 GameObject:
   m_ObjectHideFlags: 0
@@ -56172,6 +56337,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4214428132357871178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56373,6 +56541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2128543158356710732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56573,6 +56744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5216466443385914722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56825,6 +56999,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2244383461077649680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57056,6 +57233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1923638572514991820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57345,6 +57525,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3459218144930226158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57627,6 +57810,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4500520075731058811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57858,6 +58044,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6299795755082228813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58058,6 +58247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &815290268001119882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58258,6 +58450,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5658852548619249946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58458,6 +58653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2290521862552375207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58658,6 +58856,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3560664516669478067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58858,6 +59059,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8393260675534941251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59058,6 +59262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &689712496913000059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59258,6 +59465,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8281924590228179863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59458,6 +59668,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1046186301936727428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59658,6 +59871,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4797720864579128803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59940,6 +60156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9162045278182927036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60171,6 +60390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7002824580015443585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60578,6 +60800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2374132550139864539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60778,6 +61003,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2365543881954919511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60978,6 +61206,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5080975897462374330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62328,6 +62559,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &6361758777083290825
 GameObject:
   m_ObjectHideFlags: 0
@@ -62457,6 +62691,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8140795536529257306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62656,6 +62893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &6373142293244909895
 GameObject:
   m_ObjectHideFlags: 0
@@ -62785,6 +63025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7404957211939821232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62985,6 +63228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9185179460252077723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63185,6 +63431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5192976084421272920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63466,6 +63715,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &6401073410919522514
 GameObject:
   m_ObjectHideFlags: 0
@@ -63596,6 +63848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3530518129857044231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63877,6 +64132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1292571416603757418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64246,6 +64504,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5167496351282831246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64446,6 +64707,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2604296155539326462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64677,6 +64941,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7121245149250637419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64961,6 +65228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7233793834761571911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65161,6 +65431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3880116726038907146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65361,6 +65634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9116517434097104780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65893,6 +66169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8083721274672036199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66124,6 +66403,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4995066324353114108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66489,6 +66771,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &221115759345806677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66689,6 +66974,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4891792358934838788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66889,6 +67177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7806572180803085172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67089,6 +67380,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8056680692910596563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67289,6 +67583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2018562452127610946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67571,6 +67868,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4264933492708704389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67771,6 +68071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6612301370712913698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67971,6 +68274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5875032989074094356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68203,6 +68509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &536009729777431569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68403,6 +68712,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7766899631470400329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68708,8 +69020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3858fc1ebde0944b41877c436d5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points: -2
+  _points: -5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!64 &8431925778833012765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69044,6 +69359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8538231255953592441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69245,6 +69563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8800904582732067511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69446,6 +69767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4791616877733459382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69903,6 +70227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1261021786026712430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70189,6 +70516,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &7137887539130018613
 GameObject:
   m_ObjectHideFlags: 0
@@ -70483,6 +70813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &721942386425148983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70764,6 +71097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5485662372100942304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71076,6 +71412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &968432607139026868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71276,6 +71615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8590270721992233044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71476,6 +71818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9170841186351503204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71676,6 +72021,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &833645925527391370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71876,6 +72224,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2162304317719084821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72172,6 +72523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &178155045247708096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72454,6 +72808,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &230226335547615114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72654,6 +73011,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3905518560858272623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72855,6 +73215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4264736423507647992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73140,6 +73503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6847362307939868620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73509,6 +73875,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6154544279338689011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73709,6 +74078,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2889154751299641376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73910,6 +74282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6382886956555054177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73990,6 +74365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7043493892785745250}
+  - component: {fileID: 3538086658615908985}
   m_Layer: 0
   m_Name: Corn2
   m_TagString: Untagged
@@ -74013,6 +74389,18 @@ Transform:
   m_Father: {fileID: 3471149476712854910}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &3538086658615908985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706878098487179224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f05cefc341224abce47b480724fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7729526827104168983
 GameObject:
   m_ObjectHideFlags: 0
@@ -74389,6 +74777,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4000315824323473547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74588,6 +74979,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &7792835243804027316
 GameObject:
   m_ObjectHideFlags: 0
@@ -74717,6 +75111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5369531408390869641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74917,6 +75314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1056503236406507527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75367,6 +75767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1664700430598710622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75567,6 +75970,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4198777938389567536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75767,6 +76173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5007157781605559659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75967,6 +76376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1487671040907976656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76167,6 +76579,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3256620841964208284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76367,6 +76782,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2340192069933475130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76567,6 +76985,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2990756194658138605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76767,6 +77188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5702227902350371867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76967,6 +77391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2804438448361842516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77198,6 +77625,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1792257864086305938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77398,6 +77828,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2019623297330707890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77536,8 +77969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3858fc1ebde0944b41877c436d5885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points: 0
-  _sticky: 0
+  _points: 10
+  _sticky: 1
+  _stickDuration: 0.4
+  _stickVariance: 0.01
+  _stickToShirt: 0
 --- !u!1 &8032600708898161839
 GameObject:
   m_ObjectHideFlags: 0
@@ -77667,6 +78103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2935995014251713459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77867,6 +78306,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &149964107419544098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78149,6 +78591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8907128004952407818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78349,6 +78794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7957848865256422816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78549,6 +78997,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7228944104317736729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78749,6 +79200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4632101067469937853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79029,6 +79483,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &8138930860033877343
 GameObject:
   m_ObjectHideFlags: 0
@@ -79190,6 +79647,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4345412072148308260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79390,6 +79850,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &279138688884138271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79590,6 +80053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &7707861274312387866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79790,6 +80256,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4365726390630326410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79990,6 +80459,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5808222032453559950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80272,6 +80744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8375716836178146119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80472,6 +80947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1039265968527319680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80785,6 +81263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2833012478738172762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81016,6 +81497,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5987655383783580073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81216,6 +81700,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4003477247602306064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81416,6 +81903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3186647412088185548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81616,6 +82106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2094670509356909699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81897,6 +82390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2292148679079843852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82097,6 +82593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5780306077889680231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82366,6 +82865,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2053396022595344969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82566,6 +83068,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &9027326354425928443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82766,6 +83271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3558621005769665586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82966,6 +83474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8352113868818837782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83199,6 +83710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6909951881145804159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83399,6 +83913,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8997513169197961899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83712,6 +84229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5677856745584386122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83912,6 +84432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &1216314442977286022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84113,6 +84636,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &767165015851037777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84313,6 +84839,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2835383321394211856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84513,6 +85042,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6496260584757321419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84714,6 +85246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &4103633327783699579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84914,6 +85449,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &6883317900345123695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85114,6 +85652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8969070124223009520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85314,6 +85855,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5535290549512078849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85514,6 +86058,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8164171492010788161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85714,6 +86261,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &8033218861399785437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85915,6 +86465,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5370175303090665826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86115,6 +86668,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &940996267985024329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86315,6 +86871,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &5726175553656227965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86515,6 +87074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2185209250394681237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86586,39 +87148,6 @@ MonoBehaviour:
     modifiers: []
   references:
     version: 1
---- !u!1 &8969715388053899129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8969715388053899130}
-  m_Layer: 0
-  m_Name: Platform
-  m_TagString: Platform
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8969715388053899130
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8969715388053899129}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 834393226049479209}
-  - {fileID: 3056500201691006980}
-  - {fileID: 1832799465}
-  m_Father: {fileID: 8969715388329621712}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8969715388329621719
 GameObject:
   m_ObjectHideFlags: 0
@@ -86647,12 +87176,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4974751458849098375}
   - {fileID: 7441496901960734736}
   - {fileID: 8969715388053899130}
   - {fileID: 4005220356104882322}
   - {fileID: 3513551381925374050}
-  - {fileID: 71698135531902226}
+  - {fileID: 4521057185640458298}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86949,6 +87477,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &171818219610239238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87314,6 +87845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &9055112126534664707
 GameObject:
   m_ObjectHideFlags: 0
@@ -87472,6 +88006,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!1 &9115155092880065464
 GameObject:
   m_ObjectHideFlags: 0
@@ -87602,6 +88139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: 1
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &3754592939377729184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87921,6 +88461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &743967835005036849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88121,6 +88664,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points: -0.5
   _sticky: 0
+  _stickDuration: 1
+  _stickVariance: 0.15
+  _stickToShirt: 0
 --- !u!114 &2110163079379857321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88279,7 +88825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790291877301745583, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3790291877301745583, guid: 27c82b0e53f3e3d4c8b69defe0ce04f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88335,6 +88881,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (10)"
@@ -88413,6 +88963,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (4)"
@@ -88487,6 +89041,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (6)
@@ -88625,12 +89183,78 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maydanoz (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8051990795639377959, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
 --- !u!4 &6662538169688683613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6152990346555820502, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
   m_PrefabInstance: {fileID: 654648349724016011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &926544160922913462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8969715388329621712}
+    m_Modifications:
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4120347408744200246, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+      propertyPath: m_Name
+      value: EditedCharacter8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+--- !u!4 &4521057185640458298 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3631513801575522956, guid: f22e56a4f0d6046e9aa46a4a12de50ba, type: 3}
+  m_PrefabInstance: {fileID: 926544160922913462}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1035541799715033024
 PrefabInstance:
@@ -88639,6 +89263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (1)"
@@ -88713,6 +89341,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (6)"
@@ -88791,6 +89423,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (2)"
@@ -88858,120 +89502,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8726064471343840970, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
   m_PrefabInstance: {fileID: 1361574378015184286}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1403080989412895937
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8969715388329621712}
-    m_Modifications:
-    - target: {fileID: 341905140686978355, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_DistanceField
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1129305735562445712, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: _obiSolver
-      value: 
-      objectReference: {fileID: 8872182952126947064}
-    - target: {fileID: 1129305735562445712, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: _facePaintableTexture
-      value: 
-      objectReference: {fileID: 6134718644068149106}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.313
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787321049194472297, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_Name
-      value: Character_new
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069461789099084723, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: saveLoad
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069461789099084723, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: saveName
-      value: Clean
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069461789099084723, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: undoRedo
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069461789099084723, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: stateLimit
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343991639991263722, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343991639991263722, guid: c803e30c2c30163408799a08466dd399, type: 3}
-      propertyPath: m_DistanceField
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c803e30c2c30163408799a08466dd399, type: 3}
---- !u!1 &843696776708853672 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1787321049194472297, guid: c803e30c2c30163408799a08466dd399, type: 3}
-  m_PrefabInstance: {fileID: 1403080989412895937}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &71698135531902226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1406820363922373075, guid: c803e30c2c30163408799a08466dd399, type: 3}
-  m_PrefabInstance: {fileID: 1403080989412895937}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6134718644068149106 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5069461789099084723, guid: c803e30c2c30163408799a08466dd399, type: 3}
-  m_PrefabInstance: {fileID: 1403080989412895937}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6329a951f597a0488f4e1158c8f8c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1537180999357009291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88979,6 +89509,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6940131834735369661, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
       propertyPath: m_Name
       value: "Havuc\u0327 (4)"
@@ -89119,6 +89653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 14536017067545454, guid: 543106c547905404eb9973944be141bd, type: 3}
       propertyPath: m_Name
       value: Patates (3)
@@ -89197,6 +89735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (9)"
@@ -89275,6 +89817,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (8)
@@ -89353,6 +89899,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (2)
@@ -89427,6 +89977,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (5)"
@@ -89501,6 +90055,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te"
@@ -89575,6 +90141,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (3)
@@ -89641,6 +90211,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5584651207888491164, guid: bce65e285a70145118609c007e37a989, type: 3}
   m_PrefabInstance: {fileID: 2990433879400631497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3008794845315341775
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8969715388329621712}
+    m_Modifications:
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523858709369614450, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+      propertyPath: m_Name
+      value: Barrier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+--- !u!4 &3513551381925374050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1802502690915399085, guid: 730636310dbd4d74b91882118b3cc429, type: 3}
+  m_PrefabInstance: {fileID: 3008794845315341775}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3134809815179404592
 PrefabInstance:
@@ -89711,6 +90343,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6940131834735369661, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
       propertyPath: m_Name
       value: "Havuc\u0327"
@@ -89785,6 +90429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (7)"
@@ -89863,6 +90511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6940131834735369661, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
       propertyPath: m_Name
       value: "Havuc\u0327 (2)"
@@ -89937,6 +90589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 14536017067545454, guid: 543106c547905404eb9973944be141bd, type: 3}
       propertyPath: m_Name
       value: Patates (2)
@@ -90071,6 +90727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maydanoz (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8051990795639377959, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
 --- !u!4 &1339504598744307180 stripped
@@ -90085,6 +90745,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 14536017067545454, guid: 543106c547905404eb9973944be141bd, type: 3}
       propertyPath: m_Name
       value: Patates (4)
@@ -90163,6 +90827,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (4)
@@ -90297,6 +90965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maydanoz
       objectReference: {fileID: 0}
+    - target: {fileID: 8051990795639377959, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
 --- !u!4 &1975463900812207695 stripped
@@ -90311,6 +90983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (3)"
@@ -90503,6 +91179,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 14536017067545454, guid: 543106c547905404eb9973944be141bd, type: 3}
       propertyPath: m_Name
       value: Patates (1)
@@ -90569,68 +91257,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 826538911138499028, guid: 543106c547905404eb9973944be141bd, type: 3}
   m_PrefabInstance: {fileID: 6086837657177783452}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6187650290037969996
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8969715388329621712}
-    m_Modifications:
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.948
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.818
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1627186606695550771, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-      propertyPath: m_Name
-      value: SoupPainter
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
---- !u!4 &4974751458849098375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1213488375663746763, guid: 0ed2b0ffd04da2e4f8c0c0b3e7830dbe, type: 3}
-  m_PrefabInstance: {fileID: 6187650290037969996}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6669570484130729325
 PrefabInstance:
@@ -90769,6 +91395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6940131834735369661, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
       propertyPath: m_Name
       value: "Havuc\u0327 (3)"
@@ -90847,6 +91477,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -74511660513062371, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8237899332601996400, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
       propertyPath: m_Name
       value: "Eris\u0327te (8)"
@@ -90918,6 +91552,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8726064471343840970, guid: 728370c31dbb24ad19914de1631ec590, type: 3}
   m_PrefabInstance: {fileID: 6817764786505320031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7068781207502861525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8969715388329621712}
+    m_Modifications:
+    - target: {fileID: 2189751698197902252, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_Name
+      value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+--- !u!4 &8969715388053899130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2189751698197902255, guid: 9689ba44c22a62142b8813a1d3a48866, type: 3}
+  m_PrefabInstance: {fileID: 7068781207502861525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7530721144459785358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90925,6 +91621,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2982641224165077337, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6940131834735369661, guid: 65feb75f539404cc7a6d8723d91a0cba, type: 3}
       propertyPath: m_Name
       value: "Havuc\u0327 (1)"
@@ -91063,6 +91771,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8051990795639377959, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c04ea5bdc744e7883c037bbeef8a0f, type: 3}
 --- !u!4 &4061511174032124437 stripped
@@ -91077,6 +91789,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye
@@ -91151,6 +91875,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (10)
@@ -91229,6 +91957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (5)
@@ -91303,6 +92035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (7)
@@ -91381,6 +92117,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6157369893704237097, guid: 543106c547905404eb9973944be141bd, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 14536017067545454, guid: 543106c547905404eb9973944be141bd, type: 3}
       propertyPath: m_Name
       value: Patates
@@ -91455,6 +92203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (9)
@@ -91595,6 +92347,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5039383890772205270}
     m_Modifications:
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _sticky
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickToShirt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 259919484326698326, guid: bce65e285a70145118609c007e37a989, type: 3}
+      propertyPath: _stickDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5101305159621150758, guid: bce65e285a70145118609c007e37a989, type: 3}
       propertyPath: m_Name
       value: Bezelye (1)
