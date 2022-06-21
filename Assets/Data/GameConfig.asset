@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   ConveyorMoveSpeed: 0.7
-  MaxScore: 500
+  MaxScore: 100000
   MaxNausea: 20
   BarrierToggleDuration: 1
   FoodFlySpeed: 5

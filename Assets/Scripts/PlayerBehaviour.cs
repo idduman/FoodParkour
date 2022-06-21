@@ -143,7 +143,7 @@ namespace Dixy.FoodParkour
             {
                 Finish(false);
             }
-            else if (_nausea > _previousNausea + 2)
+            else if (_nausea > _previousNausea + _maxNausea * 0.2f)
             {
                 _anim.SetTrigger(Sad);
                 _sadParticles.Play();
@@ -187,7 +187,7 @@ namespace Dixy.FoodParkour
             scale.y = open ? _mouthScale.y : 0f;
             _mouthTween.Kill();
             _anim.SetBool(MouthOpen, open);
-            _mouthTween = _mouthTrigger.DOScale(scale, 0.15f)
+            _mouthTween = _mouthTrigger.DOScale(scale, 0.1f)
                 .OnUpdate(() =>
                 {
                     _mouthTrigger.gameObject.SetActive(_mouthTrigger.localScale.y > 0.4f);
