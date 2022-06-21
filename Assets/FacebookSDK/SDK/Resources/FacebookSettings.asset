@@ -24,7 +24,7 @@ MonoBehaviour:
   status: 1
   xfbml: 0
   frictionlessRequests: 1
-  androidKeystorePath: C:\Users\Alky-Pc\Unity\DixyB.keystore
+  androidKeystorePath: C:\Users\iddum\Projects\Keystore\DixyB.keystore
   iosURLSuffix: 
   appLinkSchemes:
   - list: []
