@@ -53,7 +53,7 @@ namespace Dixy.FoodParkour
 
             for (int i = 0; i < _painters.Count; i++)
             {
-                var index = (i * 5) % _particleCounter;
+                var index = (i * 20) % _particleCounter;
                 _painters[i].position = _obiEmitter.GetParticlePosition(index);
             }
         }

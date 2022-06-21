@@ -81,11 +81,11 @@ MonoBehaviour:
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
   color: {r: 0.67058825, g: 0.38039216, b: 0, a: 1}
-  opacity: 0.85
+  opacity: 1
   angle: 0
-  scale: {x: 1, y: 1, z: 1}
-  radius: 0.15
-  hardness: 4
+  scale: {x: 1, y: 1, z: 2}
+  radius: 0.2
+  hardness: 10
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
   tileOpacity: 1

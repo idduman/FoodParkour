@@ -41520,7 +41520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d174fab52f0c4b8399f25d5c3ea524c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simulateWhenInvisible: 1
+  simulateWhenInvisible: 0
   m_Backend: 1
   parameters:
     mode: 0
@@ -41531,9 +41531,9 @@ MonoBehaviour:
     sleepThreshold: 0.002
     collisionMargin: 0.02
     maxDepenetration: 10
-    continuousCollisionDetection: 1
+    continuousCollisionDetection: 0
     shockPropagation: 0
-    surfaceCollisionIterations: 6
+    surfaceCollisionIterations: 2
     surfaceCollisionTolerance: 0.005
   worldLinearInertiaScale: 0
   worldAngularInertiaScale: 0
@@ -87196,7 +87196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00659c1a8354fb478d9147b8e11fc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _conveyorBelt: {fileID: 0}
+  _conveyorBelt: {fileID: 4788331445324187989}
   Skybox: {fileID: 0}
 --- !u!1 &8979078539446199643
 GameObject:

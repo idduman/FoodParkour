@@ -644,7 +644,7 @@ MonoBehaviour:
     particleZWrite: 0
     thicknessCutoff: 1
     thicknessDownsample: 2
-    generateSurface: 1
+    generateSurface: 0
     blurRadius: 0.02
     surfaceDownsample: 3
     lighting: 1

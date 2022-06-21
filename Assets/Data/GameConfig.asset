@@ -21,7 +21,7 @@ MonoBehaviour:
   TrainMoveDuration: 3.5
   SoupFallDuration: 0.08
   SoupTurnDuration: 0.75
-  SoupPainterParticleAmount: 200
+  SoupPainterParticleAmount: 15
   SoupFoodFlySpeed: 0.1
   CatapultLaunchDuration: 4
   CatapultThrowSpeed: 6.5
