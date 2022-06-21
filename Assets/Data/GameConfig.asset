@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c82e9d4a78b8e2449b1bb7a3eb11a98, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  ConveyorMoveSpeed: 0.7
+  ConveyorMoveSpeed: 1
   MaxScore: 100000
   MaxNausea: 20
   BarrierToggleDuration: 1
