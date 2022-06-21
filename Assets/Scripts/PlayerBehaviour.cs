@@ -52,7 +52,7 @@ namespace Dixy.FoodParkour
             
             Color.RGBToHSV(_faceRenderer.material.color, out _faceHSV.x,out _faceHSV.y, out _faceHSV.z);
             _score = _previousScore = 0f;
-            _score = _maxScore = GameManager.Instance.Config.MaxScore;
+            _maxScore = GameManager.Instance.Config.MaxScore;
             _nausea = _previousNausea = 0f;
             _maxNausea = GameManager.Instance.Config.MaxNausea;
 
